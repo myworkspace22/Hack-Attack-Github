@@ -9,6 +9,7 @@ public class Turret : MonoBehaviour
     private Enemy targetEnemy;
 
     [Header("General")]
+    public string nameTurrent;
     public float range = 15f;
     public bool nearestTarget = false;
     //public GameObject towerRange;
@@ -86,7 +87,7 @@ public class Turret : MonoBehaviour
     }
     private void OnDestroy()
     {
-        if(BuildManager.instance != null)
+        if (BuildManager.instance != null)
         {
             BuildManager.instance.GetComponent<WaveSpawner>().OnWaveEnded -= ResetRotation;
         }
@@ -112,7 +113,7 @@ public class Turret : MonoBehaviour
         foreach (GameObject enemy in enemies)
         {
             float distanceToEnemy = Vector2.Distance(transform.position, enemy.transform.position);
-            if (splitter) 
+            if (splitter)
             {
                 if (distanceToEnemy < shortestDistance && enemy.transform != extraLasers[0].target && enemy.transform != extraLasers[1].target)
                 {
@@ -133,13 +134,14 @@ public class Turret : MonoBehaviour
         {
             target = nearestEnemy.transform;
             targetEnemy = nearestEnemy.GetComponent<Enemy>();
-            if (clusterBombTarget  != null) 
+            if (clusterBombTarget != null)
             {
                 GameObject cbEffect = Instantiate(clusterBombTarget, target.position, target.rotation, target);
                 //cbTargets.Add(target, cbEffect); 
                 //if (target != null) { cbTargets.Add(target, cbEffect); }
             }
-        } else
+        }
+        else
         {
             target = null;
         }
@@ -149,7 +151,7 @@ public class Turret : MonoBehaviour
     {
         if (target == null) { return; }
 
-        int index =  multiTargets - 1;
+        int index = multiTargets - 1;
 
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
 
@@ -184,7 +186,7 @@ public class Turret : MonoBehaviour
     {
         if (cCooldown > 0) { return; }
 
-        int index =  multiTargets;
+        int index = multiTargets;
 
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
 
@@ -207,7 +209,7 @@ public class Turret : MonoBehaviour
                     {
                         bullet.damage = bulletDamage;
                         bullet.Seek(enemy.transform);
-                        bullet.cbTarget = cbEffect; 
+                        bullet.cbTarget = cbEffect;
                         if (poisonDamage > 0)
                         {
                             bullet.poisonDamage = poisonDamage;
@@ -215,7 +217,7 @@ public class Turret : MonoBehaviour
                         }
                         clusterBullets.Add(bullet);
                     }
-                    
+
                     bulletGO.SetActive(false);
 
                     index--;
@@ -231,7 +233,7 @@ public class Turret : MonoBehaviour
     {
         if (sniper && lineRenderer.enabled)
         {
-            Color lineColor =  lineRenderer.endColor;
+            Color lineColor = lineRenderer.endColor;
             lineColor.a -= (fireRate * 4) * Time.deltaTime;
             lineRenderer.startColor = lineColor;
             lineRenderer.endColor = lineColor;
@@ -245,7 +247,7 @@ public class Turret : MonoBehaviour
                 target = null;
             }
         }
-        
+
         if (clusterBombTarget != null)
         {
             ClusterUpdate();
@@ -254,7 +256,7 @@ public class Turret : MonoBehaviour
 
         if (target == null)
         {
-            if(target == null)
+            if (target == null)
             {
                 if (useLaser)
                 {
@@ -265,7 +267,7 @@ public class Turret : MonoBehaviour
                     }
                 }
             }
-            
+
             return;
         }
 
@@ -293,7 +295,7 @@ public class Turret : MonoBehaviour
         {
             LockOnTarget(target);
         }
-        
+
         if (useLaser)
         {
             Laser();
@@ -313,7 +315,7 @@ public class Turret : MonoBehaviour
                     {
                         fireRate += baseFrenquency * increseFrenquencyPct;
                     }
-                    
+
                 }
                 Shoot(target);
                 fireCountdown = 1f / fireRate;
@@ -360,8 +362,8 @@ public class Turret : MonoBehaviour
 
         if (mTargets.Count > 0)
         {
-            if (target == null) 
-            { 
+            if (target == null)
+            {
                 target = mTargets.Peek();
             }
 
@@ -412,7 +414,7 @@ public class Turret : MonoBehaviour
             {
                 bullet.Seek(bulletTarget);
             }
-            
+
             if (clusterBombTarget != null)
             {
                 //bullet.cbTarget = cbTargets[bulletTarget]; cbTargets.Remove(bulletTarget); 

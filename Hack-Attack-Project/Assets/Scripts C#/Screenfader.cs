@@ -21,7 +21,7 @@ public class Screenfader : MonoBehaviour
 
     IEnumerator FadeIn()
     {
-        float t = 1.5f;
+        float t = 0.5f;
 
         while (t > 0f)
         {

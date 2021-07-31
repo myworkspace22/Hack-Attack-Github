@@ -58,6 +58,10 @@ public class WaveSpawner : MonoBehaviour
     private void Update()
     {
         //enCount = EnemiesAlive; //til at kunne se hvor mange enemies der er i banen
+        if (Input.GetKeyDown("space") && BuildMode)
+        {
+            SpaceHotkey();
+        }
         if (isPaused && currentArrow != null)
         {
             Destroy(currentArrow);
@@ -180,6 +184,13 @@ public class WaveSpawner : MonoBehaviour
             SpeedUp();
             return;
         }
+        BuildManager.instance.DeselectNode();
+        countdown = 0;
+        Time.timeScale = gameSpeed;
+        waveCountdownText.text = "SPEED (" + Time.timeScale + ")";
+    }
+    public void SpaceHotkey()
+    {
         BuildManager.instance.DeselectNode();
         countdown = 0;
         Time.timeScale = gameSpeed;

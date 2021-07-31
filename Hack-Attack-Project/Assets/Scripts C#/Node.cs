@@ -11,7 +11,7 @@ public class Node : MonoBehaviour
     [Header("Tower Properties")]
     public GameObject towerRange;
     public GameObject[] towerStars;
-    
+
     [Header("Animation Ref.")]
     public SpriteRenderer spriteToChange;
     public SpriteRenderer rangeSprite;
@@ -29,9 +29,9 @@ public class Node : MonoBehaviour
     [HideInInspector]
     public int upgradeNr;
     [HideInInspector]
-    public int UpgradeMultiplier 
-    { 
-        get 
+    public int UpgradeMultiplier
+    {
+        get
         {
             if (upgradeNr == 0)
             {
@@ -106,7 +106,7 @@ public class Node : MonoBehaviour
         towerRange.transform.localScale = new Vector2(rangeRadius * 2, rangeRadius * 2);
         towerRange.SetActive(rangeStatus);
     }
-    
+
     private void OnMouseDown()
     {
         if (EventSystem.current.IsPointerOverGameObject())
@@ -123,7 +123,7 @@ public class Node : MonoBehaviour
             buildManager.DeselectNode();
             return;
         }
-           
+
         BuildTurret(buildManager.GetTurretToBuild());
     }
     void BuildTurret(TurretBluePrint blueprint)
@@ -147,17 +147,19 @@ public class Node : MonoBehaviour
                 {
                     Debug.Log("there is no space for a turret");
                     return;
-                }              
+                }
             }
         }
-        
+
         //path check
         //if (!CheckPathWPC())
-            //return;
+        //return;
 
 
         GameObject _turret = (GameObject)Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity);
         turret = _turret;
+
+
 
         turretBlueprint = blueprint;
 
@@ -197,6 +199,17 @@ public class Node : MonoBehaviour
         //}
 
         buildManager.newTowers.Push(this);
+
+        UpdateToolTip(blueprint);
+    }
+
+    public void UpdateToolTip(TurretBluePrint blueprint, Turret getTurret = null)
+    {
+        TooltipTrigger tmp = GetComponent<TooltipTrigger>();
+        Turret tmpTurret = getTurret != null ? getTurret : blueprint.prefab.GetComponent<Turret>();
+        tmp.ShowUi = true;
+        tmp.header = tmpTurret.nameTurrent;
+        tmp.content = $"Damage: {tmpTurret.bulletDamage} \nRange: {tmpTurret.range * 100} \nFrequency: {tmpTurret.fireRate}";
     }
 
     public void levelUpTower()
@@ -258,6 +271,8 @@ public class Node : MonoBehaviour
         ChangeRange(true, turret.GetComponent<Turret>().range);
         buildManager.nodeUI.SetTarget(this);
         buildManager.nodeUI.ShowUpgradeStats(2);
+
+        UpdateToolTip(turretBlueprint, turretToUpgrade);
     }
 
     private void StarUI()
@@ -273,7 +288,7 @@ public class Node : MonoBehaviour
         //if (!buildManager.GetComponent<WaveSpawner>().BuildMode)
         //    return;
 
-        int upgradeindex = (upgradeNr > 0) ?  upgradeNr + index * 2: upgradeNr + index;
+        int upgradeindex = (upgradeNr > 0) ? upgradeNr + index * 2 : upgradeNr + index;
 
         if (PlayerStats.Money < turretBlueprint.upgradeCost[upgradeindex - 1])
         {
@@ -308,10 +323,11 @@ public class Node : MonoBehaviour
         turret.GetComponent<Animator>().SetBool("selected", true);
 
         upgradeNr = upgradeindex;
-        towerLevel ++;
+        towerLevel++;
         StarUI();
 
         Debug.Log("Turret Upgraded!");
+        UpdateToolTip(turretBlueprint, turret.GetComponent<Turret>());
     }
     public void SellTurret()
     {
@@ -348,6 +364,10 @@ public class Node : MonoBehaviour
         ChangeRange(false);
 
         AstarPath.active.Scan();
+
+        TooltipTrigger tmp = GetComponent<TooltipTrigger>();
+
+        tmp.ShowUi = false;
     }
 
     private void OnMouseEnter()
@@ -381,8 +401,10 @@ public class Node : MonoBehaviour
             spriteToChange.sprite = buildManager.GetTurretToBuild().prefab.GetComponent<SpriteRenderer>().sprite;
             ChangeRange(true, buildManager.GetTurretToBuild().prefab.GetComponent<Turret>().range);
             spriteToChange.gameObject.SetActive(true);
-            spriteToChange.color = new Color(0, 0.5372466f, 0.5849056f);
-            sR.color = new Color(0.5849056f, 0.5849056f, 0.5849056f);
+            //spriteToChange.color = new Color(0, 0.5372466f, 0.5849056f);
+            spriteToChange.color = new Color(1, 1, 1, 0.50f);
+            //sR.color = new Color(0.5849056f, 0.5849056f, 0.5849056f);
+            //sR.color = new Color(1, 1, 1);
             sR.sortingOrder = 2;
             rangeSprite.color = new Color(1, 1, 1, 0.78f);
             sR.sprite = hoverBackground;

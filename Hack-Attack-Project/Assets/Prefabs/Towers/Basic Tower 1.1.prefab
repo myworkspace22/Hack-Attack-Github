@@ -358,6 +358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  nameTurrent: Baster
   range: 1.8
   nearestTarget: 0
   upgradeDamage: 10

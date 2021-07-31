@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 125817254177808948}
   - component: {fileID: 1874531998607346999}
   - component: {fileID: 9118319029743844233}
+  - component: {fileID: 5286260511230073348}
   m_Layer: 0
   m_Name: Node
   m_TagString: Untagged
@@ -156,6 +157,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.25, y: 0.25}
   m_EdgeRadius: 0
+--- !u!114 &5286260511230073348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125817254177808951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d68b7dfc82ed1ef4080a7cd6149e972d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  header: TOolol
+  content: 'TOlolo
+
+    ototl'
+  _showUi: 0
 --- !u!1 &492249658463556457
 GameObject:
   m_ObjectHideFlags: 0
