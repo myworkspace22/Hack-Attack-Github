@@ -126,6 +126,7 @@ public class Node : MonoBehaviour
 
         BuildTurret(buildManager.GetTurretToBuild());
     }
+
     void BuildTurret(TurretBluePrint blueprint)
     {
         if (!buildManager.GetComponent<WaveSpawner>().BuildMode)

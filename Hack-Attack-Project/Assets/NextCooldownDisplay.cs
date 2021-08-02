@@ -5,26 +5,53 @@ using UnityEngine.UI;
 
 public class NextCooldownDisplay : MonoBehaviour
 {
-    public float duration;
+    public WaveSpawner waveTime;
+    private float value;
+    private float countdown;
+    //public float duration;
     public Image fillImage;
 
     private void Start()
     {
-        fillImage.fillAmount = 1f;
-        StartCoroutine(Timer(duration));
-    }
-    public IEnumerator Timer(float duration)
-    {
-        float startTime = Time.time;
-        float time = duration;
-        float value = 0;
+        fillImage.fillAmount = 0f;
+        countdown = waveTime.countdown;
 
-        while (Time.time - startTime < duration)
+        waveTime.OnWavePriceLocked += FillImageOnStart;
+
+        //StartCoroutine(Timer(duration));
+    }
+    private void Update()
+    {
+        if(countdown != waveTime.countdown && waveTime.countdown < waveTime.timeBetweenWaves)
         {
-            time -= Time.deltaTime;
-            value = time / duration;
+            countdown = waveTime.countdown;
+
+            value = countdown / waveTime.timeBetweenWaves;
+            value = 1 - value;
             fillImage.fillAmount = value;
-            yield return null;
         }
     }
+    private void OnDestroy()
+    {
+        waveTime.OnWavePriceLocked -= FillImageOnStart;
+    }
+    private void FillImageOnStart()
+    {
+        fillImage.fillAmount = 1;
+    }
+    //public IEnumerator Timer(float duration)
+    //{
+    //    float startTime = Time.time;
+    //    float time = duration;
+    //    float value = 0;
+
+    //    while (Time.time - startTime < duration)
+    //    {
+    //        time -= Time.deltaTime;
+    //        value = time / duration;
+    //        value = 1 - value;
+    //        fillImage.fillAmount = value;
+    //        yield return null;
+    //    }
+    //}
 }

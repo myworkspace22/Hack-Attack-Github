@@ -44,6 +44,9 @@ public class WaveSpawner : MonoBehaviour
     public string nameOfLevel;
     public TextMeshProUGUI nameOfLevelUI;
 
+
+    public TextMeshProUGUI timeBonusText;
+
     public bool BuildMode { get { return EnemiesAlive <= 0; } }
 
     private void Start()
@@ -60,7 +63,7 @@ public class WaveSpawner : MonoBehaviour
         //enCount = EnemiesAlive; //til at kunne se hvor mange enemies der er i banen
         if (Input.GetKeyDown("space") && BuildMode)
         {
-            SpaceHotkey();
+            SpaceToReadyUp();
         }
         if (isPaused && currentArrow != null)
         {
@@ -185,17 +188,34 @@ public class WaveSpawner : MonoBehaviour
             return;
         }
         BuildManager.instance.DeselectNode();
+        AddTimeBonus((int)countdown);
         countdown = 0;
         Time.timeScale = gameSpeed;
         waveCountdownText.text = "SPEED (" + Time.timeScale + ")";
     }
-    public void SpaceHotkey()
+    public void SpaceToReadyUp()
     {
         BuildManager.instance.DeselectNode();
+        AddTimeBonus((int)countdown);
         countdown = 0;
         Time.timeScale = gameSpeed;
         waveCountdownText.text = "SPEED (" + Time.timeScale + ")";
     }
+
+    private void AddTimeBonus(int bonus)
+    {
+        if(bonus < 2)
+        {
+            return;
+        }
+
+        PlayerStats.Money += bonus;
+
+        timeBonusText.text = "TIME BONUS <color=#FFD500>$" + bonus + "</color>";
+
+        timeBonusText.gameObject.GetComponent<Animator>().SetTrigger("PlayBonus");
+    }
+
     public void SpeedUp()
     {
         if(gameSpeed >= 3)

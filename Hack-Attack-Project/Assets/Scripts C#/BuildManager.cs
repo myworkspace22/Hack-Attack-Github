@@ -44,7 +44,13 @@ public class BuildManager : MonoBehaviour
                 DeselectNode();
             }
         }
+        if (Input.GetMouseButtonDown(1))
+        {
+            DeselectNode();
+            DeselectShopItem();
+        }
     }
+
 
     public void DeselectShopItem()
     {
