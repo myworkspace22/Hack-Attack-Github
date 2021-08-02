@@ -28,6 +28,7 @@ public class BuildManager : MonoBehaviour
 
     public NodeUI nodeUI;
     public ShopUI shopUI;
+    public TowerStatsNEW towerStatsUI;
 
     public bool CanBuild { get { return turretToBuild != null; } }
     public bool HasMoney { get { return PlayerStats.Money >= turretToBuild.cost; } }
@@ -89,6 +90,7 @@ public class BuildManager : MonoBehaviour
         turretToBuild = null;
 
         nodeUI.SetTarget(node);
+        towerStatsUI.SetTarget(node);
     }
     public void DeselectNode()
     {
@@ -104,6 +106,7 @@ public class BuildManager : MonoBehaviour
         }
         selectedNode = null;
         nodeUI.Hide();
+        towerStatsUI.Hide();
     }
     public void SelectTurretToBuild (TurretBluePrint turret)
     {

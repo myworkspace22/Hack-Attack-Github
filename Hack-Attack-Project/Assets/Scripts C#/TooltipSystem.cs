@@ -6,11 +6,7 @@ using UnityEngine;
 public class TooltipSystem : MonoBehaviour
 {
     [SerializeField]
-    private float _fadeInTime = 0.2f;
-    [SerializeField]
-    private float _fadeOutTime = 0.2f;
-
-
+    private float _fadeTime = 0.2f;
 
     public Tooltip tooltip;
 
@@ -36,11 +32,11 @@ public class TooltipSystem : MonoBehaviour
     {
         tooltip.SetText(content, header);
         tooltip.gameObject.SetActive(true);
-        canvasGroup.DOFade(1, _fadeInTime);
+        canvasGroup.DOFade(1, _fadeTime);
     }
 
     public void Hide(bool hideFast = false)
     {
-        canvasGroup.DOFade(0, hideFast ? 0 : _fadeOutTime)/*.OnComplete(() => { tooltip.gameObject.SetActive(false); })*/;
+        canvasGroup.DOFade(0, hideFast ? 0 : _fadeTime)/*.OnComplete(() => { tooltip.gameObject.SetActive(false); })*/;
     }
 }

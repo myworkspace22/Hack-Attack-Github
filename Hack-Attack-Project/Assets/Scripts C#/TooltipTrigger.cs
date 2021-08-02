@@ -5,7 +5,6 @@ using UnityEngine.EventSystems;
 
 public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    private static LTDescr delay;
     public string header;
     [Multiline()]
     public string content;
@@ -17,28 +16,20 @@ public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     public void OnPointerEnter(PointerEventData eventData)
     {
         ShowIT();
-        //delay = LeanTween.delayedCall(0.5f, () =>
-        //{
-        //});
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        //LeanTween.cancel(delay.uniqueId);
         HideIT();
     }
 
     public void OnMouseEnter()
     {
         ShowIT();
-        //delay = LeanTween.delayedCall(0.5f, () =>
-        //{
-        //});
     }
 
     public void OnMouseExit()
     {
-        //LeanTween.cancel(delay.uniqueId);
         HideIT();
     }
 
