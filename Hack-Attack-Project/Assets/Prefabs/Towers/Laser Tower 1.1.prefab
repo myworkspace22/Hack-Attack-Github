@@ -84,6 +84,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  nameTurrent: 
   range: 2
   nearestTarget: 0
   upgradeDamage: 40

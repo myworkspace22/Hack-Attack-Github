@@ -109,12 +109,14 @@ public class Node : MonoBehaviour
 
     private void OnMouseDown()
     {
+
         if (EventSystem.current.IsPointerOverGameObject())
             return;
 
         if (turret != null)
         {
             buildManager.SelectNode(this);
+            rangeSprite.color = new Color(1, 1, 1, 1);
             return;
         }
 
@@ -373,6 +375,11 @@ public class Node : MonoBehaviour
 
     private void OnMouseEnter()
     {
+        if(turret != null && buildManager.selectedNode == null)
+        {
+            ChangeRange(true);
+            rangeSprite.color = new Color(1, 1, 1, 0.78f);
+        }
         if (!buildManager.GetComponent<WaveSpawner>().BuildMode)
             return;
 
@@ -419,6 +426,11 @@ public class Node : MonoBehaviour
 
     private void OnMouseExit()
     {
+        if (turret != null && buildManager.selectedNode == null)
+        {
+            ChangeRange(false);
+            rangeSprite.color = new Color(1, 1, 1, 1f);
+        }
         if (buildManager.CanBuild)
             ChangeRange(false);
         spriteToChange.gameObject.SetActive(false);

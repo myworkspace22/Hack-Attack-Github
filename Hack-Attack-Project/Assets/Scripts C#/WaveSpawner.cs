@@ -61,9 +61,9 @@ public class WaveSpawner : MonoBehaviour
     private void Update()
     {
         //enCount = EnemiesAlive; //til at kunne se hvor mange enemies der er i banen
-        if (Input.GetKeyDown("space") && BuildMode)
+        if (Input.GetKeyDown("space")/* && BuildMode*/)
         {
-            SpaceToReadyUp();
+            ReadyUp();
         }
         if (isPaused && currentArrow != null)
         {
@@ -105,7 +105,7 @@ public class WaveSpawner : MonoBehaviour
         {
             BuildManager.instance.DeselectNode();
             Time.timeScale = gameSpeed;
-            waveCountdownText.text = "SPEED (" + Time.timeScale + ")";
+            waveCountdownText.text = "INCOMING (x" + Time.timeScale + ")";
             StartCoroutine(SpawnWave());
             countdown = timeBetweenWaves;
             //PlayerStats.Money += (PlayerStats.Money - PlayerStats.Money % 100) / 5;
@@ -119,26 +119,26 @@ public class WaveSpawner : MonoBehaviour
 
             if (countdown > 10)
             {
-                waveCountdownText.text = string.Format("START ({0:00})", countdown);
+                waveCountdownText.text = string.Format("NEXT WAVE ({0:00})", countdown);
             }
             if (countdown <= 10)
             {
-                waveCountdownText.text = string.Format("START ({0:0})", countdown);
+                waveCountdownText.text = string.Format("NEXT WAVE ({0:0})", countdown);
             }
         } else
         {
-            waveCountdownText.text = "START";
+            waveCountdownText.text = "NEXT WAVE";
         }
 
-        enemyName.text = "Next wave: <color=#00FF00>" + waves[waveIndex].enemy.GetComponent<Enemy>().startHealth + " HP</color>";
+        enemyName.text = "Next wave: <color=#00FF00>" + waves[waveIndex].enemies[0].enemy.GetComponent<Enemy>().startHealth + " HP</color>";
 
-        enemyImage.sprite = waves[waveIndex].enemy.GetComponentInChildren<SpriteRenderer>().sprite;
+        enemyImage.sprite = waves[waveIndex].enemies[0].enemy.GetComponentInChildren<SpriteRenderer>().sprite;
 
-        enemyImage.color = waves[waveIndex].enemy.GetComponentInChildren<SpriteRenderer>().color;
+        enemyImage.color = waves[waveIndex].enemies[0].enemy.GetComponentInChildren<SpriteRenderer>().color;
 
         if(waveIndex == waves.Length - 1)
         {
-            enemyName.text = "Final Boss: <color=#00FF00>" + waves[waveIndex].enemy.GetComponent<Enemy>().startHealth + " HP</color>";
+            enemyName.text = "Final Boss: <color=#00FF00>" + waves[waveIndex].enemies[0].enemy.GetComponent<Enemy>().startHealth + " HP</color>";
         }
     }
     IEnumerator SpawnWave()
@@ -156,19 +156,25 @@ public class WaveSpawner : MonoBehaviour
         BuildManager.instance.ClearStack();
 
         Wave wave = waves[waveIndex];
-
-        EnemiesAlive += wave.count;
-
-        enemyName.text = "Incoming: <color=#00FF00>" + wave.enemy.GetComponent<Enemy>().startHealth + " HP</color>";
-
-        enemyImage.sprite = wave.enemy.GetComponentInChildren<SpriteRenderer>().sprite;
-
-        for (int i = 0; i < wave.count; i++)
+        
+        for (int i = 0; i < wave.enemies.Length; i++)
         {
-            SpawnEnemy(wave.enemy);
-            if(i < wave.count - 1)
+            EnemiesAlive += wave.enemies[i].count;
+        }
+
+        enemyName.text = "Incoming: <color=#00FF00>" + wave.enemies[0].enemy.GetComponent<Enemy>().startHealth + " HP</color>";
+
+        enemyImage.sprite = wave.enemies[0].enemy.GetComponentInChildren<SpriteRenderer>().sprite;
+
+        for (int i = 0; i < wave.enemies.Length; i++)
+        {
+            for (int j = 0; j < wave.enemies[i].count; j++)
             {
-                yield return new WaitForSeconds(1f / wave.rate);
+                SpawnEnemy(wave.enemies[i].enemy);
+                //if(j < wave.enemies[i].count - 1)
+                //{
+                    yield return new WaitForSeconds(1f / wave.enemies[i].rate);
+                //}
             }
         }
 
@@ -191,7 +197,7 @@ public class WaveSpawner : MonoBehaviour
         AddTimeBonus((int)countdown);
         countdown = 0;
         Time.timeScale = gameSpeed;
-        waveCountdownText.text = "SPEED (" + Time.timeScale + ")";
+        waveCountdownText.text = "INCOMING (x" + Time.timeScale + ")";
     }
     public void SpaceToReadyUp()
     {
@@ -199,7 +205,7 @@ public class WaveSpawner : MonoBehaviour
         AddTimeBonus((int)countdown);
         countdown = 0;
         Time.timeScale = gameSpeed;
-        waveCountdownText.text = "SPEED (" + Time.timeScale + ")";
+        waveCountdownText.text = "INCOMING (x" + Time.timeScale + ")";
     }
 
     private void AddTimeBonus(int bonus)
@@ -228,6 +234,6 @@ public class WaveSpawner : MonoBehaviour
         }
 
         Time.timeScale = gameSpeed;
-        waveCountdownText.text = "SPEED (" + Time.timeScale + ")";
+        waveCountdownText.text = "INCOMING (x" + Time.timeScale + ")";
     }
 }
