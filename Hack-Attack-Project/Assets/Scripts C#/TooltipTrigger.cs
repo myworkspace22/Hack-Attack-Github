@@ -13,6 +13,12 @@ public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     private bool _showUi = true;
     public bool ShowUi { get => _showUi; set => _showUi = value; }
 
+    public void UpdateTooltipUI()
+    {
+        //HideIT();
+        ShowIT();
+    }
+
     public void OnPointerEnter(PointerEventData eventData)
     {
         ShowIT();
