@@ -5847,7 +5847,7 @@ GameObject:
   - component: {fileID: 370724539}
   - component: {fileID: 370724538}
   m_Layer: 5
-  m_Name: Tower Icon
+  m_Name: Laser Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19267,6 +19267,9 @@ MonoBehaviour:
   shooter: {fileID: 1832875083}
   cannon: {fileID: 2009975491}
   laser: {fileID: 1434844483}
+  shooterIcon: {fileID: 1914675356}
+  cannonIcon: {fileID: 1275838596}
+  laserIcon: {fileID: 370724538}
 --- !u!114 &1262485957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19503,7 +19506,7 @@ GameObject:
   - component: {fileID: 1275838597}
   - component: {fileID: 1275838596}
   m_Layer: 5
-  m_Name: Tower Icon
+  m_Name: Cannon Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27732,7 +27735,7 @@ GameObject:
   - component: {fileID: 1914675357}
   - component: {fileID: 1914675356}
   m_Layer: 5
-  m_Name: Tower Icon
+  m_Name: Shooter Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
