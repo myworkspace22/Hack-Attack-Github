@@ -178,13 +178,6 @@ public class NodeUI : MonoBehaviour
     {
         target.UpgradeTurret(upgradeIndex);
         SetTarget(target);
-
-        //BuildManager.instance.DeselectNode();
-
-        //upgradeCost1.text = "DONE";
-        //upgradeCost2.text = "DONE";
-        //upgradeButton1.interactable = false;
-        //upgradeButton2.interactable = false;
     }
 
     public void LevelUp()

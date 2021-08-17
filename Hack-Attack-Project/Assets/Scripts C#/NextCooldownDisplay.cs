@@ -37,7 +37,7 @@ public class NextCooldownDisplay : MonoBehaviour
     }
     private void FillImageOnStart()
     {
-        fillImage.fillAmount = 1;
+        fillImage.fillAmount = 0;
     }
     //public IEnumerator Timer(float duration)
     //{

@@ -36,13 +36,7 @@ public class TowerStatsNEW : MonoBehaviour
         tmp.content = "Cost: <color=#FFD500>$" + nextLevelCost + "</color> \n Damage: " + turretToUpgrade.bulletDamage + " <color=#00FF00>-> " + (turretToUpgrade.bulletDamage + turretToUpgrade.upgradeDamage * (target.towerLevel + 1)) + "</color> \n" +
             "Range: " + turretToUpgrade.range * 100 + " <color=#00FF00>-> " + (turretToUpgrade.range + turretToUpgrade.upgradeRange) * 100 + "</color> \n" +
             "Frequency: " + turretToUpgrade.fireRate + " <color=#00FF00>-> " + (turretToUpgrade.fireRate + turretToUpgrade.upgradeFrenquency) + "</color>";
-
-
-
-
-
     }
-
 
     public void UpdateSellToolTip(TurretBluePrint blueprint, Turret getTurret = null)
     {

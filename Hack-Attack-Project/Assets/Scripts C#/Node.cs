@@ -375,11 +375,11 @@ public class Node : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        if(turret != null && buildManager.selectedNode == null)
-        {
-            ChangeRange(true);
-            rangeSprite.color = new Color(1, 1, 1, 0.78f);
-        }
+        //if(turret != null && buildManager.selectedNode == null)
+        //{
+        //    ChangeRange(true);
+        //    rangeSprite.color = new Color(1, 1, 1, 0.78f);
+        //}
         if (!buildManager.GetComponent<WaveSpawner>().BuildMode)
             return;
 
@@ -500,14 +500,23 @@ public class Node : MonoBehaviour
     }
     public void InDecline()
     {
+        //spriteToChange.sprite = buildManager.GetTurretToBuild().prefab.GetComponent<SpriteRenderer>().sprite;
+        //ChangeRange(true, buildManager.GetTurretToBuild().prefab.GetComponent<Turret>().range);
+        //spriteToChange.gameObject.SetActive(true);
+        //spriteToChange.color = new Color(0.5843138f, 0, 0);
+        //sR.color = new Color(0.5843138f, 0, 0);
+        //sR.sortingOrder = 0;
+        //spriteToChange.sortingOrder = 1;
+        //rangeSprite.color = new Color(1, 0, 0, 0.78f);
+        //sR.sprite = hoverBackground;
+
         spriteToChange.sprite = buildManager.GetTurretToBuild().prefab.GetComponent<SpriteRenderer>().sprite;
         ChangeRange(true, buildManager.GetTurretToBuild().prefab.GetComponent<Turret>().range);
         spriteToChange.gameObject.SetActive(true);
-        spriteToChange.color = new Color(0.5843138f, 0, 0);
-        sR.color = new Color(0.5843138f, 0, 0);
-        sR.sortingOrder = 0;
+        spriteToChange.color = new Color(1, 1, 1, 0.50f);
+        sR.sortingOrder = 1;
         spriteToChange.sortingOrder = 1;
-        rangeSprite.color = new Color(1, 0, 0, 0.78f);
+        rangeSprite.color = new Color(1, 1, 1, 0.78f);
         sR.sprite = hoverBackground;
     }
     public void OnHoverSell(bool active)

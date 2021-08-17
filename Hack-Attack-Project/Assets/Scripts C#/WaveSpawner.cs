@@ -10,8 +10,8 @@ public class WaveSpawner : MonoBehaviour
 {
     public static int EnemiesAlive = 0;
 
-    public TextMeshProUGUI enemyName;
-    public Image enemyImage;
+    //public TextMeshProUGUI enemyName;
+    //public Image enemyImage;
     public GameObject arrowPath;
     private GameObject currentArrow;
     public bool arrowPathDeactive;
@@ -42,8 +42,7 @@ public class WaveSpawner : MonoBehaviour
     public event Action OnWaveEnded;
 
     public string nameOfLevel;
-    public TextMeshProUGUI nameOfLevelUI;
-
+    //public TextMeshProUGUI nameOfLevelUI;
 
     public TextMeshProUGUI timeBonusText;
 
@@ -51,7 +50,7 @@ public class WaveSpawner : MonoBehaviour
 
     private void Start()
     {
-        nameOfLevelUI.text = nameOfLevel + " (wave: " + (waveIndex) + " - " + waves.Length + ")";
+        //nameOfLevelUI.text = nameOfLevel + " (wave: " + (waveIndex) + " - " + waves.Length + ")";
         currentArrow = null;
         gameSpeed = 1;
         isPaused = false;
@@ -105,7 +104,7 @@ public class WaveSpawner : MonoBehaviour
         {
             BuildManager.instance.DeselectNode();
             Time.timeScale = gameSpeed;
-            waveCountdownText.text = "INCOMING (x" + Time.timeScale + ")";
+            waveCountdownText.text = "SPEED (x" + Time.timeScale + ")";
             StartCoroutine(SpawnWave());
             countdown = timeBetweenWaves;
             //PlayerStats.Money += (PlayerStats.Money - PlayerStats.Money % 100) / 5;
@@ -119,31 +118,33 @@ public class WaveSpawner : MonoBehaviour
 
             if (countdown > 10)
             {
-                waveCountdownText.text = string.Format("NEXT WAVE ({0:00})", countdown);
+                waveCountdownText.text = string.Format("NEXT WAVE", countdown);
+                //waveCountdownText.text = string.Format("NEXT WAVE ({0:0})", countdown);
             }
             if (countdown <= 10)
             {
-                waveCountdownText.text = string.Format("NEXT WAVE ({0:0})", countdown);
+                waveCountdownText.text = string.Format("NEXT WAVE", countdown);
+                //waveCountdownText.text = string.Format("NEXT WAVE ({0:0})", countdown);
             }
         } else
         {
             waveCountdownText.text = "NEXT WAVE";
         }
 
-        enemyName.text = "Next wave: <color=#00FF00>" + waves[waveIndex].enemies[0].enemy.GetComponent<Enemy>().startHealth + " HP</color>";
+        //enemyName.text = "Next wave: <color=#00FF00>" + waves[waveIndex].enemies[0].enemy.GetComponent<Enemy>().startHealth + " HP</color>";
 
-        enemyImage.sprite = waves[waveIndex].enemies[0].enemy.GetComponentInChildren<SpriteRenderer>().sprite;
+        //enemyImage.sprite = waves[waveIndex].enemies[0].enemy.GetComponentInChildren<SpriteRenderer>().sprite;
 
-        enemyImage.color = waves[waveIndex].enemies[0].enemy.GetComponentInChildren<SpriteRenderer>().color;
+        //enemyImage.color = waves[waveIndex].enemies[0].enemy.GetComponentInChildren<SpriteRenderer>().color;
 
-        if(waveIndex == waves.Length - 1)
-        {
-            enemyName.text = "Final Boss: <color=#00FF00>" + waves[waveIndex].enemies[0].enemy.GetComponent<Enemy>().startHealth + " HP</color>";
-        }
+        //if(waveIndex == waves.Length - 1)
+        //{
+        //    enemyName.text = "Final Boss: <color=#00FF00>" + waves[waveIndex].enemies[0].enemy.GetComponent<Enemy>().startHealth + " HP</color>";
+        //}
     }
     IEnumerator SpawnWave()
     {
-        nameOfLevelUI.text = nameOfLevel + " (wave: " + (waveIndex + 1) + " - " + waves.Length + ")";
+        //nameOfLevelUI.text = nameOfLevel + " (wave: " + (waveIndex + 1) + " - " + waves.Length + ")";
 
         BuildManager.instance.DeselectShopItem();
 
@@ -162,9 +163,9 @@ public class WaveSpawner : MonoBehaviour
             EnemiesAlive += wave.enemies[i].count;
         }
 
-        enemyName.text = "Incoming: <color=#00FF00>" + wave.enemies[0].enemy.GetComponent<Enemy>().startHealth + " HP</color>";
+        //enemyName.text = "Incoming: <color=#00FF00>" + wave.enemies[0].enemy.GetComponent<Enemy>().startHealth + " HP</color>";
 
-        enemyImage.sprite = wave.enemies[0].enemy.GetComponentInChildren<SpriteRenderer>().sprite;
+        //enemyImage.sprite = wave.enemies[0].enemy.GetComponentInChildren<SpriteRenderer>().sprite;
 
         for (int i = 0; i < wave.enemies.Length; i++)
         {
@@ -197,7 +198,7 @@ public class WaveSpawner : MonoBehaviour
         AddTimeBonus((int)countdown);
         countdown = 0;
         Time.timeScale = gameSpeed;
-        waveCountdownText.text = "INCOMING (x" + Time.timeScale + ")";
+        waveCountdownText.text = "SPEED (x" + Time.timeScale + ")";
     }
     public void SpaceToReadyUp()
     {
@@ -205,7 +206,7 @@ public class WaveSpawner : MonoBehaviour
         AddTimeBonus((int)countdown);
         countdown = 0;
         Time.timeScale = gameSpeed;
-        waveCountdownText.text = "INCOMING (x" + Time.timeScale + ")";
+        waveCountdownText.text = "SPEED (x" + Time.timeScale + ")";
     }
 
     private void AddTimeBonus(int bonus)
@@ -234,6 +235,6 @@ public class WaveSpawner : MonoBehaviour
         }
 
         Time.timeScale = gameSpeed;
-        waveCountdownText.text = "INCOMING (x" + Time.timeScale + ")";
+        waveCountdownText.text = "SPEED (x" + Time.timeScale + ")";
     }
 }

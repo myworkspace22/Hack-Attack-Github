@@ -7,6 +7,8 @@ public class BuildManager : MonoBehaviour
     [HideInInspector]
     public Stack<Node> newTowers;
 
+    private Node target;
+
     public static BuildManager instance;
     private void Awake()
     {
@@ -136,4 +138,14 @@ public class BuildManager : MonoBehaviour
     //    turretToBuild = null;
     //    shopUI.DeselectTower();
     //}
+    public void LevelUp()
+    {
+        target.levelUpTower();
+    }
+    public void Sell()
+    {
+        target.SellTurret();
+        DeselectNode();
+        target.isMaxed = false;
+    }
 }
