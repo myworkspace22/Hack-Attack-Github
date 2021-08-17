@@ -157,12 +157,9 @@ public class Node : MonoBehaviour
         //path check
         //if (!CheckPathWPC())
         //return;
-
-
+       
         GameObject _turret = (GameObject)Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity);
         turret = _turret;
-
-
 
         turretBlueprint = blueprint;
 
@@ -272,8 +269,8 @@ public class Node : MonoBehaviour
         StarUI();
 
         ChangeRange(true, turret.GetComponent<Turret>().range);
-        buildManager.nodeUI.SetTarget(this);
-        buildManager.nodeUI.ShowUpgradeStats(2);
+        //buildManager.nodeUI.SetTarget(this);
+        //buildManager.nodeUI.ShowUpgradeStats(2);
 
         UpdateToolTip(turretBlueprint, turretToUpgrade);
     }
@@ -320,7 +317,7 @@ public class Node : MonoBehaviour
 
         ChangeRange(true, turret.GetComponent<Turret>().range);
 
-        buildManager.nodeUI.SetTarget(this);
+        //buildManager.nodeUI.SetTarget(this);
 
         //turret.GetComponent<Turret>().towerPlatform.color = Color.white;
         turret.GetComponent<Animator>().SetBool("selected", true);
@@ -359,6 +356,7 @@ public class Node : MonoBehaviour
         turretBlueprint = null;
         upgradeNr = 0;
         towerLevel = 0;
+        isMaxed = false;
         foreach (GameObject star in towerStars)
         {
             star.SetActive(false);

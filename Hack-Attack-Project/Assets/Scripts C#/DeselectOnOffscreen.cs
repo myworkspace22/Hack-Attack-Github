@@ -13,5 +13,10 @@ public class DeselectOnOffscreen : MonoBehaviour
             byggemandbob.DeselectNode();
             return;
         }
+        else
+        {
+            byggemandbob.DeselectShopItem();
+            return;
+        }
     }
 }

@@ -263,7 +263,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $20
+  m_text: -$20
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a7619e7e53966cc44b0c5b99872d903a, type: 2}
   m_sharedMaterial: {fileID: 6871096538463531599, guid: a7619e7e53966cc44b0c5b99872d903a, type: 2}
@@ -272,8 +272,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278244863
-  m_fontColor: {r: 1, g: 0.8352941, b: 0, a: 1}
+    rgba: 4278190335
+  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -661,7 +661,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  nameTurrent: Shooter
+  nameTurrent: <sprite=1> Shooter
   range: 1.5
   nearestTarget: 0
   upgradeDamage: 25

@@ -28,8 +28,8 @@ public class BuildManager : MonoBehaviour
     [HideInInspector]
     public Node hoverNode;
 
-    public NodeUI nodeUI;
-    public ShopUI shopUI;
+    //public NodeUI nodeUI;
+    //public ShopUI shopUI;
     public TowerStatsNEW towerStatsUI;
 
     public bool CanBuild { get { return turretToBuild != null; } }
@@ -56,7 +56,7 @@ public class BuildManager : MonoBehaviour
 
     public void DeselectShopItem()
     {
-        shopUI.DeselectTower();
+        //shopUI.DeselectTower();
         turretToBuild = null;
         if (hoverNode != null) { hoverNode.EndHover(); }
     }
@@ -94,10 +94,10 @@ public class BuildManager : MonoBehaviour
             node.turret.GetComponent<Animator>().SetBool("selected", true);
         }
         selectedNode = node;
-        shopUI.DeselectTower();
+        //shopUI.DeselectTower();
         turretToBuild = null;
 
-        nodeUI.SetTarget(node);
+        //nodeUI.SetTarget(node);
         towerStatsUI.SetTarget(node);
     }
     public void DeselectNode()
@@ -113,13 +113,13 @@ public class BuildManager : MonoBehaviour
             }
         }
         selectedNode = null;
-        nodeUI.Hide();
+        //nodeUI.Hide();
         towerStatsUI.Hide();
     }
     public void SelectTurretToBuild (TurretBluePrint turret)
     {
         turretToBuild = turret;
-        shopUI.SelectTower(turret);
+        //shopUI.SelectTower(turret);
         //selectedNode = null;
 
         DeselectNode();
@@ -140,12 +140,11 @@ public class BuildManager : MonoBehaviour
     //}
     public void LevelUp()
     {
-        target.levelUpTower();
+        selectedNode.levelUpTower();
     }
     public void Sell()
     {
-        target.SellTurret();
+        selectedNode.SellTurret();
         DeselectNode();
-        target.isMaxed = false;
     }
 }

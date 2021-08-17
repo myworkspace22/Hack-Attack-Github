@@ -41,17 +41,20 @@ public class Shop : MonoBehaviour
     }
     public void SelectStandardTurret()
     {
-        Debug.Log("Standard Tower Selected");
+        if (!buildManager.GetComponent<WaveSpawner>().BuildMode)
+            return;
         buildManager.SelectTurretToBuild(standardTurret);
     }
     public void SelectMissileTurret()
     {
-        Debug.Log("Missile Tower Selected");
+        if (!buildManager.GetComponent<WaveSpawner>().BuildMode)
+            return;
         buildManager.SelectTurretToBuild(missileTurret);
     }
     public void SelectLaserTurret()
     {
-        Debug.Log("Laser Tower Selected");
+        if (!buildManager.GetComponent<WaveSpawner>().BuildMode)
+            return;
         buildManager.SelectTurretToBuild(laserTurret);
     }
 }
