@@ -12,6 +12,13 @@ public class TowerStatsNEW : MonoBehaviour
 
     public TooltipTrigger upgradeButton, sellButton;
 
+    //private BuildManager buildManager;
+
+    //private void Start()
+    //{
+    //    buildManager = BuildManager.instance;
+    //}
+
     public void SetTarget (Node _target)
     {
         target = _target;
@@ -33,7 +40,8 @@ public class TowerStatsNEW : MonoBehaviour
         tmp.ShowUi = true;
         
         int nextLevelCost = target.turretBlueprint.levelUpCost * (target.towerLevel + 1);
-        tmp.content = "Cost: <color=#FFD500>$" + nextLevelCost + "</color> \n Damage: " + turretToUpgrade.bulletDamage + " <color=#00FF00>-> " + (turretToUpgrade.bulletDamage + turretToUpgrade.upgradeDamage * (target.towerLevel + 1)) + "</color> \n" +
+        tmp.content = "Cost: <color=#FFD500>$" + nextLevelCost + "</color> \n" +
+            "Damage: " + turretToUpgrade.bulletDamage + " <color=#00FF00>-> " + (turretToUpgrade.bulletDamage + turretToUpgrade.upgradeDamage * (target.towerLevel + 1)) + "</color> \n" +
             "Range: " + turretToUpgrade.range * 100 + " <color=#00FF00>-> " + (turretToUpgrade.range + turretToUpgrade.upgradeRange) * 100 + "</color> \n" +
             "Frequency: " + turretToUpgrade.fireRate + " <color=#00FF00>-> " + (turretToUpgrade.fireRate + turretToUpgrade.upgradeFrenquency) + "</color>";
     }
@@ -46,4 +54,7 @@ public class TowerStatsNEW : MonoBehaviour
         tmp.header = tmpTurret.nameTurrent;
         tmp.content = $"Damage: {tmpTurret.bulletDamage} \nRange: {tmpTurret.range * 100} \nFrequency: {tmpTurret.fireRate}";
     }
+
+
+
 }
