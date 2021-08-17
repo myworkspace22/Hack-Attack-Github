@@ -58,6 +58,7 @@ MonoBehaviour:
   speed: 0
   stunResistence: 0.3
   deathEffect: {fileID: 1787491968115139843, guid: 72ae324c15b9e6d43895e32d4fc3c2c3, type: 3}
+  deathEffectGold: {fileID: 5848223581304362944, guid: 9778c63ae2aa6fc439d8e994f27fb8cc, type: 3}
   canFly: 0
   healAmt: 0
   slowResistence: 0
@@ -245,6 +246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7528428964736097970}
   - component: {fileID: 3622262882340304982}
+  - component: {fileID: 4321583566821291450}
   m_Layer: 0
   m_Name: Ranks
   m_TagString: Untagged
@@ -317,6 +319,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &4321583566821291450
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8010286485977064757}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6e9ef5a388af67d4689bd3ae9dce75e5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &3712291537663943726
 PrefabInstance:
   m_ObjectHideFlags: 0

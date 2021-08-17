@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Pathfinding;
+using TMPro;
 
 public class Enemy : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class Enemy : MonoBehaviour
     public float speed;
     public float stunResistence;
     public GameObject deathEffect;
+    public GameObject deathEffectGold;
 
     [Header("Special Stats:")]
     public bool canFly;
@@ -36,7 +38,7 @@ public class Enemy : MonoBehaviour
     public GameObject spriteToRotate;
 
     //Privates
-    
+
     public bool StealthMode { get; private set; }
     private float StartSpeed { get; set; }
     private float health;
@@ -263,6 +265,10 @@ public class Enemy : MonoBehaviour
 
         GameObject effectIns = (GameObject)Instantiate(deathEffect, transform.position, transform.rotation);
         Destroy(effectIns, 2f);
+
+        GameObject goldIns = (GameObject)Instantiate(deathEffectGold, transform.position, transform.rotation);
+        goldIns.GetComponentInChildren<TextMeshProUGUI>().text = "$" + worth;
+        Destroy(goldIns, 2f);
 
         hasDied = true;
         PlayerStats.Money += worth;
