@@ -283,6 +283,7 @@ GameObject:
   - component: {fileID: 8770130}
   - component: {fileID: 8770129}
   - component: {fileID: 8770128}
+  - component: {fileID: 8770131}
   - component: {fileID: 8770127}
   m_Layer: 0
   m_Name: Terminal
@@ -398,6 +399,19 @@ Transform:
   m_Father: {fileID: 4024176749668182314}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8770131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8770126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86c54d3ae8636b42b7418af0748ed0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endTooltip: {fileID: 8770128}
 --- !u!1 &16604779
 GameObject:
   m_ObjectHideFlags: 0
@@ -9367,7 +9381,7 @@ GameObject:
   - component: {fileID: 572885426}
   - component: {fileID: 572885425}
   m_Layer: 5
-  m_Name: Upgrade Button
+  m_Name: LevelUp Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9455,7 +9469,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1827356916}
         m_TargetAssemblyTypeName: TowerStatsNEW, Assembly-CSharp
-        m_MethodName: UpdateUpgradeToolTip
+        m_MethodName: UpdateLevelUpToolTip
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -31369,6 +31383,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4024176749668182314}
+  - component: {fileID: 4024176749668182317}
+  - component: {fileID: 4024176749668182316}
   m_Layer: 0
   m_Name: Spawn & Endpoint
   m_TagString: Untagged
@@ -31376,6 +31392,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4024176749668182316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4024176749668182315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cd385de10321614da2f5052e0556ca2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4024176749668182317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4024176749668182315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf7510d6852bc344fb78140f1f755b3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4024176749880019194
 GameObject:
   m_ObjectHideFlags: 0
