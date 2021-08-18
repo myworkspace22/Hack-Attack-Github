@@ -32,7 +32,7 @@ public class TowerStatsNEW : MonoBehaviour
     {
         ui.SetActive(false);
     }
-    public void UpdateUpgradeToolTip()//TurretBluePrint blueprint, Turret getTurret = null)
+    public void UpdateLevelUpToolTip()//TurretBluePrint blueprint, Turret getTurret = null)
     {
         TooltipTrigger tmp = upgradeButton;
         Turret turretToUpgrade = BuildManager.instance.selectedNode.turret.GetComponent<Turret>();
@@ -44,17 +44,17 @@ public class TowerStatsNEW : MonoBehaviour
             "Damage: " + turretToUpgrade.bulletDamage + " <color=#00FF00>-> " + (turretToUpgrade.bulletDamage + turretToUpgrade.upgradeDamage * (target.towerLevel + 1)) + "</color> \n" +
             "Range: " + turretToUpgrade.range * 100 + " <color=#00FF00>-> " + (turretToUpgrade.range + turretToUpgrade.upgradeRange) * 100 + "</color> \n" +
             "Frequency: " + turretToUpgrade.fireRate + " <color=#00FF00>-> " + (turretToUpgrade.fireRate + turretToUpgrade.upgradeFrenquency) + "</color>";
+
+        UpdateSellToolTip();
     }
 
-    public void UpdateSellToolTip(TurretBluePrint blueprint, Turret getTurret = null)
+    private void UpdateSellToolTip()
     {
         TooltipTrigger tmp = sellButton;
-        Turret tmpTurret = getTurret != null ? getTurret : blueprint.prefab.GetComponent<Turret>();
+        Node node = BuildManager.instance.selectedNode;
+        //Turret tmpTurret = getTurret != null ? getTurret : blueprint.prefab.GetComponent<Turret>();
         tmp.ShowUi = true;
-        tmp.header = tmpTurret.nameTurrent;
-        tmp.content = $"Damage: {tmpTurret.bulletDamage} \nRange: {tmpTurret.range * 100} \nFrequency: {tmpTurret.fireRate}";
+
+        tmp.content = "Amount: <color=#FFD500>$" + node.SellAmount + "</color>";
     }
-
-
-
 }

@@ -99,7 +99,7 @@ public class BuildManager : MonoBehaviour
 
         //nodeUI.SetTarget(node);
         towerStatsUI.SetTarget(node);
-        towerStatsUI.UpdateUpgradeToolTip();
+        towerStatsUI.UpdateLevelUpToolTip();
     }
     public void DeselectNode()
     {
