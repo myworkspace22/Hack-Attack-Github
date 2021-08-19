@@ -884,7 +884,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6015244019188668028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.2350557, y: -1.6277642, z: -28.257675}
+  m_LocalPosition: {x: -3.2350557, y: -1.6277642, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7251587041310783660}
@@ -1340,6 +1340,7 @@ GameObject:
   - component: {fileID: 7251587039909311892}
   - component: {fileID: 7251587039909311893}
   - component: {fileID: 7251587039909311894}
+  - component: {fileID: 3484694286844589067}
   m_Layer: 5
   m_Name: Cannon Tower
   m_TagString: Untagged
@@ -1475,17 +1476,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   header: Cannon
-  content: 'Cost: <color=#FFD500>$25</color>
+  content: 'Launches a missile that explodes
 
-    Launches a missile that explodes
-
-    Damage:
-    50
+    Damage: 50
 
     Range: 150
 
-    Frequency: 0,6'
+    Frequency:
+    0,6'
   _showUi: 1
+--- !u!114 &3484694286844589067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7251587039909311976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 320b10b8e0d5fab4bb983f119994f207, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerTooltip: {fileID: 7251587039909311894}
+  cost: 100
 --- !u!1 &7251587039954247629
 GameObject:
   m_ObjectHideFlags: 0
@@ -2968,6 +2981,7 @@ GameObject:
   - component: {fileID: 7251587040275090204}
   - component: {fileID: 7251587040275090205}
   - component: {fileID: 7251587040275090206}
+  - component: {fileID: 8262960720327570110}
   m_Layer: 5
   m_Name: Shooter Tower
   m_TagString: Untagged
@@ -3103,17 +3117,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   header: Shooter
-  content: 'Cost: <color=#FFD500>$20</color>
+  content: 'Shoots a single bullet at enemies
 
-    Shoots a single bullet at enemies
-
-    Damage:
-    25
+    Damage: 25
 
     Range: 150
 
-    Frequency: 1'
+    Frequency:
+    1'
   _showUi: 1
+--- !u!114 &8262960720327570110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7251587040275090192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 320b10b8e0d5fab4bb983f119994f207, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerTooltip: {fileID: 7251587040275090206}
+  cost: 50
 --- !u!1 &7251587040279688004
 GameObject:
   m_ObjectHideFlags: 0
@@ -3388,7 +3414,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7251587040330302241}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 10.428573, y: 10.428573, z: 0.7321}
   m_Children: []
   m_Father: {fileID: 7251587041808805125}
@@ -3618,6 +3644,7 @@ GameObject:
   - component: {fileID: 7251587040416285204}
   - component: {fileID: 7251587040416285205}
   - component: {fileID: 7251587040416285206}
+  - component: {fileID: 4631615663722719857}
   m_Layer: 5
   m_Name: Laser Tower
   m_TagString: Untagged
@@ -3753,17 +3780,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   header: Laser
-  content: 'Cost: <color=#FFD500>$30</color>
+  content: 'Shoots lasers at enemies with stun
 
-    Shoots lasers at enemies with stun
-
-    Damage:
-    70
+    Damage: 70
 
     Range: 160
 
-    Frequency: 1'
+    Frequency:
+    1'
   _showUi: 1
+--- !u!114 &4631615663722719857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7251587040416285288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 320b10b8e0d5fab4bb983f119994f207, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerTooltip: {fileID: 7251587040416285206}
+  cost: 175
 --- !u!1 &7251587040435641099
 GameObject:
   m_ObjectHideFlags: 0
@@ -6373,7 +6412,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7251587041180649505}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.35923457, y: 0.5021286, z: 27.257675}
+  m_LocalPosition: {x: 0.35923457, y: 0.5021286, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 7251587041310783660}
@@ -9207,7 +9246,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7251587041808805145}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.860056, y: 4.002764, z: 27.257675}
+  m_LocalPosition: {x: 4.860056, y: 4.002764, z: 0}
   m_LocalScale: {x: 0.07, y: 0.07, z: 1}
   m_Children:
   - {fileID: 7251587040330302255}
@@ -9253,7 +9292,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: a0c70332db54a9f4b96fb65c8ea45bd6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9465,7 +9504,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7251587041880805965}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.36005569, y: 0.5027642, z: 28.257675}
+  m_LocalPosition: {x: 0.36005569, y: 0.5027642, z: 0}
   m_LocalScale: {x: 0.73, y: 0.73, z: 0.7321}
   m_Children: []
   m_Father: {fileID: 7251587041310783660}
