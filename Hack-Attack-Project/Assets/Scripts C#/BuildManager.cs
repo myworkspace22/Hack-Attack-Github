@@ -9,6 +9,8 @@ public class BuildManager : MonoBehaviour
 
     private Node target;
 
+    public GameObject levelUpUI, upgradeUI, MaxedUI;
+
     public static BuildManager instance;
     private void Awake()
     {
@@ -98,8 +100,9 @@ public class BuildManager : MonoBehaviour
         turretToBuild = null;
 
         //nodeUI.SetTarget(node);
+        UpdateUI();
         towerStatsUI.SetTarget(node);
-        towerStatsUI.UpdateLevelUpToolTip();
+        towerStatsUI.UpdateTowerToolTip();
     }
     public void DeselectNode()
     {
@@ -142,10 +145,27 @@ public class BuildManager : MonoBehaviour
     public void LevelUp()
     {
         selectedNode.levelUpTower();
+        UpdateUI();
     }
+
+    public void Upgrade(int upgradeIndex)
+    {
+        selectedNode.UpgradeTurret(upgradeIndex);
+        UpdateUI();
+    }
+
     public void Sell()
     {
         selectedNode.SellTurret();
         DeselectNode();
+    }
+
+    private void UpdateUI()
+    {
+        bool readyToUpgrade = selectedNode.towerLevel == 2 || selectedNode.towerLevel == 5;
+        bool maxed = selectedNode.towerLevel > 5;
+        levelUpUI.SetActive(!readyToUpgrade && !maxed);
+        upgradeUI.SetActive(readyToUpgrade);
+        MaxedUI.SetActive(maxed);
     }
 }
