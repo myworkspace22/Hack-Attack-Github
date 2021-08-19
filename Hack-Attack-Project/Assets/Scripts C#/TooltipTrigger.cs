@@ -15,8 +15,15 @@ public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     public void UpdateTooltipUI()
     {
-        //HideIT();
-        ShowIT();
+        if(BuildManager.instance.selectedNode.towerLevel <= 1 || BuildManager.instance.selectedNode.towerLevel == 4)
+        {
+            ShowIT();
+        }
+        else
+        {
+            HideIT();
+        }
+        
     }
 
     public void OnPointerEnter(PointerEventData eventData)
