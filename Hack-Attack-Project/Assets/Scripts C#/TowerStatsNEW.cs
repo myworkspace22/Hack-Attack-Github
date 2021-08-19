@@ -38,20 +38,26 @@ public class TowerStatsNEW : MonoBehaviour
 
     public void UpdateTowerToolTip()//TurretBluePrint blueprint, Turret getTurret = null)
     {
+        UpdateLevelUpToolTip();
+        UpdateUpgradeTooltip();
+        UpdateSellToolTip();
+    }
+
+    private void UpdateLevelUpToolTip()//TurretBluePrint blueprint, Turret getTurret = null)
+    {
         TooltipTrigger tmp = levelUpButton;
         Turret turretToUpgrade = BuildManager.instance.selectedNode.turret.GetComponent<Turret>();
         //Turret tmpTurret = getTurret != null ? getTurret : blueprint.prefab.GetComponent<Turret>();
         tmp.ShowUi = true;
-        
+
         int nextLevelCost = target.turretBlueprint.levelUpCost * (target.towerLevel + 1);
-        tmp.content = "Cost: <color=#FFD500>$" + nextLevelCost + "</color> \n" +
+        string color = (PlayerStats.Money >= nextLevelCost) ? "#FFD500" : "#9A9A9A";
+        tmp.content = "Cost: <color=" + color + ">$" + nextLevelCost + "</color> \n" +
             "Damage: " + turretToUpgrade.bulletDamage + " <color=#00FF00>-> " + (turretToUpgrade.bulletDamage + turretToUpgrade.upgradeDamage * (target.towerLevel + 1)) + "</color> \n" +
             "Range: " + turretToUpgrade.range * 100 + " <color=#00FF00>-> " + (turretToUpgrade.range + turretToUpgrade.upgradeRange) * 100 + "</color> \n" +
             "Frequency: " + turretToUpgrade.fireRate + " <color=#00FF00>-> " + (turretToUpgrade.fireRate + turretToUpgrade.upgradeFrenquency) + "</color>";
-
-        UpdateUpgradeTooltip();
     }
-    
+
     private void UpdateUpgradeTooltip()
     {
         if (target.isMaxed)
@@ -66,20 +72,29 @@ public class TowerStatsNEW : MonoBehaviour
         
         string currentTitle = (target.upgradeNr > 0) ? target.turretBlueprint.upgradeNames[target.upgradeNr - 1] : target.turretBlueprint.title;
 
-        tmp.header = currentTitle + " <color=#00FF00>-> " + target.turretBlueprint.upgradeNames[target.upgradeNr + 1 * multiplyer - 1] + "</color>";
-        tmp2.header = currentTitle + " <color=#00FF00>-> " + target.turretBlueprint.upgradeNames[target.upgradeNr + 2 * multiplyer - 1] + "</color>";
+        tmp.header = target.turretBlueprint.upgradeNames[target.upgradeNr + 1 * multiplyer - 1];
+        tmp2.header = target.turretBlueprint.upgradeNames[target.upgradeNr + 2 * multiplyer - 1];
 
-        tmp.content = "Damage: " + turretToUpgrade.bulletDamage + " <color=#00FF00>-> " + target.turretBlueprint.upgradedPrefab[target.upgradeNr + 1 * multiplyer - 1].GetComponent<Turret>().bulletDamage + "</color>\n" +
-            " Range: " + turretToUpgrade.range * 100 + " <color=#00FF00>-> " + target.turretBlueprint.upgradedPrefab[target.upgradeNr + 1 * multiplyer - 1].GetComponent<Turret>().range * 100 + "</color>\n" +
+        string color = (PlayerStats.Money >= target.turretBlueprint.upgradeCost[target.upgradeNr + 1 * multiplyer - 1]) ? "#FFD500" : "#9A9A9A";
+
+        tmp.content = "Cost: <color=" + color + ">$" + target.turretBlueprint.upgradeCost[target.upgradeNr + 1 * multiplyer - 1] + "</color>\n" +
+            "Damage: " + turretToUpgrade.bulletDamage + " <color=#00FF00>-> " + target.turretBlueprint.upgradedPrefab[target.upgradeNr + 1 * multiplyer - 1].GetComponent<Turret>().bulletDamage + "</color>\n" +
+            "Range: " + turretToUpgrade.range * 100 + " <color=#00FF00>-> " + target.turretBlueprint.upgradedPrefab[target.upgradeNr + 1 * multiplyer - 1].GetComponent<Turret>().range * 100 + "</color>\n" +
             "Frequency: " + turretToUpgrade.fireRate + " <color=#00FF00>-> " + target.turretBlueprint.upgradedPrefab[target.upgradeNr + 1 * multiplyer - 1].GetComponent<Turret>().fireRate + "</color>\n" +
-            "<color=#00FF00>" + target.turretBlueprint.upgradeEffect[target.upgradeNr + 1 * multiplyer - 1] + "</color>";
+            target.turretBlueprint.upgradeEffect[target.upgradeNr + 1 * multiplyer - 1];
 
-        tmp2.content = "Damage: " + turretToUpgrade.bulletDamage + " <color=#00FF00>-> " + target.turretBlueprint.upgradedPrefab[target.upgradeNr + 2 * multiplyer - 1].GetComponent<Turret>().bulletDamage + "</color>\n" +
-            " Range: " + turretToUpgrade.range * 100 + " <color=#00FF00>-> " + target.turretBlueprint.upgradedPrefab[target.upgradeNr + 2 * multiplyer - 1].GetComponent<Turret>().range * 100 + "</color>\n" +
+        color = (PlayerStats.Money >= target.turretBlueprint.upgradeCost[target.upgradeNr + 2 * multiplyer - 1]) ? "#FFD500" : "#9A9A9A";
+
+        tmp2.content = "Cost: <color=" + color + ">$" + target.turretBlueprint.upgradeCost[target.upgradeNr + 2 * multiplyer - 1] + "</color>\n" +
+            "Damage: " + turretToUpgrade.bulletDamage + " <color=#00FF00>-> " + target.turretBlueprint.upgradedPrefab[target.upgradeNr + 2 * multiplyer - 1].GetComponent<Turret>().bulletDamage + "</color>\n" +
+            "Range: " + turretToUpgrade.range * 100 + " <color=#00FF00>-> " + target.turretBlueprint.upgradedPrefab[target.upgradeNr + 2 * multiplyer - 1].GetComponent<Turret>().range * 100 + "</color>\n" +
             "Frequency: " + turretToUpgrade.fireRate + " <color=#00FF00>-> " + target.turretBlueprint.upgradedPrefab[target.upgradeNr + 2 * multiplyer - 1].GetComponent<Turret>().fireRate + "</color>\n" +
-            "<color=#00FF00>" + target.turretBlueprint.upgradeEffect[target.upgradeNr + 2 * multiplyer - 1] + "</color>";
+            target.turretBlueprint.upgradeEffect[target.upgradeNr + 2 * multiplyer - 1] ;
 
-        UpdateSellToolTip();
+        upgradeImage.sprite = target.turretBlueprint.upgradeIcon[target.upgradeNr + 1 * multiplyer - 1];
+
+        upgradeImage2.sprite = target.turretBlueprint.upgradeIcon[target.upgradeNr + 2 * multiplyer - 1];
+
     }
     
     private void UpdateSellToolTip()

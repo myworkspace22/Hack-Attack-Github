@@ -12,6 +12,7 @@ public class TurretBluePrint
     public int levelUpCost;
 
     public string[] upgradeNames;
+    public Sprite[] upgradeIcon;
     public string[] upgradeDescription;
     public GameObject[] upgradedPrefab;
     public int[] upgradeCost;
