@@ -208,8 +208,9 @@ public class Node : MonoBehaviour
         TooltipTrigger tmp = GetComponent<TooltipTrigger>();
         Turret tmpTurret = getTurret != null ? getTurret : blueprint.prefab.GetComponent<Turret>();
         tmp.ShowUi = true;
-        tmp.header = tmpTurret.nameTurrent;
-        tmp.content = $"Damage: {tmpTurret.bulletDamage} \nRange: {tmpTurret.range * 100} \nFrequency: {tmpTurret.fireRate}";
+        tmp.header = (upgradeNr > 0) ? turretBlueprint.upgradeNames[upgradeNr -1]: turretBlueprint.title;
+        string effetTxt = (upgradeNr > 0) ? turretBlueprint.upgradeEffect[upgradeNr - 1] : "";
+        tmp.content = $"Damage: {tmpTurret.bulletDamage} \nRange: {tmpTurret.range * 100} \nFrequency: {tmpTurret.fireRate}\n{effetTxt}";
     }
 
     public void levelUpTower()

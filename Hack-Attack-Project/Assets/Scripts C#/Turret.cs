@@ -9,7 +9,7 @@ public class Turret : MonoBehaviour
     private Enemy targetEnemy;
 
     [Header("General")]
-    public string nameTurrent;
+    // string nameTurrent;
     public float range = 15f;
     public bool nearestTarget = false;
     //public GameObject towerRange;

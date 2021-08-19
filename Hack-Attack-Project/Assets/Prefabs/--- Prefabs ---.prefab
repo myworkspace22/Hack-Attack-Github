@@ -2953,8 +2953,8 @@ MonoBehaviour:
   sellButton: {fileID: 7251587040764531826}
   sellButton2: {fileID: 7251587041617392528}
   sellButton3: {fileID: 1568521507614591632}
-  upgradeImage: {fileID: 0}
-  upgradeImage2: {fileID: 0}
+  upgradeImage: {fileID: 7251587040117149876}
+  upgradeImage2: {fileID: 7251587041291824374}
 --- !u!1 &7251587040275090192
 GameObject:
   m_ObjectHideFlags: 0
@@ -5842,6 +5842,13 @@ MonoBehaviour:
     - Venom
     - Heavy
     - Sniper
+    upgradeIcon:
+    - {fileID: 21300000, guid: c0ba584581e131441bfb7a777fad678f, type: 3}
+    - {fileID: 21300000, guid: abecb97f208deac4694295013b968d2f, type: 3}
+    - {fileID: 21300000, guid: 3900bfab6c947304385eb75e283ceebc, type: 3}
+    - {fileID: 21300000, guid: 12c84ce37998b1f4da4e65ba7f7b0346, type: 3}
+    - {fileID: 21300000, guid: bf1d7689313dc7d48a6119cdba63c5d1, type: 3}
+    - {fileID: 21300000, guid: 18f40374a2241a24e9b793fa1333979a, type: 3}
     upgradeDescription:
     - Shoots out bullets at a higher frequency
     - Shoot enemies at a longer range
@@ -5861,7 +5868,7 @@ MonoBehaviour:
     - 
     - 
     - 
-    - 'Effect: damage over time'
+    - 'Effect: <color=#00FF00>damage over time</color>'
     - 
     - 
   missileTurret:
@@ -5877,6 +5884,13 @@ MonoBehaviour:
     - Nuke
     - Cluster
     - BuzzSaw
+    upgradeIcon:
+    - {fileID: 21300000, guid: 266ae015ad793894ca5c2c8b912f2acc, type: 3}
+    - {fileID: 21300000, guid: 43552e3692a5a34408dff41da17022b4, type: 3}
+    - {fileID: 21300000, guid: 794f060c1cff9d841b09303427290a42, type: 3}
+    - {fileID: 21300000, guid: 17e4b70d14675804181d7799bdb6570b, type: 3}
+    - {fileID: 21300000, guid: 11c68c16f510b574093418da71a5d898, type: 3}
+    - {fileID: 21300000, guid: e75a507548af9bd4897e5667e03cc8cc, type: 3}
     upgradeDescription:
     - Can shoot two missiles at a time that no longer explodes
     - Throws out a powerful explosion causing high damage
@@ -5895,7 +5909,7 @@ MonoBehaviour:
     upgradeEffect:
     - 
     - 
-    - 'Effect: damage over time'
+    - 'Effect: <color=#00FF00>damage over time</color>'
     - 
     - 
     - 
@@ -5912,6 +5926,13 @@ MonoBehaviour:
     - Electro
     - Splitter
     - Telsa
+    upgradeIcon:
+    - {fileID: 21300000, guid: 06e83ef5ef4c9a346a5bef0dc2936a2a, type: 3}
+    - {fileID: 21300000, guid: e429347f138ac7e4cbf1bb6041d32eb0, type: 3}
+    - {fileID: 21300000, guid: d2736f7ae2b58fe4585897943d9b7af0, type: 3}
+    - {fileID: 21300000, guid: 6b971951cb17a0e45a9919e559f288bf, type: 3}
+    - {fileID: 21300000, guid: e69daa4e8ddfc0a41bf4d7172ebbde6e, type: 3}
+    - {fileID: 21300000, guid: dcaececb394caaf48ab1b9872e6ccf18, type: 3}
     upgradeDescription:
     - Fires a laser that slows down enemies
     - Shoots laser beams at enemies with stun
@@ -5928,11 +5949,11 @@ MonoBehaviour:
     - {fileID: 5556433950650397502, guid: 4ef270e71c19edc46a68d2772230cb94, type: 3}
     upgradeCost: c201000090010000b603000084030000e8030000b6030000
     upgradeEffect:
-    - 'Effect: slowing'
+    - 'Effect: <color=#00FF00>slowing</color>'
     - 
-    - 'Effect: slowing'
+    - 'Effect: <color=#00FF00>slowing</color>'
     - 
-    - 'Effect: slowing'
+    - 'Effect: <color=#00FF00>slowing</color>'
     - 
 --- !u!114 &7251587040906788499
 MonoBehaviour:
