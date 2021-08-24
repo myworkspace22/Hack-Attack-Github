@@ -64,8 +64,7 @@ public class WaveSpawner : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(EnemiesAlive);
-
+        
         //enCount = EnemiesAlive; //til at kunne se hvor mange enemies der er i banen
         if (Input.GetKeyDown("space")/* && BuildMode*/)
         {
@@ -184,7 +183,6 @@ public class WaveSpawner : MonoBehaviour
         portalsReady++;
         if (portalsReady >= spawnPortals.Length)
         {
-            Debug.Log("Ready to spawn next wave");
             waveIndex++;
         }
     }

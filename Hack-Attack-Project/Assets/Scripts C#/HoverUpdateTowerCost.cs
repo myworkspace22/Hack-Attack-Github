@@ -28,6 +28,6 @@ public class HoverUpdateTowerCost : MonoBehaviour
 
         towerTooltip.content = "Cost: <color=" + color + ">$" + cost + "</color>\n" + baseContent;
 
-        towerTooltip.UpdateTooltipUI();
+        towerTooltip.UpdateTowerTooltipUI();
     }
 }

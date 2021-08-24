@@ -168,8 +168,6 @@ GameObject:
   - component: {fileID: 1653801403843016940}
   - component: {fileID: 821571920755079990}
   - component: {fileID: 1416387550602810360}
-  - component: {fileID: 3231044928613001113}
-  - component: {fileID: 3752176085648901548}
   m_Layer: 0
   m_Name: Portal
   m_TagString: Untagged
@@ -255,49 +253,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotation: -40
---- !u!114 &3231044928613001113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 656090819745924121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d68b7dfc82ed1ef4080a7cd6149e972d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  header: <color=#FF0000>INCOMING WAVE</color>
-  content: 'Fighters x2
-
-    Strong x6'
-  _showUi: 1
---- !u!61 &3752176085648901548
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 656090819745924121}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
-    newSize: {x: 2, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.883514, y: 2.880846}
-  m_EdgeRadius: 0
 --- !u!1 &1055405946230125643
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,6 +263,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7634283620098183942}
   - component: {fileID: 4070870526656383876}
+  - component: {fileID: 5365745445028734221}
+  - component: {fileID: 5132092318591899842}
+  - component: {fileID: 5923820414320871358}
   m_Layer: 0
   m_Name: Spawn Portal (1)
   m_TagString: Untagged
@@ -346,22 +304,82 @@ MonoBehaviour:
   waveSpawner: {fileID: 6015244018461862571}
   waves:
   - enemies:
-    - enemy: {fileID: 5975281576349636344, guid: 146cc806fe0558b48b5e5a601967e8f6, type: 3}
+    - enemyName: Fast
+      enemy: {fileID: 5975281576349636344, guid: 146cc806fe0558b48b5e5a601967e8f6, type: 3}
       count: 4
       rate: 3
   - enemies:
-    - enemy: {fileID: 5975281576349636344, guid: 146cc806fe0558b48b5e5a601967e8f6, type: 3}
+    - enemyName: Fast
+      enemy: {fileID: 5975281576349636344, guid: 146cc806fe0558b48b5e5a601967e8f6, type: 3}
       count: 3
       rate: 0.4
-    - enemy: {fileID: 5975281576349636344, guid: 8958b854c78210340a188cbf1486f413, type: 3}
+    - enemyName: Stromg
+      enemy: {fileID: 5975281576349636344, guid: 8958b854c78210340a188cbf1486f413, type: 3}
       count: 2
       rate: 1.3
-    - enemy: {fileID: 5975281576349636344, guid: 940fad39164ca9141802a89e070abe6b, type: 3}
+    - enemyName: Regular
+      enemy: {fileID: 5975281576349636344, guid: 940fad39164ca9141802a89e070abe6b, type: 3}
       count: 4
       rate: 1
-    - enemy: {fileID: 5975281576349636344, guid: 146cc806fe0558b48b5e5a601967e8f6, type: 3}
+    - enemyName: Fast
+      enemy: {fileID: 5975281576349636344, guid: 146cc806fe0558b48b5e5a601967e8f6, type: 3}
       count: 3
       rate: 0.4
+--- !u!114 &5365745445028734221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055405946230125643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f576c76857b79a4086449dcbf0b7e78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPortal: {fileID: 4070870526656383876}
+  spawnTooltip: {fileID: 5132092318591899842}
+--- !u!114 &5132092318591899842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055405946230125643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d68b7dfc82ed1ef4080a7cd6149e972d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  header: <color=#FF0000>INCOMING WAVE</color>
+  content: 
+  _showUi: 1
+--- !u!61 &5923820414320871358
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055405946230125643}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 2, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.73, y: 0.73}
+  m_EdgeRadius: 0
 --- !u!1 &1178129859645467508
 GameObject:
   m_ObjectHideFlags: 0
@@ -6473,8 +6491,6 @@ GameObject:
   - component: {fileID: 7251587041180649518}
   - component: {fileID: 7251587041180649519}
   - component: {fileID: 7251587041180649504}
-  - component: {fileID: 7251587041180649516}
-  - component: {fileID: 7251587041180649517}
   m_Layer: 0
   m_Name: Portal
   m_TagString: Untagged
@@ -6560,49 +6576,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotation: -40
---- !u!114 &7251587041180649516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7251587041180649505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d68b7dfc82ed1ef4080a7cd6149e972d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  header: <color=#FF0000>INCOMING WAVE</color>
-  content: 'Fighters x2
-
-    Strong x6'
-  _showUi: 1
---- !u!61 &7251587041180649517
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7251587041180649505}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
-    newSize: {x: 2, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.883514, y: 2.880846}
-  m_EdgeRadius: 0
 --- !u!1 &7251587041245878160
 GameObject:
   m_ObjectHideFlags: 0
@@ -7303,6 +7276,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7251587041310783660}
   - component: {fileID: 8077055468838727924}
+  - component: {fileID: 3041610407390307334}
+  - component: {fileID: 975193388757971201}
+  - component: {fileID: 3642327890764244859}
   m_Layer: 0
   m_Name: Spawn Portal
   m_TagString: Untagged
@@ -7341,28 +7317,78 @@ MonoBehaviour:
   waveSpawner: {fileID: 6015244018461862571}
   waves:
   - enemies:
-    - enemy: {fileID: 5975281576349636344, guid: 940fad39164ca9141802a89e070abe6b, type: 3}
+    - enemyName: Regular
+      enemy: {fileID: 5975281576349636344, guid: 940fad39164ca9141802a89e070abe6b, type: 3}
       count: 2
       rate: 1
-    - enemy: {fileID: 0}
+    - enemyName: 
+      enemy: {fileID: 0}
       count: 2
       rate: 1
-    - enemy: {fileID: 5975281576349636344, guid: 940fad39164ca9141802a89e070abe6b, type: 3}
+    - enemyName: Regular
+      enemy: {fileID: 5975281576349636344, guid: 940fad39164ca9141802a89e070abe6b, type: 3}
       count: 2
       rate: 1
   - enemies:
-    - enemy: {fileID: 5975281576349636344, guid: 146cc806fe0558b48b5e5a601967e8f6, type: 3}
-      count: 3
+    - enemyName: Fast
+      enemy: {fileID: 5975281576349636344, guid: 146cc806fe0558b48b5e5a601967e8f6, type: 3}
+      count: 9
       rate: 0.4
-    - enemy: {fileID: 5975281576349636344, guid: 8958b854c78210340a188cbf1486f413, type: 3}
-      count: 2
-      rate: 1.3
-    - enemy: {fileID: 5975281576349636344, guid: 940fad39164ca9141802a89e070abe6b, type: 3}
-      count: 4
-      rate: 1
-    - enemy: {fileID: 5975281576349636344, guid: 146cc806fe0558b48b5e5a601967e8f6, type: 3}
-      count: 3
-      rate: 0.4
+--- !u!114 &3041610407390307334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7251587041310783661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f576c76857b79a4086449dcbf0b7e78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPortal: {fileID: 8077055468838727924}
+  spawnTooltip: {fileID: 975193388757971201}
+--- !u!114 &975193388757971201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7251587041310783661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d68b7dfc82ed1ef4080a7cd6149e972d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  header: <color=#FF0000>INCOMING WAVE</color>
+  content: 
+  _showUi: 1
+--- !u!61 &3642327890764244859
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7251587041310783661}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 2, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.73, y: 0.73}
+  m_EdgeRadius: 0
 --- !u!1 &7251587041322735280
 GameObject:
   m_ObjectHideFlags: 0
