@@ -4858,6 +4858,7 @@ MonoBehaviour:
     - Venom
     - Heavy
     - Sniper
+    upgradeIcon: []
     upgradeDescription:
     - Shoots out bullets at a higher frequency
     - Shoot enemies at a longer range
@@ -4893,6 +4894,7 @@ MonoBehaviour:
     - Nuke
     - Cluster
     - BuzzSaw
+    upgradeIcon: []
     upgradeDescription:
     - Can shoot two missiles at a time that no longer explodes
     - Throws out a powerful explosion causing high damage
@@ -4928,6 +4930,7 @@ MonoBehaviour:
     - Electro
     - Splitter
     - Telsa
+    upgradeIcon: []
     upgradeDescription:
     - Fires a laser that slows down enemies
     - Shoots laser beams at enemies with stun
@@ -6947,7 +6950,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &596758322245103399
 MonoBehaviour:
   m_ObjectHideFlags: 0

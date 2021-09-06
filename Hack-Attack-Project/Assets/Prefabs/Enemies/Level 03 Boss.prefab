@@ -482,7 +482,7 @@ Transform:
   m_GameObject: {fileID: 5975281576349636344}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_Children:
   - {fileID: 2611874495231560172}
   - {fileID: 7705170075573851899}
@@ -501,7 +501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d74dac3fb455d549bfd69d47fc26ce4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHealth: 11000
+  startHealth: 1600
   maxSpeed: 0.5
   damage: 5
   worth: 50
@@ -675,7 +675,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7938309800727462650
 Transform:
   m_ObjectHideFlags: 0

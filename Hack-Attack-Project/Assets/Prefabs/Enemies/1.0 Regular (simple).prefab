@@ -121,7 +121,7 @@ MonoBehaviour:
   startHealth: 100
   maxSpeed: 1
   damage: 1
-  worth: 25
+  worth: 10
   speed: 0
   stunResistence: 0.3
   deathEffect: {fileID: 1787491968115139843, guid: 72ae324c15b9e6d43895e32d4fc3c2c3, type: 3}
