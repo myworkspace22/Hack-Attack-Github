@@ -24,9 +24,11 @@ public class WaveSpawner : MonoBehaviour
 
     public GameManager gameManager;
 
-    public Wave[] waves;
+    public SpawnPortal[] spawnPortals;
 
-    public Transform[] spawnPoints;
+    //public Wave[] waves; 
+
+    //public Transform[] spawnPoints;
     public Transform endPoint;
 
     public float timeBetweenWaves = 5f;
@@ -48,6 +50,8 @@ public class WaveSpawner : MonoBehaviour
 
     public bool BuildMode { get { return EnemiesAlive <= 0; } }
 
+    public int portalsReady;
+
     private void Start()
     {
         //nameOfLevelUI.text = nameOfLevel + " (wave: " + (waveIndex) + " - " + waves.Length + ")";
@@ -55,10 +59,12 @@ public class WaveSpawner : MonoBehaviour
         gameSpeed = 1;
         isPaused = false;
         EnemiesAlive = 0;
+        portalsReady = spawnPortals.Length;
     }
 
     private void Update()
     {
+        
         //enCount = EnemiesAlive; //til at kunne se hvor mange enemies der er i banen
         if (Input.GetKeyDown("space")/* && BuildMode*/)
         {
@@ -70,7 +76,7 @@ public class WaveSpawner : MonoBehaviour
         }
         if (BuildMode && currentArrow == null && !arrowPathDeactive && !isPaused)
         {
-            currentArrow = Instantiate(arrowPath, spawnPoints[UnityEngine.Random.Range(0, 4)].position, spawnPoints[UnityEngine.Random.Range(0, 4)].rotation);
+            currentArrow = Instantiate(arrowPath, spawnPortals[UnityEngine.Random.Range(0, spawnPortals.Length)].transform.position, spawnPortals[UnityEngine.Random.Range(0, spawnPortals.Length)].transform.rotation);
             currentArrow.GetComponent<AIDestinationSetter>().target = endPoint;
         }
 
@@ -91,7 +97,15 @@ public class WaveSpawner : MonoBehaviour
             waveEnded = true;
             OnWaveEnded?.Invoke();
         }
-        if (waveIndex == waves.Length)
+        int waveMaxlength = 0;
+        for (int i = 0; i < spawnPortals.Length; i++)
+        {
+            if (spawnPortals[i].waves.Length > waveMaxlength)
+            {
+                waveMaxlength = spawnPortals[i].waves.Length;
+            }
+        }
+        if (waveIndex == waveMaxlength)
         {
             if(PlayerStats.Lives > 0)
             {
@@ -105,8 +119,8 @@ public class WaveSpawner : MonoBehaviour
             BuildManager.instance.DeselectNode();
             Time.timeScale = gameSpeed;
             waveCountdownText.text = "SPEED (x" + Time.timeScale + ")";
-            StartCoroutine(SpawnWave());
-            countdown = timeBetweenWaves;
+            SpawnWave();
+
             //PlayerStats.Money += (PlayerStats.Money - PlayerStats.Money % 100) / 5;
             return;
         }
@@ -142,9 +156,15 @@ public class WaveSpawner : MonoBehaviour
         //    enemyName.text = "Final Boss: <color=#00FF00>" + waves[waveIndex].enemies[0].enemy.GetComponent<Enemy>().startHealth + " HP</color>";
         //}
     }
-    IEnumerator SpawnWave()
+
+    private void SpawnWave()
     {
-        //nameOfLevelUI.text = nameOfLevel + " (wave: " + (waveIndex + 1) + " - " + waves.Length + ")";
+        portalsReady = 0;
+
+        for (int i = 0; i < spawnPortals.Length; i++)
+        {
+            StartCoroutine(spawnPortals[i].SpawnWave(waveIndex));
+        }
 
         BuildManager.instance.DeselectShopItem();
 
@@ -156,36 +176,64 @@ public class WaveSpawner : MonoBehaviour
 
         BuildManager.instance.ClearStack();
 
-        Wave wave = waves[waveIndex];
-        
-        for (int i = 0; i < wave.enemies.Length; i++)
-        {
-            EnemiesAlive += wave.enemies[i].count;
-        }
-
-        //enemyName.text = "Incoming: <color=#00FF00>" + wave.enemies[0].enemy.GetComponent<Enemy>().startHealth + " HP</color>";
-
-        //enemyImage.sprite = wave.enemies[0].enemy.GetComponentInChildren<SpriteRenderer>().sprite;
-
-        for (int i = 0; i < wave.enemies.Length; i++)
-        {
-            for (int j = 0; j < wave.enemies[i].count; j++)
-            {
-                SpawnEnemy(wave.enemies[i].enemy);
-                //if(j < wave.enemies[i].count - 1)
-                //{
-                    yield return new WaitForSeconds(1f / wave.enemies[i].rate);
-                //}
-            }
-        }
-
-        waveIndex++;
+        countdown = timeBetweenWaves;
     }
-    void SpawnEnemy(GameObject enemy)
+    public void PortalWaweEnded()
     {
-        GameObject e = Instantiate(enemy, spawnPoints[UnityEngine.Random.Range(0, 4)].position, spawnPoints[UnityEngine.Random.Range(0, 4)].rotation);
-        e.GetComponent<AIDestinationSetter>().target = endPoint;
+        portalsReady++;
+        if (portalsReady >= spawnPortals.Length)
+        {
+            waveIndex++;
+        }
     }
+
+    //IEnumerator SpawnWave()
+    //{
+    //    //nameOfLevelUI.text = nameOfLevel + " (wave: " + (waveIndex + 1) + " - " + waves.Length + ")";
+
+    //    BuildManager.instance.DeselectShopItem();
+
+    //    Destroy(currentArrow);
+
+    //    PlayerStats.Rounds++;
+
+    //    OnWavePriceLocked?.Invoke();
+
+    //    BuildManager.instance.ClearStack();
+
+    //    Wave wave = waves[waveIndex];
+        
+    //    for (int i = 0; i < wave.enemies.Length; i++)
+    //    {
+    //        EnemiesAlive += wave.enemies[i].count;
+    //    }
+
+    //    //enemyName.text = "Incoming: <color=#00FF00>" + wave.enemies[0].enemy.GetComponent<Enemy>().startHealth + " HP</color>";
+
+    //    //enemyImage.sprite = wave.enemies[0].enemy.GetComponentInChildren<SpriteRenderer>().sprite;
+
+    //    for (int i = 0; i < wave.enemies.Length; i++)
+    //    {
+    //        for (int j = 0; j < wave.enemies[i].count; j++)
+    //        {
+    //            if (wave.enemies[i].enemy != null)
+    //            {
+    //                SpawnEnemy(wave.enemies[i].enemy);
+    //            }
+    //            //if(j < wave.enemies[i].count - 1)
+    //            //{
+    //                yield return new WaitForSeconds(1f / wave.enemies[i].rate);
+    //            //}
+    //        }
+    //    }
+
+    //    waveIndex++;
+    //}
+    //void SpawnEnemy(GameObject enemy)
+    //{
+    //    GameObject e = Instantiate(enemy, spawnPoints[UnityEngine.Random.Range(0, 4)].position, spawnPoints[UnityEngine.Random.Range(0, 4)].rotation);
+    //    e.GetComponent<AIDestinationSetter>().target = endPoint;
+    //}
 
     public void ReadyUp()
     {

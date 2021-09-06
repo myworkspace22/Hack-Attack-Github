@@ -13,7 +13,7 @@ public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     private bool _showUi = true;
     public bool ShowUi { get => _showUi; set => _showUi = value; }
 
-    public void UpdateTooltipUI()
+    public void UpdateTowerTooltipUI()
     {
         if (BuildManager.instance.selectedNode == null)
             return;
@@ -27,6 +27,10 @@ public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
             HideIT();
         }
         
+    }
+    public void UpdateTooltipUI()
+    {
+            ShowIT();
     }
 
     public void OnPointerEnter(PointerEventData eventData)

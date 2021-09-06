@@ -5,13 +5,24 @@ using UnityEngine;
 
 public class PathChecker : MonoBehaviour
 {
-    public Transform endTarget;
+    public Transform[] spawnPositions;
+    public Transform basePosition;
+
 
     public bool PathCheck()
     {
-        GraphNode node1 = AstarPath.active.GetNearest(transform.position, NNConstraint.Default).node;
-        GraphNode node2 = AstarPath.active.GetNearest(endTarget.position, NNConstraint.Default).node;
+        GraphNode spawnNode;
+        GraphNode baseNode = AstarPath.active.GetNearest(basePosition.position, NNConstraint.Default).node;
 
-        return PathUtilities.IsPathPossible(node1, node2);
+        for (int i = 0; i < spawnPositions.Length; i++)
+        {
+            spawnNode = AstarPath.active.GetNearest(spawnPositions[i].position, NNConstraint.Default).node;
+            if (!PathUtilities.IsPathPossible(spawnNode, baseNode))
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
 }
