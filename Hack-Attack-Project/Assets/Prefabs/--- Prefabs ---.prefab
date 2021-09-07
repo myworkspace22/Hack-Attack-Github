@@ -6001,8 +6001,8 @@ MonoBehaviour:
     title: Shooter
     description: Shoots a single bullet at nearby enemies
     prefab: {fileID: 7916541085778940208, guid: 7771ac83e91ba994ca249dff24c09796, type: 3}
-    cost: 50
-    levelUpCost: 50
+    cost: 20
+    levelUpCost: 20
     upgradeNames:
     - Machinegun
     - Blaster
@@ -6043,8 +6043,8 @@ MonoBehaviour:
     title: Missile
     description: Launches a missile that explodes in a radius on impact
     prefab: {fileID: 4133119791020861501, guid: f77f4c037301bcb458924e096a3d3684, type: 3}
-    cost: 100
-    levelUpCost: 100
+    cost: 20
+    levelUpCost: 20
     upgradeNames:
     - Cannonade
     - Cannon
@@ -6085,8 +6085,8 @@ MonoBehaviour:
     title: Laser
     description: Shoots lasers at enemies with stun
     prefab: {fileID: 5556433950650397502, guid: f4615c7410a365e428c6f329470011b9, type: 3}
-    cost: 150
-    levelUpCost: 150
+    cost: 20
+    levelUpCost: 20
     upgradeNames:
     - Beamer
     - Zapper
