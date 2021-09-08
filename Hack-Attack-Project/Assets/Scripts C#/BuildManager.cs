@@ -144,7 +144,7 @@ public class BuildManager : MonoBehaviour
     //}
     public void LevelUp()
     {
-        selectedNode.levelUpTower();
+        selectedNode.LevelUpTower();
         UpdateUI();
     }
 
