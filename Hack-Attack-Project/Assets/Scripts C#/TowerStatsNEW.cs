@@ -53,7 +53,7 @@ public class TowerStatsNEW : MonoBehaviour
         int nextLevelCost = (int)(Mathf.Pow(2, target.towerLevel + 1) * 10);
         string color = (PlayerStats.Money >= nextLevelCost) ? "#FFD500" : "#9A9A9A";
         tmp.content = "Cost: <color=" + color + ">$" + nextLevelCost + "</color> \n" +
-            "Damage: " + turretToUpgrade.bulletDamage + " <color=#00FF00>-> " + (turretToUpgrade.bulletDamage + turretToUpgrade.upgradeDamage * (target.towerLevel + 1)) + "</color> \n" +
+            "Damage: " + turretToUpgrade.bulletDamage + " <color=#00FF00>-> " + (turretToUpgrade.bulletDamage + turretToUpgrade.upgradeDamage) + "</color> \n" +
             "Range: " + turretToUpgrade.range * 100 + " <color=#00FF00>-> " + (turretToUpgrade.range + turretToUpgrade.upgradeRange) * 100 + "</color> \n" +
             "Frequency: " + turretToUpgrade.fireRate + " <color=#00FF00>-> " + (turretToUpgrade.fireRate + turretToUpgrade.upgradeFrenquency) + "</color>";
     }
