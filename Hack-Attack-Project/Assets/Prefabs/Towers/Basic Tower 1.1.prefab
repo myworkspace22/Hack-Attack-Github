@@ -358,15 +358,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  nameTurrent: Machinegunname
   range: 1.8
   nearestTarget: 0
-  upgradeDamage: 10
+  upgradeDamage: 25
   upgradeRange: 0.1
-  upgradeFrenquency: 0.5
+  upgradeFrenquency: 1.4
   upgradeLaserDoT: 0
-  bulletDamage: 65
-  fireRate: 3
+  bulletDamage: 30
+  fireRate: 2.6
   multiTargets: 0
   multiDelay: 0
   increseFrenquencyPct: 0

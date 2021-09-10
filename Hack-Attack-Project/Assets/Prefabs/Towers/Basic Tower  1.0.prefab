@@ -661,12 +661,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  nameTurrent: <sprite=1> Shooter
   range: 1.5
   nearestTarget: 0
   upgradeDamage: 25
   upgradeRange: 0.1
-  upgradeFrenquency: 0
+  upgradeFrenquency: 0.1
   upgradeLaserDoT: 0
   bulletDamage: 25
   fireRate: 1

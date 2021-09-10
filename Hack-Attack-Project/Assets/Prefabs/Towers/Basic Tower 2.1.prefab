@@ -358,14 +358,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  nameTurrent: 
   range: 2.4
   nearestTarget: 0
-  upgradeDamage: 25
-  upgradeRange: 0.2
+  upgradeDamage: 170
+  upgradeRange: 0.8
   upgradeFrenquency: 0
   upgradeLaserDoT: 0
-  bulletDamage: 175
+  bulletDamage: 130
   fireRate: 1
   multiTargets: 0
   multiDelay: 0
