@@ -165,10 +165,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d74dac3fb455d549bfd69d47fc26ce4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHealth: 125
+  startHealth: 25
   maxSpeed: 2
+  defence: 0
   damage: 1
-  worth: 25
+  worth: 2
   speed: 0
   stunResistence: 0.3
   deathEffect: {fileID: 1787491968115139843, guid: 72ae324c15b9e6d43895e32d4fc3c2c3, type: 3}
