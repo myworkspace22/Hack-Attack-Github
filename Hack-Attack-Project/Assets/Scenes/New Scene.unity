@@ -13454,7 +13454,7 @@ MonoBehaviour:
     - enemyName: Fast
       enemy: {fileID: 5975281576349636344, guid: 146cc806fe0558b48b5e5a601967e8f6, type: 3}
       count: 15
-      rate: 2
+      rate: 3
   - enemies:
     - enemyName: Strong
       enemy: {fileID: 5975281576349636344, guid: 8958b854c78210340a188cbf1486f413, type: 3}
@@ -21151,7 +21151,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8077055468838727924, guid: 9004b60c70019f14fb9619213f83d1c3, type: 3}
       propertyPath: waves.Array.data[1].enemies.Array.data[0].rate
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8077055468838727924, guid: 9004b60c70019f14fb9619213f83d1c3, type: 3}
       propertyPath: waves.Array.data[2].enemies.Array.data[0].rate

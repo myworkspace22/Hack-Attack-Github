@@ -364,8 +364,8 @@ MonoBehaviour:
   upgradeRange: 0.1
   upgradeFrenquency: 1.4
   upgradeLaserDoT: 0
-  bulletDamage: 50
-  fireRate: 2.6
+  bulletDamage: 10
+  fireRate: 4
   multiTargets: 0
   multiDelay: 0
   increseFrenquencyPct: 0
