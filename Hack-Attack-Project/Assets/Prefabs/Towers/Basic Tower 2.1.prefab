@@ -360,12 +360,14 @@ MonoBehaviour:
   target: {fileID: 0}
   range: 2.4
   nearestTarget: 0
-  upgradeDamage: 170
-  upgradeRange: 0.8
-  upgradeFrenquency: 0
-  upgradeLaserDoT: 0
-  bulletDamage: 130
-  fireRate: 1
+  bulletDamage: 170
+  fireRate: 0.7
+  useLaser: 0
+  damageOverTime: 170
+  slowAmount: 0.5
+  lineRenderer: {fileID: 0}
+  impactEffect: {fileID: 0}
+  laserWidth: 0
   multiTargets: 0
   multiDelay: 0
   increseFrenquencyPct: 0
@@ -377,12 +379,10 @@ MonoBehaviour:
   splitter: 0
   tesla: 0
   extraLasers: []
-  useLaser: 0
-  damageOverTime: 30
-  slowAmount: 0.5
-  lineRenderer: {fileID: 0}
-  impactEffect: {fileID: 0}
-  laserWidth: 0
+  upgradeDamage: 110
+  upgradeRange: 0.8
+  upgradeFrenquency: 0.3
+  upgradeLaserDoT: 0
   enemyTag: Enemy
   rotationPoint: {fileID: 8277812115738884651}
   bulletPrefab: {fileID: 4238579209898551604, guid: 8499719f2d94f68419464cf79032fd3d, type: 3}

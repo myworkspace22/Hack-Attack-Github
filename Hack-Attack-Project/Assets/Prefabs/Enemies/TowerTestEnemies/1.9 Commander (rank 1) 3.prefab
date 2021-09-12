@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -8091043518590745029}
   - component: {fileID: 8109400275763236503}
   m_Layer: 0
-  m_Name: 1.9 Commander 3
+  m_Name: 1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,7 +35,6 @@ Transform:
   m_Children:
   - {fileID: 7528428964736097970}
   - {fileID: 7705170075573851899}
-  - {fileID: 59041031136131956}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -51,10 +50,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d74dac3fb455d549bfd69d47fc26ce4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHealth: 700
-  maxSpeed: 0.8
+  startHealth: 500
+  maxSpeed: 1.2
   damage: 1
-  worth: 0
+  worth: 25
   speed: 0
   stunResistence: 0.3
   deathEffect: {fileID: 1787491968115139843, guid: 72ae324c15b9e6d43895e32d4fc3c2c3, type: 3}
@@ -64,12 +63,11 @@ MonoBehaviour:
   slowResistence: 0
   increaseSpeed: 0
   stealthTime: 0
-  deathSpawnAmt: 1
+  deathSpawnAmt: 0
   timedSpawnAmt: 0
   timedSpawnDelay: 0
-  spawn: {fileID: 5975281576349636344, guid: 64cc4f3963206c545861c400595e3188, type: 3}
-  spawnPoints:
-  - {fileID: 59041031136131956}
+  spawn: {fileID: 0}
+  spawnPoints: []
   healthBar: {fileID: 4417366439022705190}
   healthTransform: {fileID: 7705170075573851899}
   givesMoneyOnEnd: 1
@@ -206,36 +204,6 @@ MonoBehaviour:
   interpolatePathSwitches: 1
   switchPathInterpolationSpeed: 10
   targetCompatibility: {fileID: 0}
---- !u!1 &7277692675567566010
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 59041031136131956}
-  m_Layer: 0
-  m_Name: Spawnpoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &59041031136131956
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7277692675567566010}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5975281576349636350}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8010286485977064757
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,7 +214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7528428964736097970}
   - component: {fileID: 3622262882340304982}
-  - component: {fileID: 4321583566821291450}
+  - component: {fileID: 207540534178899959}
   m_Layer: 0
   m_Name: Ranks
   m_TagString: Untagged
@@ -308,7 +276,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: af19c08c99e00834e844d5417284c237, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1d967707e8283e04db8b090cb737bf9f, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -319,7 +287,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &4321583566821291450
+--- !u!95 &207540534178899959
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
