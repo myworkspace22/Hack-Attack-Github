@@ -185,14 +185,14 @@ public class Enemy : MonoBehaviour
     {
         if(StealthMode) { return; }
 
-        if (amount-defence > 5)
+        if (amount-defence > 3)// måske 5?
         {
             health -= amount - defence;
             Debug.LogWarning("damege delt: " + (amount - defence));
         }
         else
         {
-            health -= 5;
+            health -= 3;
             Debug.LogWarning("Only 5 damage will be delt");
         }
         

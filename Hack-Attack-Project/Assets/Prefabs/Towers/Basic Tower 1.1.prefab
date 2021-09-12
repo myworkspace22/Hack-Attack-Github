@@ -361,7 +361,7 @@ MonoBehaviour:
   range: 1.6
   nearestTarget: 0
   bulletDamage: 30
-  fireRate: 4
+  fireRate: 5
   useLaser: 0
   damageOverTime: 30
   slowAmount: 0.5
