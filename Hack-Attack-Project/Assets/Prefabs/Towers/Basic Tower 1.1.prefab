@@ -379,9 +379,9 @@ MonoBehaviour:
   splitter: 0
   tesla: 0
   extraLasers: []
-  upgradeDamage: 20
+  upgradeDamage: 0
   upgradeRange: 0.2
-  upgradeFrenquency: 1.6
+  upgradeFrenquency: 5
   upgradeLaserDoT: 0
   enemyTag: Enemy
   rotationPoint: {fileID: 8277812115738884651}
