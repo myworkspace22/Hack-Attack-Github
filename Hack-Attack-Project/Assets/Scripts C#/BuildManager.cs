@@ -144,7 +144,7 @@ public class BuildManager : MonoBehaviour
     //}
     public void LevelUp()
     {
-        selectedNode.levelUpTower();
+        selectedNode.LevelUpTower();
         UpdateUI();
     }
 
@@ -162,8 +162,8 @@ public class BuildManager : MonoBehaviour
 
     private void UpdateUI()
     {
-        bool readyToUpgrade = selectedNode.towerLevel == 2 || selectedNode.towerLevel == 5;
-        bool maxed = selectedNode.towerLevel > 5;
+        bool readyToUpgrade = selectedNode.towerLevel == 1 || selectedNode.towerLevel == 3 ;
+        bool maxed = selectedNode.towerLevel > 4;
         levelUpUI.SetActive(!readyToUpgrade && !maxed);
         upgradeUI.SetActive(readyToUpgrade);
         MaxedUI.SetActive(maxed);

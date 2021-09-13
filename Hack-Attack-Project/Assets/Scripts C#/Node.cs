@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -28,7 +28,6 @@ public class Node : MonoBehaviour
     public bool isMaxed = false;
     [HideInInspector]
     public int upgradeNr;
-    [HideInInspector]
     public int UpgradeMultiplier
     {
         get
@@ -213,62 +212,45 @@ public class Node : MonoBehaviour
         tmp.content = $"Damage: {tmpTurret.bulletDamage} \nRange: {tmpTurret.range * 100} \nFrequency: {tmpTurret.fireRate}\n{effetTxt}";
     }
 
-    public void levelUpTower()
+    public void LevelUpTower()
     {
-        //if (!buildManager.GetComponent<WaveSpawner>().BuildMode)
-        //    return;
+        int levelUpCost = (int)(Mathf.Pow(2, towerLevel + 1) * 10);
 
-
-
-        //if (PlayerStats.Money < turretBlueprint.levelUpCost * UpgradeMultiplier)
-        //{
-        //    Debug.Log("Not enough money to level up!");
-        //    return;
-        //}
-        //PlayerStats.Money -= turretBlueprint.levelUpCost * UpgradeMultiplier;
-
-        //if (buildManager.GetComponent<WaveSpawner>().BuildMode)
-        //{
-        //    priceUnlocked += turretBlueprint.levelUpCost * UpgradeMultiplier;
-        //}
-        //else
-        //{
-        //    priceLocked += turretBlueprint.levelUpCost * UpgradeMultiplier;
-        //}
-
-        if (PlayerStats.Money < turretBlueprint.levelUpCost * (towerLevel + 1))
+        if (PlayerStats.Money < levelUpCost)
         {
-            Debug.Log("Not enough money to level up!");
+            Debug.Log("Not enough money to level up!: " + levelUpCost);
             return;
         }
-        PlayerStats.Money -= turretBlueprint.levelUpCost * (towerLevel + 1);
+        
+        PlayerStats.Money -= levelUpCost;
 
         if (buildManager.GetComponent<WaveSpawner>().BuildMode)
         {
-            priceUnlocked += turretBlueprint.levelUpCost * (towerLevel + 1);
+            priceUnlocked += levelUpCost;
         }
         else
         {
-            priceLocked += turretBlueprint.levelUpCost * (towerLevel + 1);
+            priceLocked += levelUpCost;
         }
 
 
-        if (towerLevel >= 6)
+        if (towerLevel >= 5)
         {
-            Debug.LogWarning("trying to level beyound level 6");
+            Debug.LogWarning("trying to level beyound level 5");
             return;
         }
 
         Turret turretToUpgrade = turret.GetComponent<Turret>();
 
-        turretToUpgrade.bulletDamage += turretToUpgrade.upgradeDamage * (towerLevel + 1);
+        turretToUpgrade.bulletDamage += turretToUpgrade.upgradeDamage;
         
         turretToUpgrade.fireRate += turretToUpgrade.upgradeFrenquency;
 
         turretToUpgrade.fireRate = (float)Mathf.Round(turretToUpgrade.fireRate * 100f) / 100f;
 
         turretToUpgrade.range += turretToUpgrade.upgradeRange;
-        turretToUpgrade.damageOverTime += turretToUpgrade.upgradeLaserDoT * (towerLevel + 1);
+
+        turretToUpgrade.damageOverTime += turretToUpgrade.upgradeLaserDoT;
 
         towerLevel++;
         StarUI();
@@ -282,7 +264,7 @@ public class Node : MonoBehaviour
 
     private void StarUI()
     {
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < 5; i++)
         {
             towerStars[i].SetActive(towerLevel > i);
         }
@@ -290,26 +272,25 @@ public class Node : MonoBehaviour
 
     public void UpgradeTurret(int index)
     {
-        //if (!buildManager.GetComponent<WaveSpawner>().BuildMode)
-        //    return;
+        int upgradeCost = (int)(Mathf.Pow(2, towerLevel + 1) * 10);
 
         int upgradeindex = (upgradeNr > 0) ? upgradeNr + index * 2 : upgradeNr + index;
 
-        if (PlayerStats.Money < turretBlueprint.upgradeCost[upgradeindex - 1])
+        if (PlayerStats.Money < upgradeCost)
         {
-            Debug.Log("Not enough money to Upgrade!");
+            Debug.Log("Not enough money to Upgrade!: " + upgradeCost);
             return;
         }
 
-        PlayerStats.Money -= turretBlueprint.upgradeCost[upgradeindex - 1];
+        PlayerStats.Money -= upgradeCost;
 
         if (buildManager.GetComponent<WaveSpawner>().BuildMode)
         {
-            priceUnlocked += turretBlueprint.upgradeCost[upgradeindex - 1];
+            priceUnlocked += upgradeCost;
         }
         else
         {
-            priceLocked += turretBlueprint.upgradeCost[upgradeindex - 1];
+            priceLocked += upgradeCost;
         }
 
         //Get rid of the old turret

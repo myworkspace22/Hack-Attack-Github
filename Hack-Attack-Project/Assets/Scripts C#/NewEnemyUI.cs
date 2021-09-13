@@ -16,6 +16,8 @@ public class NewEnemyUI : MonoBehaviour
 
     public string[] newEnemyDescription;
 
+    public Sprite[] newEnemyImage;
+
     public int[] waveIndex;
 
     public GameObject warning;
@@ -44,7 +46,7 @@ public class NewEnemyUI : MonoBehaviour
                 warning.SetActive(true);
                 titleText.text = newEnemyTitle[i];
                 descriptionText.text = newEnemyDescription[i];
-                enemyImage.sprite = waveSpawned.waves[waveSpawned.waveIndex].enemies[0].enemy.GetComponentInChildren<SpriteRenderer>().sprite;
+                enemyImage.sprite = newEnemyImage[i];//waveSpawned.waves[waveSpawned.waveIndex].enemies[0].enemy.GetComponentInChildren<SpriteRenderer>().sprite;
                 animator.SetTrigger("Warning");
                 waveSpawned.isPaused = true;
                 break;

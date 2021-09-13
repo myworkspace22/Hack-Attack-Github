@@ -13,17 +13,21 @@ public class Turret : MonoBehaviour
     public float range = 15f;
     public bool nearestTarget = false;
     //public GameObject towerRange;
-
-    [Header("Upgrades")]
-    public int upgradeDamage;
-    public float upgradeRange;
-    public float upgradeFrenquency;
-    public int upgradeLaserDoT;
-
-    [Header("Use Bullets (defualt)")]
     public int bulletDamage;
     public float fireRate = 1f;
     private float fireCountdown = 0f;
+    [Header("Use Laser")]
+    public bool useLaser = false;
+
+    public int damageOverTime = 30;
+    public float slowAmount = 0.5f;
+
+    public LineRenderer lineRenderer;
+    public ParticleSystem impactEffect;
+
+    public float laserWidth;
+
+
 
     [Header("Special Abileties")]
     public int multiTargets;
@@ -45,18 +49,14 @@ public class Turret : MonoBehaviour
     private Stack<Transform> mTargets;
     private float cCooldown;
     private bool hasCleared;
+    
+    [Header("Upgrades")]
+    public int upgradeDamage;
+    public float upgradeRange;
+    public float upgradeFrenquency;
+    public int upgradeLaserDoT;
 
-
-    [Header("Use Laser")]
-    public bool useLaser = false;
-
-    public int damageOverTime = 30;
-    public float slowAmount = 0.5f;
-
-    public LineRenderer lineRenderer;
-    public ParticleSystem impactEffect;
-
-    public float laserWidth;
+    
 
     [Header("Unity Setup Fields M.I.S")]
     public string enemyTag = "Enemy";

@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     [Header("Base Stas:")]
     public float startHealth;
     public float maxSpeed;
+    public int defence;
     public int damage;
     public int worth;
     [HideInInspector]
@@ -184,7 +185,18 @@ public class Enemy : MonoBehaviour
     {
         if(StealthMode) { return; }
 
-        health -= amount;
+        if (amount-defence > 3)// måske 5?
+        {
+            health -= amount - defence;
+            Debug.LogWarning("damege delt: " + (amount - defence));
+        }
+        else
+        {
+            health -= 3;
+            Debug.LogWarning("Only 5 damage will be delt");
+        }
+        
+        
 
         //float alpha = 90 + (healthUIpct * health);
         //Debug.Log(alpha + " color on " + gameObject);
