@@ -442,6 +442,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 2881803708027556478, guid: 23e6b7c082407484c8a368c9500e548c, type: 3}
   firePoint: {fileID: 6035166715951589729}
   towerPlatform: {fileID: 7764791535041439049}
+  randomPitchRangeMax: 0
+  randomPitchRangeMin: 0
 --- !u!212 &1811285495851032897
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -847,6 +849,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2766983560153170726}
+  - component: {fileID: 1632249048426617645}
   m_Layer: 6
   m_Name: RotationPoint
   m_TagString: Untagged
@@ -870,3 +873,16 @@ Transform:
   m_Father: {fileID: 3598439514273331396}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1632249048426617645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7162765834059245059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae28a75a2f7b36e4e81aff13b844c716, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 0

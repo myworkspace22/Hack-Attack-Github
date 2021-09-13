@@ -67,6 +67,13 @@ public class Turret : MonoBehaviour
     public Transform firePoint;
     public SpriteRenderer towerPlatform;
 
+    private AudioSource audioSource;
+
+    [SerializeField]
+    private float randomPitchRangeMax;
+    [SerializeField]
+    private float randomPitchRangeMin;
+
     private void Start()
     {
         if (clusterBombTarget != null)
@@ -84,6 +91,7 @@ public class Turret : MonoBehaviour
         multiCountdown = 0;
         InvokeRepeating("UpdateTarget", 0f, 0.2f); //Update Target Delay
         BuildManager.instance.GetComponent<WaveSpawner>().OnWaveEnded += ResetRotation;
+        audioSource = GetComponent<AudioSource>();
     }
     private void OnDestroy()
     {
@@ -401,7 +409,7 @@ public class Turret : MonoBehaviour
 
         GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
-
+        PlaySound();
         if (bullet != null)
         {
             bullet.damage = bulletDamage;
@@ -446,5 +454,14 @@ public class Turret : MonoBehaviour
     private void ResetRotation()
     {
         rotationPoint.rotation = Quaternion.Euler(0, 0, 0);
+    }
+
+    public void PlaySound()
+    {
+        audioSource.Stop();
+
+        audioSource.pitch = Random.Range(randomPitchRangeMin, randomPitchRangeMax);
+
+        audioSource.Play();
     }
 }

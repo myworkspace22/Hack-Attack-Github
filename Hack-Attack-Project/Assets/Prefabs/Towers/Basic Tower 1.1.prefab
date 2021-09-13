@@ -388,6 +388,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 4238579209898551604, guid: 7f98077fe9376f04baa4166b7ddbe507, type: 3}
   firePoint: {fileID: 524606163506090092}
   towerPlatform: {fileID: 4559026435059489860}
+  randomPitchRangeMax: 0
+  randomPitchRangeMin: 0
 --- !u!212 &2023288362687100980
 SpriteRenderer:
   m_ObjectHideFlags: 0

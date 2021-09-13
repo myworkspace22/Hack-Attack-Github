@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5918272327451547685}
+  - component: {fileID: 501861863098598867}
   m_Layer: 6
   m_Name: RotationPoint
   m_TagString: Untagged
@@ -32,6 +33,19 @@ Transform:
   m_Father: {fileID: 5023651156899734471}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &501861863098598867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666578304798784768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae28a75a2f7b36e4e81aff13b844c716, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 0
 --- !u!1 &5556433950650397502
 GameObject:
   m_ObjectHideFlags: 0
@@ -84,15 +98,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  nameTurrent: 
   range: 2.5
   nearestTarget: 1
-  upgradeDamage: 0
-  upgradeRange: 0
-  upgradeFrenquency: 0
-  upgradeLaserDoT: 0
   bulletDamage: 900
   fireRate: 1.6
+  useLaser: 0
+  damageOverTime: 80
+  slowAmount: 0.8
+  lineRenderer: {fileID: 6920416368136055428}
+  impactEffect: {fileID: 2872334427099462869}
+  laserWidth: 0
   multiTargets: 0
   multiDelay: 0
   increseFrenquencyPct: 0
@@ -104,17 +119,17 @@ MonoBehaviour:
   splitter: 0
   tesla: 0
   extraLasers: []
-  useLaser: 0
-  damageOverTime: 80
-  slowAmount: 0.8
-  lineRenderer: {fileID: 6920416368136055428}
-  impactEffect: {fileID: 2872334427099462869}
-  laserWidth: 0
+  upgradeDamage: 0
+  upgradeRange: 0
+  upgradeFrenquency: 0
+  upgradeLaserDoT: 0
   enemyTag: Enemy
   rotationPoint: {fileID: 5918272327451547685}
   bulletPrefab: {fileID: 4238579209898551604, guid: 1e935d5707e5c8240ac9c55ed44c57e8, type: 3}
   firePoint: {fileID: 2848132688497259106}
   towerPlatform: {fileID: 2271421092245175882}
+  randomPitchRangeMax: 0
+  randomPitchRangeMin: 0
 --- !u!212 &8709025309036245343
 SpriteRenderer:
   m_ObjectHideFlags: 0
