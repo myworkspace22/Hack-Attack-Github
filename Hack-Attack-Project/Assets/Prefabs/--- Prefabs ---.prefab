@@ -643,7 +643,6 @@ MonoBehaviour:
   gameManager: {fileID: 6015244018461862583}
   spawnPortals:
   - {fileID: 8077055468838727924}
-  - {fileID: 0}
   endPoint: {fileID: 6015244020020103407}
   timeBetweenWaves: 50
   countdown: 50
@@ -3334,7 +3333,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.0148926, y: 620.198}
+  m_AnchoredPosition: {x: -57, y: 692.5}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &7251587040367010125
@@ -5562,7 +5561,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7251587040838585586
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6741,7 +6740,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPositions:
   - {fileID: 7251587041310783660}
-  - {fileID: 0}
   basePosition: {fileID: 6015244020020103407}
 --- !u!1 &7251587041291824328
 GameObject:
