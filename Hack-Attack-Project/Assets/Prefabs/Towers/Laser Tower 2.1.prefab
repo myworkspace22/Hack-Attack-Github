@@ -181,17 +181,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  range: 1.9
+  range: 1.8
   nearestTarget: 0
-  bulletDamage: 320
-  fireRate: 1.3
+  bulletDamage: 0
+  fireRate: 2
   useLaser: 0
   damageOverTime: 30
   slowAmount: 0.5
   lineRenderer: {fileID: 6920416368136055428, guid: f4615c7410a365e428c6f329470011b9, type: 3}
   impactEffect: {fileID: 0}
   laserWidth: 0
-  multiTargets: 0
+  multiTargets: 2
   multiDelay: 0
   increseFrenquencyPct: 0
   sniper: 0
@@ -202,9 +202,10 @@ MonoBehaviour:
   splitter: 0
   tesla: 0
   extraLasers: []
-  upgradeDamage: 40
-  upgradeRange: 0.1
-  upgradeFrenquency: 0.1
+  stunner: 1
+  upgradeDamage: 0
+  upgradeRange: 0.6
+  upgradeFrenquency: 2
   upgradeLaserDoT: 0
   enemyTag: Enemy
   rotationPoint: {fileID: 5918272327451547685}
