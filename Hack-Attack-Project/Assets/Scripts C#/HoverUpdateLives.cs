@@ -8,7 +8,7 @@ public class HoverUpdateLives : MonoBehaviour
 
     private void OnMouseOver()
     {
-        endTooltip.content = "<color=#00FF00>LIVES (" + PlayerStats.Lives.ToString() + ")</color>"; //alternativ "Remaining Lives: "
+        endTooltip.content = "LIVES (" + PlayerStats.Lives.ToString() + ")"; //alternativ "Remaining Lives: "
         endTooltip.UpdateTooltipUI();
     }
 }
