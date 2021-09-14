@@ -37,11 +37,6 @@ public class Enemy : MonoBehaviour
     public Transform healthTransform;
     public bool givesMoneyOnEnd;
     public GameObject spriteToRotate;
-    private AudioSource audioSource;
-    [SerializeField]
-    private float randomPitchRangeMax;
-    [SerializeField]
-    private float randomPitchRangeMin;
 
 
     //Privates
@@ -64,10 +59,6 @@ public class Enemy : MonoBehaviour
 
     private float stunTimer;
 
-    private void Awake()
-    {
-        audioSource = GetComponent<AudioSource>();
-    }
     private void Start()
     {
         StealthMode = false;
@@ -279,7 +270,6 @@ public class Enemy : MonoBehaviour
     {
         if (hasDied)
             return;
-        PlaySound();
 
         if (deathSpawnAmt > 0)
         {
@@ -342,6 +332,7 @@ public class Enemy : MonoBehaviour
     private void EndReached()
     {
         PlayerStats.Lives -= damage;
+        BuildManager.instance.GetComponent<PlayerDamageSFX>().PlaySound();
         WaveSpawner.EnemiesAlive--;
         if (givesMoneyOnEnd)
         {
@@ -349,19 +340,7 @@ public class Enemy : MonoBehaviour
         }
         shake.CamShake();
         Destroy(gameObject);
+        
     }
 
-
-
-
-    
-
-    public void PlaySound()
-    {
-        audioSource.Stop();
-
-        audioSource.pitch = Random.Range(randomPitchRangeMin, randomPitchRangeMax);
-
-        audioSource.Play();
-    }
 }
