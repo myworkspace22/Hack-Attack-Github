@@ -124,7 +124,7 @@ public class WaveSpawner : MonoBehaviour
             //PlayerStats.Money += (PlayerStats.Money - PlayerStats.Money % 100) / 5;
             return;
         }
-        if (waveIndex > 0 && !isPaused)
+        if (false)//waveIndex > 0 && !isPaused)
         {
             countdown -= Time.deltaTime;
 
@@ -243,7 +243,7 @@ public class WaveSpawner : MonoBehaviour
             return;
         }
         BuildManager.instance.DeselectNode();
-        AddTimeBonus((int)countdown);
+        //AddTimeBonus((int)countdown);
         countdown = 0;
         Time.timeScale = gameSpeed;
         waveCountdownText.text = "SPEED (x" + Time.timeScale + ")";
@@ -251,7 +251,7 @@ public class WaveSpawner : MonoBehaviour
     public void SpaceToReadyUp()
     {
         BuildManager.instance.DeselectNode();
-        AddTimeBonus((int)countdown);
+        //AddTimeBonus((int)countdown);
         countdown = 0;
         Time.timeScale = gameSpeed;
         waveCountdownText.text = "SPEED (x" + Time.timeScale + ")";
