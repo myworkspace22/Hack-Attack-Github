@@ -183,7 +183,7 @@ MonoBehaviour:
   range: 2.2
   nearestTarget: 0
   bulletDamage: 0
-  fireRate: 1
+  fireRate: 0.2
   useLaser: 0
   damageOverTime: 900
   slowAmount: 0.75
@@ -202,7 +202,7 @@ MonoBehaviour:
   tesla: 1
   extraLasers: []
   stunner: 0
-  upgradeDamage: 0
+  upgradeDamage: 900
   upgradeRange: 0
   upgradeFrenquency: 0
   upgradeLaserDoT: 0

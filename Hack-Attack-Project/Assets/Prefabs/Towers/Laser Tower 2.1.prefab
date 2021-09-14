@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  range: 1.8
+  range: 1.6
   nearestTarget: 0
   bulletDamage: 0
   fireRate: 2
@@ -204,7 +204,7 @@ MonoBehaviour:
   extraLasers: []
   stunner: 1
   upgradeDamage: 0
-  upgradeRange: 0.6
+  upgradeRange: 0.2
   upgradeFrenquency: 2
   upgradeLaserDoT: 0
   enemyTag: Enemy

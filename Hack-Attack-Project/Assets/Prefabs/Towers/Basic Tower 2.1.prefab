@@ -373,7 +373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  range: 2
+  range: 1.8
   nearestTarget: 0
   bulletDamage: 170
   fireRate: 0.7

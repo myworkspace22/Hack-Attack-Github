@@ -375,8 +375,8 @@ MonoBehaviour:
   target: {fileID: 0}
   range: 2
   nearestTarget: 0
-  bulletDamage: 200
-  fireRate: 3
+  bulletDamage: 60
+  fireRate: 6
   useLaser: 0
   damageOverTime: 30
   slowAmount: 0.5
@@ -394,9 +394,10 @@ MonoBehaviour:
   splitter: 0
   tesla: 0
   extraLasers: []
-  upgradeDamage: 0
+  stunner: 0
+  upgradeDamage: 100
   upgradeRange: 0
-  upgradeFrenquency: 0
+  upgradeFrenquency: 2
   upgradeLaserDoT: 0
   enemyTag: Enemy
   rotationPoint: {fileID: 8277812115738884651}

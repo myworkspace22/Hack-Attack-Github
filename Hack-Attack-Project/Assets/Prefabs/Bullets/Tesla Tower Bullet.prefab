@@ -99,7 +99,7 @@ MonoBehaviour:
   flameThrower: 0
   nuke: 0
   timbersaw: 0
-  stunTime: 1
+  stunTime: 3
   rotateMissile: 0
   damage: 0
   explosionRadius: 2.2

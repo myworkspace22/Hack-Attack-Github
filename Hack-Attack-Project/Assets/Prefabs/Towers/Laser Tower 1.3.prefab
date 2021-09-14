@@ -364,7 +364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  range: 2.5
+  range: 2.1
   nearestTarget: 0
   bulletDamage: 30
   fireRate: 1
@@ -391,7 +391,7 @@ MonoBehaviour:
   upgradeDamage: 0
   upgradeRange: 0
   upgradeFrenquency: 0
-  upgradeLaserDoT: 0
+  upgradeLaserDoT: 100
   enemyTag: Enemy
   rotationPoint: {fileID: 5918272327451547685}
   bulletPrefab: {fileID: 4238579209898551604, guid: 7f98077fe9376f04baa4166b7ddbe507, type: 3}
