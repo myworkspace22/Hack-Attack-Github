@@ -184,7 +184,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 266ae015ad793894ca5c2c8b912f2acc, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.14117648, g: 0.93333334, b: 0.95686275, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -327,17 +327,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  range: 1.8
+  range: 1.5
   nearestTarget: 0
-  bulletDamage: 300
-  fireRate: 1.2
+  bulletDamage: 30
+  fireRate: 2
   useLaser: 0
   damageOverTime: 30
   slowAmount: 0.5
   lineRenderer: {fileID: 0}
   impactEffect: {fileID: 0}
   laserWidth: 0
-  multiTargets: 2
+  multiTargets: 3
   multiDelay: 0
   increseFrenquencyPct: 0
   sniper: 0
@@ -348,17 +348,17 @@ MonoBehaviour:
   splitter: 0
   tesla: 0
   extraLasers: []
-  upgradeDamage: 30
-  upgradeRange: 0.1
-  upgradeFrenquency: 0.1
+  upgradeDamage: 0
+  upgradeRange: 0.2
+  upgradeFrenquency: 2
   upgradeLaserDoT: 0
   enemyTag: Enemy
   rotationPoint: {fileID: 2766983560153170726}
   bulletPrefab: {fileID: 4238579209898551604, guid: 7f98077fe9376f04baa4166b7ddbe507, type: 3}
   firePoint: {fileID: 6035166715951589729}
   towerPlatform: {fileID: 7764791535041439049}
-  randomPitchRangeMax: 0
-  randomPitchRangeMin: 0
+  randomPitchRangeMax: 0.9
+  randomPitchRangeMin: 1.1
 --- !u!212 &1811285495851032897
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -465,9 +465,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0814ef0a57b68624fb45e44ab74a544e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c74842e132fc54b4eaee60cf6621b1ce, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0

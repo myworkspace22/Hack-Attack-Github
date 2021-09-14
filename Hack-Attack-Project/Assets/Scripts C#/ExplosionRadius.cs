@@ -11,7 +11,19 @@ public class ExplosionRadius : MonoBehaviour
     public float multiplier;
     private SpriteRenderer sR;
     public bool Tesla;
+    
+    private AudioSource audioSource;
+
+    [SerializeField]
+    private float randomPitchRangeMax;
+    [SerializeField]
+    private float randomPitchRangeMin;
     //private CircleCollider2D circleCollider;
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+        PlaySound();
+    }
 
     private void Start()
     {
@@ -51,5 +63,14 @@ public class ExplosionRadius : MonoBehaviour
         Color color = sR.color;
         color.a = fadeSice;
         sR.color = color;
+    }
+
+    private void PlaySound()
+    {
+        audioSource.Stop();
+
+        audioSource.pitch = Random.Range(randomPitchRangeMin, randomPitchRangeMax);
+
+        audioSource.Play();
     }
 }

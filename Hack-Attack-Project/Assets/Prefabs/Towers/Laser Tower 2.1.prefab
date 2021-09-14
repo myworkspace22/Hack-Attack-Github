@@ -211,8 +211,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 4238579209898551604, guid: bd10bbc7e7174d242858a6debcf8fb9c, type: 3}
   firePoint: {fileID: 2848132688497259106}
   towerPlatform: {fileID: 2271421092245175882}
-  randomPitchRangeMax: 0
-  randomPitchRangeMin: 0
+  randomPitchRangeMax: 0.9
+  randomPitchRangeMin: 1.1
 --- !u!212 &8709025309036245343
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -419,7 +419,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0814ef0a57b68624fb45e44ab74a544e, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -575,7 +575,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: e429347f138ac7e4cbf1bb6041d32eb0, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.14117648, g: 0.93333334, b: 0.95686275, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
