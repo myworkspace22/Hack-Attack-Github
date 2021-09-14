@@ -329,7 +329,7 @@ MonoBehaviour:
   target: {fileID: 0}
   range: 2.1
   nearestTarget: 0
-  bulletDamage: 700
+  bulletDamage: 100
   fireRate: 0.4
   useLaser: 0
   damageOverTime: 30
@@ -348,9 +348,10 @@ MonoBehaviour:
   splitter: 0
   tesla: 0
   extraLasers: []
-  upgradeDamage: 0
-  upgradeRange: 0
-  upgradeFrenquency: 0
+  stunner: 0
+  upgradeDamage: 100
+  upgradeRange: 0.1
+  upgradeFrenquency: 0.2
   upgradeLaserDoT: 0
   enemyTag: Enemy
   rotationPoint: {fileID: 2766983560153170726}
@@ -465,7 +466,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0814ef0a57b68624fb45e44ab74a544e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 98e2f222dc94d5e4b851bcac5da7726b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.8
   m_Pitch: 1

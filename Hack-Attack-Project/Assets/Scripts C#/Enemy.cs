@@ -58,6 +58,9 @@ public class Enemy : MonoBehaviour
     private float poisonTimer;
 
     private float stunTimer;
+    public bool Stuned { get { return stunTimer > 0; } }
+
+    public bool IsSlowed { get; private set; }
 
     private void Start()
     {
@@ -154,8 +157,7 @@ public class Enemy : MonoBehaviour
             }
             return;
         }
-
-        if (stunResistenceTimer > 0) { stunResistenceTimer -= Time.deltaTime; }
+        else if (stunResistenceTimer > 0) { stunResistenceTimer -= Time.deltaTime; }
 
         slowed = false;
 
@@ -189,12 +191,17 @@ public class Enemy : MonoBehaviour
         if (amount-defence > 3)// måske 5?
         {
             health -= amount - defence;
-            Debug.LogWarning("damege delt: " + (amount - defence));
         }
         else
         {
-            health -= 3;
-            Debug.LogWarning("Only 5 damage will be delt");
+            if (amount < 3)
+            {
+                health -= amount;
+            }
+            else
+            {
+                health -= 3;
+            }
         }
         
         
@@ -265,6 +272,8 @@ public class Enemy : MonoBehaviour
         pct -= slowResistence;
         SetSpeed(maxSpeed * (1f - pct));
         slowed = true;
+        defence = 0;
+        IsSlowed = true;
     }
     void Die()
     {

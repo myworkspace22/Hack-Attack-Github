@@ -41,6 +41,7 @@ public class Turret : MonoBehaviour
     public bool splitter;
     public bool tesla;
     public Turret[] extraLasers;
+    public bool stunner;
 
     private List<Bullet> clusterBullets;
 
@@ -110,8 +111,11 @@ public class Turret : MonoBehaviour
 
         if (target != null && transform.position != null && !nearestTarget)
         {
-            if (Vector2.Distance(transform.position, target.position) <= range)
+            if (!stunner || !targetEnemy.Stuned)
+            {
+                if (Vector2.Distance(transform.position, target.position) <= range)
                 return;
+            }
         }
 
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
@@ -120,19 +124,22 @@ public class Turret : MonoBehaviour
 
         foreach (GameObject enemy in enemies)
         {
-            float distanceToEnemy = Vector2.Distance(transform.position, enemy.transform.position);
-            if (splitter)
+            if (!stunner || !enemy.GetComponent<Enemy>().Stuned)
             {
-                if (distanceToEnemy < shortestDistance && enemy.transform != extraLasers[0].target && enemy.transform != extraLasers[1].target)
+                float distanceToEnemy = Vector2.Distance(transform.position, enemy.transform.position);
+                if (splitter)
+                {
+                    if (distanceToEnemy < shortestDistance && enemy.transform != extraLasers[0].target && enemy.transform != extraLasers[1].target)
+                    {
+                        shortestDistance = distanceToEnemy;
+                        nearestEnemy = enemy;
+                    }
+                }
+                else if (distanceToEnemy < shortestDistance)
                 {
                     shortestDistance = distanceToEnemy;
                     nearestEnemy = enemy;
                 }
-            }
-            else if (distanceToEnemy < shortestDistance)
-            {
-                shortestDistance = distanceToEnemy;
-                nearestEnemy = enemy;
             }
         }
 
