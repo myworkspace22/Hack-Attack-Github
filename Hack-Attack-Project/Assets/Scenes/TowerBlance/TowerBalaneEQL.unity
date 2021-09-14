@@ -4395,8 +4395,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 922860341c8b7404f8898032fc5eb153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  randomPitchRangeMax: 0.9
-  randomPitchRangeMin: 1.1
+  randomPitchRangeMax: 1.1
+  randomPitchRangeMin: 0.9
 --- !u!1001 &404318700
 PrefabInstance:
   m_ObjectHideFlags: 0
