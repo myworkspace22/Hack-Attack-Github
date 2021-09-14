@@ -99,17 +99,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  range: 2.5
+  range: 3
   nearestTarget: 1
-  bulletDamage: 900
-  fireRate: 1.6
+  bulletDamage: 0
+  fireRate: 6
   useLaser: 0
   damageOverTime: 80
   slowAmount: 0.8
   lineRenderer: {fileID: 6920416368136055428}
   impactEffect: {fileID: 2872334427099462869}
   laserWidth: 0
-  multiTargets: 0
+  multiTargets: 3
   multiDelay: 0
   increseFrenquencyPct: 0
   sniper: 0
@@ -120,6 +120,7 @@ MonoBehaviour:
   splitter: 0
   tesla: 0
   extraLasers: []
+  stunner: 1
   upgradeDamage: 0
   upgradeRange: 0
   upgradeFrenquency: 0

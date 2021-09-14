@@ -116,6 +116,7 @@ MonoBehaviour:
   extraLasers:
   - {fileID: 3749382570788660919}
   - {fileID: 6595567104721690625}
+  stunner: 0
   upgradeDamage: 0
   upgradeRange: 0
   upgradeFrenquency: 0
@@ -365,11 +366,11 @@ MonoBehaviour:
   target: {fileID: 0}
   range: 2.5
   nearestTarget: 0
-  bulletDamage: 500
+  bulletDamage: 30
   fireRate: 1
   useLaser: 1
-  damageOverTime: 500
-  slowAmount: 0.75
+  damageOverTime: 30
+  slowAmount: 0.8
   lineRenderer: {fileID: 6920416368136055428}
   impactEffect: {fileID: 3871315479789446270}
   laserWidth: 0.03
@@ -386,6 +387,7 @@ MonoBehaviour:
   extraLasers:
   - {fileID: 7151086252326480661}
   - {fileID: 3749382570788660919}
+  stunner: 0
   upgradeDamage: 0
   upgradeRange: 0
   upgradeFrenquency: 0
@@ -960,6 +962,7 @@ MonoBehaviour:
   extraLasers:
   - {fileID: 7151086252326480661}
   - {fileID: 6595567104721690625}
+  stunner: 0
   upgradeDamage: 0
   upgradeRange: 0
   upgradeFrenquency: 0

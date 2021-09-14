@@ -157,8 +157,7 @@ public class Enemy : MonoBehaviour
             }
             return;
         }
-
-        if (stunResistenceTimer > 0) { stunResistenceTimer -= Time.deltaTime; }
+        else if (stunResistenceTimer > 0) { stunResistenceTimer -= Time.deltaTime; }
 
         slowed = false;
 

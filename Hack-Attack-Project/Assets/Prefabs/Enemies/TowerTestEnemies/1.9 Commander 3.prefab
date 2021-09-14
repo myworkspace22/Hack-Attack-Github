@@ -57,7 +57,7 @@ MonoBehaviour:
   damage: 1
   worth: 0
   speed: 0
-  stunResistence: 0.3
+  stunResistence: 0.4
   deathEffect: {fileID: 1787491968115139843, guid: 72ae324c15b9e6d43895e32d4fc3c2c3, type: 3}
   deathEffectGold: {fileID: 5848223581304362944, guid: 9778c63ae2aa6fc439d8e994f27fb8cc, type: 3}
   canFly: 0

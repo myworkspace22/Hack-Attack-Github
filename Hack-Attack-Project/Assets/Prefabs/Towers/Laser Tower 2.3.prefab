@@ -182,7 +182,7 @@ MonoBehaviour:
   target: {fileID: 0}
   range: 2.2
   nearestTarget: 0
-  bulletDamage: 900
+  bulletDamage: 0
   fireRate: 1
   useLaser: 0
   damageOverTime: 900
@@ -201,6 +201,7 @@ MonoBehaviour:
   splitter: 0
   tesla: 1
   extraLasers: []
+  stunner: 0
   upgradeDamage: 0
   upgradeRange: 0
   upgradeFrenquency: 0
