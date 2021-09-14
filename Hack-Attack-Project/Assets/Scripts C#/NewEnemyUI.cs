@@ -31,10 +31,12 @@ public class NewEnemyUI : MonoBehaviour
         waveSpawned = BuildManager.instance.GetComponent<WaveSpawner>();
         animator = GetComponent<Animator>();
         waveSpawned.OnWaveEnded += WaveEnd;
+        waveSpawned.OnWavePriceLocked += CloseWindow;
     }
     private void OnDestroy()
     {
         waveSpawned.OnWaveEnded -= WaveEnd;
+        waveSpawned.OnWavePriceLocked -= CloseWindow;
     }
 
     private void WaveEnd()
@@ -48,14 +50,14 @@ public class NewEnemyUI : MonoBehaviour
                 descriptionText.text = newEnemyDescription[i];
                 enemyImage.sprite = newEnemyImage[i];//waveSpawned.waves[waveSpawned.waveIndex].enemies[0].enemy.GetComponentInChildren<SpriteRenderer>().sprite;
                 animator.SetTrigger("Warning");
-                waveSpawned.isPaused = true;
+                animator.ResetTrigger("Close");
                 break;
             }
         }
     }
     public void CloseWindow()
     {
-        waveSpawned.isPaused = false;
         animator.SetTrigger("Close");
+        animator.ResetTrigger("Warning");
     }
 }

@@ -4850,7 +4850,6 @@ MonoBehaviour:
     description: Shoots a single bullet at nearby enemies
     prefab: {fileID: 7916541085778940208, guid: 7771ac83e91ba994ca249dff24c09796, type: 3}
     cost: 50
-    levelUpCost: 50
     upgradeNames:
     - Machinegun
     - Blaster
@@ -4873,7 +4872,6 @@ MonoBehaviour:
     - {fileID: 7916541085778940208, guid: 4dc36c88a1310214fb953f2d4815af58, type: 3}
     - {fileID: 7916541085778940208, guid: 093eb98c45785424eb3b622a5544c031, type: 3}
     - {fileID: 7916541085778940208, guid: a479a156e3581be4789abc961d554ff2, type: 3}
-    upgradeCost: af00000096000000c201000090010000a9010000c2010000
     upgradeEffect:
     - 
     - 
@@ -4886,7 +4884,6 @@ MonoBehaviour:
     description: Launches a missile that explodes in a radius on impact
     prefab: {fileID: 4133119791020861501, guid: f77f4c037301bcb458924e096a3d3684, type: 3}
     cost: 100
-    levelUpCost: 100
     upgradeNames:
     - Cannonade
     - Cannon
@@ -4909,7 +4906,6 @@ MonoBehaviour:
     - {fileID: 4133119791020861501, guid: 4b9c0971086cf9e47b7245ebc8a09d74, type: 3}
     - {fileID: 4133119791020861501, guid: 1cebbfd33c00c0d4d841dc095abe806f, type: 3}
     - {fileID: 4133119791020861501, guid: 7f476895eb870ae499c55a93cc088723, type: 3}
-    upgradeCost: 2c0100005e01000058020000bc0200008a02000058020000
     upgradeEffect:
     - 
     - 
@@ -4922,7 +4918,6 @@ MonoBehaviour:
     description: Shoots lasers at enemies with stun
     prefab: {fileID: 5556433950650397502, guid: f4615c7410a365e428c6f329470011b9, type: 3}
     cost: 150
-    levelUpCost: 150
     upgradeNames:
     - Beamer
     - Zapper
@@ -4945,7 +4940,6 @@ MonoBehaviour:
     - {fileID: 5556433950650397502, guid: a75464de6e0979e4e8bf041fefb5fa78, type: 3}
     - {fileID: 5556433950650397502, guid: d32e43a5d71a3824ca49113c94cf7b18, type: 3}
     - {fileID: 5556433950650397502, guid: 4ef270e71c19edc46a68d2772230cb94, type: 3}
-    upgradeCost: c201000090010000b603000084030000e8030000b6030000
     upgradeEffect:
     - 'Effect: slowing'
     - 
@@ -11156,6 +11150,7 @@ MonoBehaviour:
   - BOSS APPROACHING!
   newEnemyDescription:
   - THE CORONA (FINAL BOSS)
+  newEnemyImage: []
   waveIndex: 0a000000
   warning: {fileID: 2691852979792935051}
 --- !u!1 &1184299470988255862
