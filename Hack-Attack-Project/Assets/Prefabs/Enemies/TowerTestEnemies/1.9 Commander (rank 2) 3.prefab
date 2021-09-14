@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: -8091043518590745029}
   - component: {fileID: 8109400275763236503}
   m_Layer: 0
-  m_Name: 1
+  m_Name: 1.9 Commander (rank 2) 3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,6 +83,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startHealth: 600
   maxSpeed: 1
+  defence: 0
   damage: 1
   worth: 0
   speed: 0
@@ -309,7 +310,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: cdb1545ae5f7e274b85e969cb46bbab0, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

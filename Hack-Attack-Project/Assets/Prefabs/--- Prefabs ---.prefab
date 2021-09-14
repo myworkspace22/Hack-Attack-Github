@@ -3573,7 +3573,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -55, y: 691.5}
+  m_AnchoredPosition: {x: -58, y: 691.5}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &7251587040367010125
@@ -7231,7 +7231,7 @@ GameObject:
   - component: {fileID: 975193388757971201}
   - component: {fileID: 3642327890764244859}
   m_Layer: 0
-  m_Name: Spawn Portal
+  m_Name: --- Spawn Portal ---
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
