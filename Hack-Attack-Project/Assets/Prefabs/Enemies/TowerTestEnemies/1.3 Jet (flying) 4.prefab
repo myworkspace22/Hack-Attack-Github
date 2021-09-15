@@ -49,9 +49,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d74dac3fb455d549bfd69d47fc26ce4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHealth: 150
-  maxSpeed: 1
-  defence: 0
+  startHealth: 200
+  maxSpeed: 1.5
+  defence: 50
   damage: 1
   worth: 25
   speed: 0
