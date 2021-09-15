@@ -1542,6 +1542,7 @@ GameObject:
   - component: {fileID: 647423399097559208}
   - component: {fileID: 391009275418152595}
   - component: {fileID: 1256526806027820429}
+  - component: {fileID: 6930461191734657913}
   m_Layer: 5
   m_Name: Arrow (Next Level)
   m_TagString: Untagged
@@ -1649,7 +1650,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 391009275418152595}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6930461191734657913}
+        m_TargetAssemblyTypeName: ResetLevel, Assembly-CSharp
+        m_MethodName: Loadscene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6930461191734657913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3197959202337777478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f620124076e608c4cb1758074ec28ee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Level alpha2
 --- !u!1 &3390819538041826781
 GameObject:
   m_ObjectHideFlags: 0
@@ -2205,6 +2231,7 @@ GameObject:
   - component: {fileID: 5858576354804723899}
   - component: {fileID: 4434157141275241679}
   - component: {fileID: 1676768233647526261}
+  - component: {fileID: 8877584077210727635}
   m_Layer: 5
   m_Name: Arrow (Previous Level)
   m_TagString: Untagged
@@ -2312,7 +2339,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4434157141275241679}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8877584077210727635}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8877584077210727635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5622288508521509037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f620124076e608c4cb1758074ec28ee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: 
 --- !u!1 &5911497996555837345
 GameObject:
   m_ObjectHideFlags: 0
@@ -5400,7 +5452,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.6831665, y: 609.5049}
+  m_AnchoredPosition: {x: 4.009918, y: 614.85144}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &7251587040367010125

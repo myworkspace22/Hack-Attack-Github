@@ -6,33 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/StartMenu.unity
-    guid: 45c02515b74e9634ba9792bce9d2668f
+    path: Assets/Scenes/EXPO/Level alpha1.unity
+    guid: 84adf197d5a2184448bf72d00890c2e7
   - enabled: 1
-    path: Assets/Scenes/LevelSelection.unity
-    guid: 1f3bc93b402fdd340a4d9e9297b0ea3a
-  - enabled: 1
-    path: Assets/Scenes/Levels/Level 01.unity
-    guid: c71cfdf58f6701a4dafb6a206e576aff
-  - enabled: 1
-    path: Assets/Scenes/Levels/Level 02.unity
-    guid: 7cd62d2d2af226f449b31ebb674bda19
-  - enabled: 1
-    path: Assets/Scenes/Levels/Level 03.unity
-    guid: 319f03a4fb67ca94099775502191ea70
-  - enabled: 1
-    path: Assets/Scenes/Levels/Level 04.unity
-    guid: b081903e502489441ba4d41fc39d2ca4
-  - enabled: 1
-    path: Assets/Scenes/Levels/Level 05!.unity
-    guid: 35377aa43bfb55344b3638ce5748b580
-  - enabled: 1
-    path: Assets/Scenes/Levels/Level 06!!.unity
-    guid: 53ff9aa9b88e7c44695bd80b0fe36ab7
-  - enabled: 1
-    path: Assets/Scenes/Levels/Level 07!.unity
-    guid: 7283565f374bcec4991083140e1fa354
-  - enabled: 1
-    path: Assets/Scenes/Levels/Level 08.unity
-    guid: d4abf6fb1c6ee804ebe40036df1b868c
+    path: Assets/Scenes/EXPO/Level alpha2.unity
+    guid: 9d5e930350477ae409b0339dbe633696
   m_configObjects: {}

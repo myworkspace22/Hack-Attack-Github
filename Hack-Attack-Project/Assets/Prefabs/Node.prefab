@@ -119,12 +119,11 @@ MonoBehaviour:
     description: 
     prefab: {fileID: 0}
     cost: 0
-    levelUpCost: 0
     upgradeNames: []
+    upgradeIcon: []
     upgradeDescription: []
     upgradedPrefab:
     - {fileID: 0}
-    upgradeCost: 
     upgradeEffect: []
   isMaxed: 0
   upgradeNr: 0

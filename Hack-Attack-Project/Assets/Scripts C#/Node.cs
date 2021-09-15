@@ -494,13 +494,25 @@ public class Node : MonoBehaviour
         //rangeSprite.color = new Color(1, 0, 0, 0.78f);
         //sR.sprite = hoverBackground;
 
+        //spriteToChange.sprite = buildManager.GetTurretToBuild().prefab.GetComponent<SpriteRenderer>().sprite;
+        //ChangeRange(true, buildManager.GetTurretToBuild().prefab.GetComponent<Turret>().range);
+        //spriteToChange.gameObject.SetActive(true);
+        //spriteToChange.color = new Color(1, 1, 1, 0.50f);
+        //sR.sortingOrder = 1;
+        //spriteToChange.sortingOrder = 1;
+        //rangeSprite.color = new Color(1, 1, 1, 0.78f);
+        //sR.sprite = hoverBackground;
+
         spriteToChange.sprite = buildManager.GetTurretToBuild().prefab.GetComponent<SpriteRenderer>().sprite;
         ChangeRange(true, buildManager.GetTurretToBuild().prefab.GetComponent<Turret>().range);
         spriteToChange.gameObject.SetActive(true);
-        spriteToChange.color = new Color(1, 1, 1, 0.50f);
+        //spriteToChange.color = new Color(0, 0.5372466f, 0.5849056f);
+        spriteToChange.color = new Color(0.5843138f, 0, 0);
+        //sR.color = new Color(0.5849056f, 0.5849056f, 0.5849056f);
+        //sR.color = new Color(1, 1, 1);
         sR.sortingOrder = 1;
-        spriteToChange.sortingOrder = 1;
-        rangeSprite.color = new Color(1, 1, 1, 0.78f);
+        spriteToChange.sortingOrder = 2;
+        rangeSprite.color = new Color(1, 0, 0, 0.78f);
         sR.sprite = hoverBackground;
     }
     public void OnHoverSell(bool active)
