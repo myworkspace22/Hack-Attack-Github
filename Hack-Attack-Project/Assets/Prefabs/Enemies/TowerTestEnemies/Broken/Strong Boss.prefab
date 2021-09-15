@@ -91,7 +91,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4834382032185542614}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48a820fca87f0b64788af86b838f7009, type: 3}
   m_Name: 
@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 7373373764363036414}
   - component: {fileID: 7203673169436658652}
   m_Layer: 0
-  m_Name: Level 05 Boss
+  m_Name: Strong Boss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -167,8 +167,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startHealth: 12000
   maxSpeed: 0.8
-  defence: 0
-  damage: 5
+  defence: 1000
+  damage: 3
   worth: 50
   speed: 0
   stunResistence: 1
@@ -177,7 +177,7 @@ MonoBehaviour:
   canFly: 0
   healAmt: 0
   slowResistence: 0.3
-  increaseSpeed: 1
+  increaseSpeed: 0
   stealthTime: 0
   deathSpawnAmt: 0
   timedSpawnAmt: 0

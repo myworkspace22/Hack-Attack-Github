@@ -415,7 +415,7 @@ MonoBehaviour:
   target: {fileID: 0}
   range: 1
   nearestTarget: 0
-  bulletDamage: 10
+  bulletDamage: 15
   fireRate: 0.6
   useLaser: 0
   damageOverTime: 30
