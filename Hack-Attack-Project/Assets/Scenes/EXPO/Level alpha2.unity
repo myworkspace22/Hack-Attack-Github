@@ -3358,7 +3358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 716150944549258880, guid: 79b2353e86013104e93b18c4a209097c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 716150944549258885, guid: 79b2353e86013104e93b18c4a209097c, type: 3}
       propertyPath: m_RootOrder
@@ -60995,6 +60995,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6930461191734657913, guid: 9004b60c70019f14fb9619213f83d1c3, type: 3}
+      propertyPath: sceneName
+      value: Level alpha3
+      objectReference: {fileID: 0}
     - target: {fileID: 7251587039984775847, guid: 9004b60c70019f14fb9619213f83d1c3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -61029,11 +61033,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7251587040367010113, guid: 9004b60c70019f14fb9619213f83d1c3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 4.009918
+      value: -9.356415
       objectReference: {fileID: 0}
     - target: {fileID: 7251587040367010113, guid: 9004b60c70019f14fb9619213f83d1c3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 616.1881
+      value: 598.8118
       objectReference: {fileID: 0}
     - target: {fileID: 7251587040751038281, guid: 9004b60c70019f14fb9619213f83d1c3, type: 3}
       propertyPath: m_SortingOrder
@@ -61153,7 +61157,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8077055468838727924, guid: 9004b60c70019f14fb9619213f83d1c3, type: 3}
       propertyPath: waves.Array.size
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8077055468838727924, guid: 9004b60c70019f14fb9619213f83d1c3, type: 3}
       propertyPath: waves.Array.data[0].enemies.Array.size
