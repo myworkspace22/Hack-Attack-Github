@@ -2289,7 +2289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2421,10 +2421,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}
-    m_HighlightedColor: {r: 0.09, g: 0.09, b: 0.09, a: 1}
-    m_PressedColor: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}
-    m_SelectedColor: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2440,7 +2440,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 6902355703354162952}
+  m_TargetGraphic: {fileID: 3889550821775240400}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -2784,6 +2784,7 @@ MonoBehaviour:
   timeBetweenWaves: 50
   countdown: 50
   waveCountdownText: {fileID: 7251587039881500890}
+  waveCountdownButton: {fileID: 6960322158364926095}
   waveIndex: 0
   nameOfLevel: USB PORT
   timeBonusText: {fileID: 0}
@@ -3420,7 +3421,7 @@ GameObject:
   - component: {fileID: 7251587039909311894}
   - component: {fileID: 3484694286844589067}
   m_Layer: 5
-  m_Name: Cannon Tower
+  m_Name: Missile Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3440,7 +3441,7 @@ RectTransform:
   - {fileID: 7251587040793919444}
   - {fileID: 7251587041415049518}
   m_Father: {fileID: 7251587040906788501}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3553,8 +3554,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d68b7dfc82ed1ef4080a7cd6149e972d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  header: Cannon
-  content: 'Type: Area of effect
+  header: Missile
+  content: '<size=18><color=#C0C0C0>Launches a powerful missile that
+
+    explodes
+    in a radius on impact</size></color>
 
     Damage: 10
 
@@ -4927,7 +4931,7 @@ RectTransform:
   - {fileID: 7251587039954247628}
   - {fileID: 7251587040070415024}
   m_Father: {fileID: 7251587040906788501}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5041,7 +5045,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   header: Shooter
-  content: '<size=16>Type: Single target</size>
+  content: '<size=18><color=#C0C0C0>Shoots out a bullet dealing damage
+
+    to nearby
+    single targets</size></color>
 
     Damage: 15
 
@@ -5364,7 +5371,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.346588, y: 616.1881}
+  m_AnchoredPosition: {x: 10.693085, y: 609.5049}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &7251587040367010125
@@ -5519,7 +5526,7 @@ RectTransform:
   - {fileID: 7251587041497706990}
   - {fileID: 7251587040608477226}
   m_Father: {fileID: 7251587040906788501}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5633,13 +5640,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   header: Laser
-  content: 'Type: Supportive
-
-    Damage: 0
-
-    Range: 100
-
-    Frequency: 1.8'
+  content: "<size=18><color=#C0C0C0>Fires out laser beams slowing \r\nenemies for
+    at short time</size></color>\nDamage: 0\nRange: 100\nFrequency: 1.8"
   _showUi: 1
 --- !u!114 &4631615663722719857
 MonoBehaviour:
@@ -7539,82 +7541,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &7251587040838585587
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7251587040838585586}
-  - component: {fileID: 7251587040838585584}
-  - component: {fileID: 7251587040838585585}
-  m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &7251587040838585586
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7251587040838585587}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 7251587041382161627}
-  m_Father: {fileID: 7251587040906788501}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -15.000004, y: 87.9}
-  m_SizeDelta: {x: 320, y: 56.8194}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &7251587040838585584
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7251587040838585587}
-  m_CullTransparentMesh: 1
---- !u!114 &7251587040838585585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7251587040838585587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.101960786, g: 0.101960786, b: 0.101960786, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &7251587040906788502
 GameObject:
   m_ObjectHideFlags: 0
@@ -7646,7 +7572,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 7251587040838585586}
   - {fileID: 7251587040275090207}
   - {fileID: 7251587039909311895}
   - {fileID: 7251587040416285207}
@@ -7745,12 +7670,12 @@ MonoBehaviour:
     - {fileID: 7916541085778940208, guid: 093eb98c45785424eb3b622a5544c031, type: 3}
     - {fileID: 7916541085778940208, guid: a479a156e3581be4789abc961d554ff2, type: 3}
     upgradeEffect:
-    - 
-    - 
-    - 
-    - 'Effect: <color=#00FF00>damage over time</color>'
-    - 
-    - 
+    - <size=18><color=#C0C0C0>Shoots out bullets at a higher frequency</size></color>
+    - <size=18><color=#C0C0C0>Shoot enemies at a longer range</size></color>
+    - <size=18><color=#C0C0C0>Shoots faster over time, resets when changing targets</size></color>
+    - <size=18><color=#C0C0C0>Shoots bullets that poison enemies</size></color>
+    - <size=18><color=#C0C0C0>Shoots out multiple bullets at a time</size></color>
+    - <size=18><color=#C0C0C0>Shoots enemies anywhere on the screen</size></color>
   missileTurret:
     title: Missile
     description: Launches a missile that explodes in a radius on impact
@@ -7771,7 +7696,7 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 11c68c16f510b574093418da71a5d898, type: 3}
     - {fileID: 21300000, guid: e75a507548af9bd4897e5667e03cc8cc, type: 3}
     upgradeDescription:
-    - Can shoot two missiles at a time that no longer explodes
+    - Shoots out two missiles at a time that no longer explodes
     - Throws out a powerful explosion causing high damage
     - Shoot out a cone of fire damaging all enemies in the area
     - Throws out a high impact explosion causing damage to multiple enemies
@@ -7785,12 +7710,15 @@ MonoBehaviour:
     - {fileID: 4133119791020861501, guid: 1cebbfd33c00c0d4d841dc095abe806f, type: 3}
     - {fileID: 4133119791020861501, guid: 7f476895eb870ae499c55a93cc088723, type: 3}
     upgradeEffect:
-    - 
-    - 
-    - 'Effect: <color=#00FF00>damage over time</color>'
-    - 
-    - 
-    - 
+    - <size=18><color=#C0C0C0>Shoots out two missiles at a time that no longer explodes</size></color>
+    - <size=18><color=#C0C0C0>Throws out a powerful explosion causing high damage</size></color>
+    - <size=18><color=#C0C0C0>Shoot out a cone of fire damaging all enemies in the
+      area</size></color>
+    - <size=18><color=#C0C0C0>Throws out a high impact explosion causing damage to
+      multiple enemies</size></color>
+    - <size=18><color=#C0C0C0>Scans for nearby enemies and sends out seeking missiles</size></color>
+    - <size=18><color=#C0C0C0>Sends out a spinning projectile that deals damage on
+      collision</size></color>
   laserTurret:
     title: Laser
     description: Shoots lasers at enemies with stun
@@ -7825,12 +7753,12 @@ MonoBehaviour:
     - {fileID: 5556433950650397502, guid: d32e43a5d71a3824ca49113c94cf7b18, type: 3}
     - {fileID: 5556433950650397502, guid: 4ef270e71c19edc46a68d2772230cb94, type: 3}
     upgradeEffect:
-    - 'Effect: <color=#00FF00>slowing</color>'
-    - 
-    - 'Effect: <color=#00FF00>slowing</color>'
-    - 
-    - 'Effect: <color=#00FF00>slowing</color>'
-    - 
+    - <size=18><color=#C0C0C0>Fires a laser that slows down enemies</size></color>
+    - <size=18><color=#C0C0C0>Shoots laser beams at enemies with stun</size></color>
+    - <size=18><color=#C0C0C0>Slow enemies around the tower while shooting laser</size></color>
+    - <size=18><color=#C0C0C0>Shoots laser beams that stuns enemies for longer</size></color>
+    - <size=18><color=#C0C0C0>Fires out multiple beams that damages enemies</size></color>
+    - <size=18><color=#C0C0C0>Shoots radioactive waves damaging enemies around</size></color>
 --- !u!114 &7251587040906788499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8864,7 +8792,7 @@ GameObject:
   - component: {fileID: 975193388757971201}
   - component: {fileID: 3642327890764244859}
   m_Layer: 0
-  m_Name: WaveManager*
+  m_Name: Wavemanager - enemylist
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8878,7 +8806,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7251587041310783661}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7251587041180649518}
@@ -9131,140 +9059,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!1 &7251587041382161628
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7251587041382161627}
-  - component: {fileID: 7251587041382161625}
-  - component: {fileID: 7251587041382161626}
-  m_Layer: 5
-  m_Name: Text (TMP)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &7251587041382161627
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7251587041382161628}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7251587040838585586}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &7251587041382161625
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7251587041382161628}
-  m_CullTransparentMesh: 1
---- !u!114 &7251587041382161626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7251587041382161628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: TOWERS
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b8e5e6ee5dac741408435bd90d2b5349, type: 2}
-  m_sharedMaterial: {fileID: 6871096538463531599, guid: b8e5e6ee5dac741408435bd90d2b5349, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 26
-  m_fontSizeBase: 26
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &7251587041395399870
 GameObject:
   m_ObjectHideFlags: 0
@@ -10712,7 +10506,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7251587041808805145}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1202127985205729679}
@@ -12064,11 +11858,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
-    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.039215688}
-    m_PressedColor: {r: 1, g: 1, b: 1, a: 0}
-    m_SelectedColor: {r: 1, g: 1, b: 1, a: 0}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    m_PressedColor: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_DisabledColor: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -12083,7 +11877,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 2729291111692735551}
+  m_TargetGraphic: {fileID: 7251587039881500890}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -12120,7 +11914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

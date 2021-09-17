@@ -93,13 +93,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  range: 2.5
+  range: 1.5
   nearestTarget: 0
   bulletDamage: 900
   fireRate: 2
   useLaser: 1
-  damageOverTime: 500
-  slowAmount: 0.75
+  damageOverTime: 0
+  slowAmount: 0.8
   lineRenderer: {fileID: 6504848342243824772}
   impactEffect: {fileID: 542028477967590547}
   laserWidth: 0.03
@@ -191,8 +191,8 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.023529412, g: 0.9019608, b: 0.9764706, a: 1}
-      key1: {r: 0.023529414, g: 0.90196085, b: 0.97647065, a: 1}
+      key0: {r: 0.023529412, g: 0.9019608, b: 0.9764706, a: 0}
+      key1: {r: 0.023529414, g: 0.90196085, b: 0.97647065, a: 0}
       key2: {r: 0.023529414, g: 0.90196085, b: 0.97647065, a: 1}
       key3: {r: 0, g: 0, b: 0, a: 1}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 1817394550564463745}
   - component: {fileID: 5931138794728094771}
   m_Layer: 6
-  m_Name: FireLaizer
+  m_Name: Black Circle ontop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -364,12 +364,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  range: 2.1
+  range: 1.5
   nearestTarget: 0
   bulletDamage: 30
   fireRate: 1
   useLaser: 1
-  damageOverTime: 30
+  damageOverTime: 0
   slowAmount: 0.8
   lineRenderer: {fileID: 6920416368136055428}
   impactEffect: {fileID: 3871315479789446270}
@@ -513,8 +513,8 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.023529412, g: 0.9019608, b: 0.9764706, a: 1}
-      key1: {r: 0.023529414, g: 0.90196085, b: 0.97647065, a: 1}
+      key0: {r: 0.023529412, g: 0.9019608, b: 0.9764706, a: 0}
+      key1: {r: 0.023529414, g: 0.90196085, b: 0.97647065, a: 0}
       key2: {r: 0.023529414, g: 0.90196085, b: 0.97647065, a: 1}
       key3: {r: 0, g: 0, b: 0, a: 1}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -939,13 +939,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  range: 2.5
+  range: 1.5
   nearestTarget: 0
   bulletDamage: 900
   fireRate: 2
   useLaser: 1
-  damageOverTime: 500
-  slowAmount: 0.75
+  damageOverTime: 0
+  slowAmount: 0.8
   lineRenderer: {fileID: 2049763727636447868}
   impactEffect: {fileID: 1194017718859168963}
   laserWidth: 0.03
@@ -1037,8 +1037,8 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.023529412, g: 0.9019608, b: 0.9764706, a: 1}
-      key1: {r: 0.023529414, g: 0.90196085, b: 0.97647065, a: 1}
+      key0: {r: 0.023529412, g: 0.9019608, b: 0.9764706, a: 0}
+      key1: {r: 0.023529414, g: 0.90196085, b: 0.97647065, a: 0}
       key2: {r: 0.023529414, g: 0.90196085, b: 0.97647065, a: 1}
       key3: {r: 0, g: 0, b: 0, a: 1}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -1318,29 +1318,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4609472876526070178, guid: 82f2954dd43510e49af5c6ef1653f4dd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7353973041108334631, guid: 82f2954dd43510e49af5c6ef1653f4dd, type: 3}
-      propertyPath: m_SortingOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7353973041108334631, guid: 82f2954dd43510e49af5c6ef1653f4dd, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 7920924485072857347, guid: 82f2954dd43510e49af5c6ef1653f4dd, type: 3}
       propertyPath: m_Name
       value: Laser Impact Effect
-      objectReference: {fileID: 0}
-    - target: {fileID: 7920924485072857347, guid: 82f2954dd43510e49af5c6ef1653f4dd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8364091784890256781, guid: 82f2954dd43510e49af5c6ef1653f4dd, type: 3}
-      propertyPath: m_SortingOrder
-      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82f2954dd43510e49af5c6ef1653f4dd, type: 3}
@@ -1405,29 +1385,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4609472876526070178, guid: 82f2954dd43510e49af5c6ef1653f4dd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7353973041108334631, guid: 82f2954dd43510e49af5c6ef1653f4dd, type: 3}
-      propertyPath: m_SortingOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7353973041108334631, guid: 82f2954dd43510e49af5c6ef1653f4dd, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 7920924485072857347, guid: 82f2954dd43510e49af5c6ef1653f4dd, type: 3}
       propertyPath: m_Name
       value: Laser Impact Effect
-      objectReference: {fileID: 0}
-    - target: {fileID: 7920924485072857347, guid: 82f2954dd43510e49af5c6ef1653f4dd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8364091784890256781, guid: 82f2954dd43510e49af5c6ef1653f4dd, type: 3}
-      propertyPath: m_SortingOrder
-      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82f2954dd43510e49af5c6ef1653f4dd, type: 3}
@@ -1492,29 +1452,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4609472876526070178, guid: 82f2954dd43510e49af5c6ef1653f4dd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7353973041108334631, guid: 82f2954dd43510e49af5c6ef1653f4dd, type: 3}
-      propertyPath: m_SortingOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7353973041108334631, guid: 82f2954dd43510e49af5c6ef1653f4dd, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 7920924485072857347, guid: 82f2954dd43510e49af5c6ef1653f4dd, type: 3}
       propertyPath: m_Name
       value: Laser Impact Effect
-      objectReference: {fileID: 0}
-    - target: {fileID: 7920924485072857347, guid: 82f2954dd43510e49af5c6ef1653f4dd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8364091784890256781, guid: 82f2954dd43510e49af5c6ef1653f4dd, type: 3}
-      propertyPath: m_SortingOrder
-      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82f2954dd43510e49af5c6ef1653f4dd, type: 3}

@@ -38,6 +38,8 @@ public class WaveSpawner : MonoBehaviour
 
     public TextMeshProUGUI waveCountdownText;
 
+    public Button waveCountdownButton;
+
     public int waveIndex = 0;
 
     private bool waveEnded;
@@ -104,7 +106,7 @@ public class WaveSpawner : MonoBehaviour
         {
             Time.timeScale = 1;
             waveEnded = true;
-            waveCountdownText.color = Color.white;
+            waveCountdownButton.interactable = true;
             OnWaveEnded?.Invoke();
         }
         int waveMaxlength = 0;
@@ -128,7 +130,7 @@ public class WaveSpawner : MonoBehaviour
         {
             BuildManager.instance.DeselectNode();
             Time.timeScale = gameSpeed;
-            waveCountdownText.color = Color.gray;
+            waveCountdownButton.interactable = false;
             SpawnWave();
 
             //PlayerStats.Money += (PlayerStats.Money - PlayerStats.Money % 100) / 5;
