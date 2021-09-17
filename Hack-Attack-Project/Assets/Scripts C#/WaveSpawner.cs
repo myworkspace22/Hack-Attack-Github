@@ -20,6 +20,8 @@ public class WaveSpawner : MonoBehaviour
     [HideInInspector]
     public bool isPaused;
 
+    public TextMeshProUGUI speedButtonText;
+
     //public int enCount; //til at kunne se hvor mange enemies der er i banen
 
     public GameManager gameManager;
@@ -68,7 +70,14 @@ public class WaveSpawner : MonoBehaviour
         //enCount = EnemiesAlive; //til at kunne se hvor mange enemies der er i banen
         if (Input.GetKeyDown("space")/* && BuildMode*/)
         {
-            ReadyUp();
+            if (!BuildMode)
+            {
+                SpeedUp();
+            }
+            else
+            {
+                ReadyUp();
+            }
         }
         if (isPaused && currentArrow != null)
         {
@@ -95,6 +104,7 @@ public class WaveSpawner : MonoBehaviour
         {
             Time.timeScale = 1;
             waveEnded = true;
+            waveCountdownText.color = Color.white;
             OnWaveEnded?.Invoke();
         }
         int waveMaxlength = 0;
@@ -118,32 +128,33 @@ public class WaveSpawner : MonoBehaviour
         {
             BuildManager.instance.DeselectNode();
             Time.timeScale = gameSpeed;
-            waveCountdownText.text = "SPEED (x" + Time.timeScale + ")";
+            waveCountdownText.color = Color.gray;
             SpawnWave();
 
             //PlayerStats.Money += (PlayerStats.Money - PlayerStats.Money % 100) / 5;
             return;
         }
-        if (false)//waveIndex > 0 && !isPaused)
-        {
-            countdown -= Time.deltaTime;
+        //if (false)//waveIndex > 0 && !isPaused)
+        //{
+        //    countdown -= Time.deltaTime;
 
-            countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
+        //    countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
 
-            if (countdown > 10)
-            {
-                waveCountdownText.text = string.Format("NEXT WAVE", countdown);
-                //waveCountdownText.text = string.Format("NEXT WAVE ({0:0})", countdown);
-            }
-            if (countdown <= 10)
-            {
-                waveCountdownText.text = string.Format("NEXT WAVE", countdown);
-                //waveCountdownText.text = string.Format("NEXT WAVE ({0:0})", countdown);
-            }
-        } else
-        {
-            waveCountdownText.text = "NEXT WAVE";
-        }
+        //    if (countdown > 10)
+        //    {
+        //        waveCountdownText.text = string.Format("NEXT WAVE", countdown);
+        //        //waveCountdownText.text = string.Format("NEXT WAVE ({0:0})", countdown);
+        //    }
+        //    if (countdown <= 10)
+        //    {
+        //        waveCountdownText.text = string.Format("NEXT WAVE", countdown);
+        //        //waveCountdownText.text = string.Format("NEXT WAVE ({0:0})", countdown);
+        //    }
+        //} else
+        //{
+        //    waveCountdownText.text = "NEXT WAVE";
+        //}
+        waveCountdownText.text = "NEXT WAVE";
 
         //enemyName.text = "Next wave: <color=#00FF00>" + waves[waveIndex].enemies[0].enemy.GetComponent<Enemy>().startHealth + " HP</color>";
 
@@ -239,23 +250,23 @@ public class WaveSpawner : MonoBehaviour
     {
         if (!BuildMode)
         {
-            SpeedUp();
+            //SpeedUp();
             return;
         }
         BuildManager.instance.DeselectNode();
         //AddTimeBonus((int)countdown);
         countdown = 0;
         Time.timeScale = gameSpeed;
-        waveCountdownText.text = "SPEED (x" + Time.timeScale + ")";
+        //speedButtonText.text = "x" + Time.timeScale;
     }
-    public void SpaceToReadyUp()
-    {
-        BuildManager.instance.DeselectNode();
-        //AddTimeBonus((int)countdown);
-        countdown = 0;
-        Time.timeScale = gameSpeed;
-        waveCountdownText.text = "SPEED (x" + Time.timeScale + ")";
-    }
+    //public void SpaceToReadyUp()
+    //{
+    //    BuildManager.instance.DeselectNode();
+    //    //AddTimeBonus((int)countdown);
+    //    countdown = 0;
+    //    Time.timeScale = gameSpeed;
+    //    speedButtonText.text = "x" + Time.timeScale;
+    //}
 
     private void AddTimeBonus(int bonus)
     {
@@ -273,7 +284,8 @@ public class WaveSpawner : MonoBehaviour
 
     public void SpeedUp()
     {
-        if(gameSpeed >= 3)
+
+        if (gameSpeed >= 3)
         {
             gameSpeed = 1;
         }
@@ -282,7 +294,10 @@ public class WaveSpawner : MonoBehaviour
             gameSpeed += 1;
         }
 
-        Time.timeScale = gameSpeed;
-        waveCountdownText.text = "SPEED (x" + Time.timeScale + ")";
+        if (!BuildMode)
+        {
+            Time.timeScale = gameSpeed;
+        }
+        speedButtonText.text = "x" + gameSpeed;
     }
 }
