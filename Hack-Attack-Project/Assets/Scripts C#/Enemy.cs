@@ -7,7 +7,7 @@ using TMPro;
 
 public class Enemy : MonoBehaviour
 {
-    [Header("Base Stas:")]
+    [Header("Base Stats:")]
     public float startHealth;
     public float maxSpeed;
     public int defence;

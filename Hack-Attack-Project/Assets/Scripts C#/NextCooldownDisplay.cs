@@ -9,14 +9,14 @@ public class NextCooldownDisplay : MonoBehaviour
     private float value;
     private float countdown;
     //public float duration;
-    public Image fillImage;
+    //public Image fillImage;
 
     private void Start()
     {
-        fillImage.fillAmount = 0f;
+        //fillImage.fillAmount = 0f;
         countdown = waveTime.countdown;
 
-        waveTime.OnWavePriceLocked += FillImageOnStart;
+        //waveTime.OnWavePriceLocked += FillImageOnStart;
 
         //StartCoroutine(Timer(duration));
     }
@@ -28,17 +28,17 @@ public class NextCooldownDisplay : MonoBehaviour
 
             value = countdown / waveTime.timeBetweenWaves;
             value = 1 - value;
-            fillImage.fillAmount = value;
+            //fillImage.fillAmount = value;
         }
     }
-    private void OnDestroy()
-    {
-        waveTime.OnWavePriceLocked -= FillImageOnStart;
-    }
-    private void FillImageOnStart()
-    {
-        fillImage.fillAmount = 0;
-    }
+    //private void OnDestroy()
+    //{
+    //    waveTime.OnWavePriceLocked -= FillImageOnStart;
+    //}
+    //private void FillImageOnStart()
+    //{
+    //    fillImage.fillAmount = 0;
+    //}
     //public IEnumerator Timer(float duration)
     //{
     //    float startTime = Time.time;
