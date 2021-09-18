@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 3364265f26d80704a9e9bd270fd21867, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1cdacd986e129154b900cb526345db4d, type: 3}
   m_Color: {r: 0.14117648, g: 0.93333334, b: 0.95686275, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,8 +97,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionRange: 0
-  growSpeed: 1
-  multiplier: 8
+  growSpeed: 2
+  multiplier: 16
   Tesla: 0
   randomPitchRangeMax: 0.9
   randomPitchRangeMin: 1.1

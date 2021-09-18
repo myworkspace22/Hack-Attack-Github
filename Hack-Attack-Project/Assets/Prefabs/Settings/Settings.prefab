@@ -406,7 +406,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 44a653a0514de9144ac9b6b105ff2f2e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2bf1e338854b03949b95430c0a167be2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1966,7 +1966,7 @@ RectTransform:
   - {fileID: 1508486457558366332}
   - {fileID: 1473444763319283865}
   m_Father: {fileID: 7251587041357896656}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3555,17 +3555,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   header: Missile
-  content: '<size=18><color=#C0C0C0>Launches a powerful missile that
+  content: '<size=18><color=#C0C0C0>Sends out missiles that explodes</size></color>
 
-    explodes
-    in a radius on impact</size></color>
-
-    Damage: 10
+    Damage:
+    10
 
     Range: 150
 
-    Frequency:
-    0,6'
+    Frequency: 0,6'
   _showUi: 1
 --- !u!114 &3484694286844589067
 MonoBehaviour:
@@ -5045,17 +5042,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   header: Shooter
-  content: '<size=18><color=#C0C0C0>Shoots out a bullet dealing damage
+  content: '<size=18><color=#C0C0C0>Shoots at nearby single targets</size></color>
 
-    to nearby
-    single targets</size></color>
-
-    Damage: 15
+    Damage:
+    15
 
     Range: 150
 
-    Frequency:
-    1'
+    Frequency: 1'
   _showUi: 1
 --- !u!114 &8262960720327570110
 MonoBehaviour:
@@ -5190,7 +5184,7 @@ RectTransform:
   - {fileID: 1937911798056540737}
   - {fileID: 6950942381054314190}
   m_Father: {fileID: 7251587041357896656}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -5371,7 +5365,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.693085, y: 609.5049}
+  m_AnchoredPosition: {x: 6.6831665, y: 614.85144}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &7251587040367010125
@@ -5640,8 +5634,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   header: Laser
-  content: "<size=18><color=#C0C0C0>Fires out laser beams slowing \r\nenemies for
-    at short time</size></color>\nDamage: 0\nRange: 100\nFrequency: 1.8"
+  content: '<size=18><color=#C0C0C0>Fires out plasma that slows</size></color>
+
+    Damage:
+    0
+
+    Range: 100
+
+    Frequency: 1.8'
   _showUi: 1
 --- !u!114 &4631615663722719857
 MonoBehaviour:
@@ -7670,12 +7670,12 @@ MonoBehaviour:
     - {fileID: 7916541085778940208, guid: 093eb98c45785424eb3b622a5544c031, type: 3}
     - {fileID: 7916541085778940208, guid: a479a156e3581be4789abc961d554ff2, type: 3}
     upgradeEffect:
-    - <size=18><color=#C0C0C0>Shoots out bullets at a higher frequency</size></color>
-    - <size=18><color=#C0C0C0>Shoot enemies at a longer range</size></color>
-    - <size=18><color=#C0C0C0>Shoots faster over time, resets when changing targets</size></color>
-    - <size=18><color=#C0C0C0>Shoots bullets that poison enemies</size></color>
-    - <size=18><color=#C0C0C0>Shoots out multiple bullets at a time</size></color>
-    - <size=18><color=#C0C0C0>Shoots enemies anywhere on the screen</size></color>
+    - <size=18><color=#C0C0C0>Shoots at a higher frequency</size></color>
+    - <size=18><color=#C0C0C0>Shoots at a longer range</size></color>
+    - <size=18><color=#C0C0C0>Shoots faster over time</size></color>
+    - <size=18><color=#C0C0C0>Shoots bullets with poison</size></color>
+    - <size=18><color=#C0C0C0>Shoots out multiple bullets</size></color>
+    - <size=18><color=#C0C0C0>Shoots enemies anywhere</size></color>
   missileTurret:
     title: Missile
     description: Launches a missile that explodes in a radius on impact
@@ -8792,7 +8792,7 @@ GameObject:
   - component: {fileID: 975193388757971201}
   - component: {fileID: 3642327890764244859}
   m_Layer: 0
-  m_Name: Wavemanager - enemylist
+  m_Name: Spawn Portal - Waves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8980,8 +8980,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 7251587040906788501}
-  - {fileID: 7251587040311425599}
   - {fileID: 65815948268131678}
+  - {fileID: 7251587040311425599}
   - {fileID: 7251587040063381411}
   - {fileID: 7251587040485958567}
   - {fileID: 1738180294565918765}
