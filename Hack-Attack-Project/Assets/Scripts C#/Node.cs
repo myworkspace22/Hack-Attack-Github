@@ -19,6 +19,8 @@ public class Node : MonoBehaviour
     public Sprite hoverBackground;
     private Sprite baseSprite;
     private Color baseColor;
+    public Renderer meshRendererRange;
+    public Material rangeCircle;
 
     [HideInInspector]
     public GameObject turret;
@@ -79,10 +81,10 @@ public class Node : MonoBehaviour
         towerRange.SetActive(false);
 
         sR = GetComponent<SpriteRenderer>();
-
         baseColor = sR.color;
-
         baseSprite = sR.sprite;
+        meshRendererRange = gameObject.GetComponent<Renderer>();
+        rangeCircle = meshRendererRange.material;
     }
 
     //private void OnDestroy()
@@ -104,6 +106,7 @@ public class Node : MonoBehaviour
     {
         towerRange.transform.localScale = new Vector2(rangeRadius * 2, rangeRadius * 2);
         towerRange.SetActive(rangeStatus);
+        //rangeCircle.SetFloat("Scale", rangeRadius);
     }
 
     private void OnMouseDown()
@@ -510,8 +513,8 @@ public class Node : MonoBehaviour
         spriteToChange.color = new Color(0.5843138f, 0, 0);
         //sR.color = new Color(0.5849056f, 0.5849056f, 0.5849056f);
         //sR.color = new Color(1, 1, 1);
-        sR.sortingOrder = 1;
-        spriteToChange.sortingOrder = 2;
+        sR.sortingOrder = 0;
+        spriteToChange.sortingOrder = 1;
         rangeSprite.color = new Color(1, 0, 0, 0.78f);
         sR.sprite = hoverBackground;
     }

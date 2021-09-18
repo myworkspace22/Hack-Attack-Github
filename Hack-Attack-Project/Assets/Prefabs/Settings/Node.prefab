@@ -113,6 +113,8 @@ MonoBehaviour:
   spriteToChange: {fileID: 8620048545108702975}
   rangeSprite: {fileID: 2599942752457133196}
   hoverBackground: {fileID: 21300000, guid: 155de46eb2d422f41a7e2c342ec20ce9, type: 3}
+  meshRendererRange: {fileID: 7088225148930692448}
+  rangeCircle: {fileID: 2100000, guid: aec5c5a7f7a1ef24d8c2cb9902428f97, type: 2}
   turret: {fileID: 0}
   turretBlueprint:
     title: 
@@ -1032,7 +1034,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d221fe045e4e8ca429bc811f81c31faf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
