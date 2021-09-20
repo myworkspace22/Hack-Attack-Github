@@ -16,7 +16,7 @@ public class TurretBluePrint
     public string[] upgradeDescription;
     public GameObject[] upgradedPrefab;
     //public int[] upgradeCost;
-    public string[] upgradeEffect;
+    //public string[] upgradeEffect;
 
 
     //public int GetSellAmount()

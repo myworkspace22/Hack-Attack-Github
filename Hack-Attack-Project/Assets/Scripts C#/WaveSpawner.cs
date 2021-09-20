@@ -20,7 +20,7 @@ public class WaveSpawner : MonoBehaviour
     [HideInInspector]
     public bool isPaused;
 
-    public TextMeshProUGUI speedButtonText;
+    //public TextMeshProUGUI speedButtonText;
 
     //public int enCount; //til at kunne se hvor mange enemies der er i banen
 
@@ -48,9 +48,12 @@ public class WaveSpawner : MonoBehaviour
     public event Action OnWaveEnded;
 
     public string nameOfLevel;
+
+    public GameObject[] speedArrows;
+
     //public TextMeshProUGUI nameOfLevelUI;
 
-    public TextMeshProUGUI timeBonusText;
+    //public TextMeshProUGUI timeBonusText;
 
     public bool BuildMode { get { return EnemiesAlive <= 0; } }
 
@@ -64,6 +67,7 @@ public class WaveSpawner : MonoBehaviour
         isPaused = false;
         EnemiesAlive = 0;
         portalsReady = spawnPortals.Length;
+        UpdateSpeedArrows();
     }
 
     private void Update()
@@ -72,17 +76,17 @@ public class WaveSpawner : MonoBehaviour
         //enCount = EnemiesAlive; //til at kunne se hvor mange enemies der er i banen
         if (Input.GetKeyDown("space")/* && BuildMode*/)
         {
-                ReadyUp();
+            ReadyUp();
         }
         if (isPaused && currentArrow != null)
         {
             Destroy(currentArrow);
         }
-        if (BuildMode && currentArrow == null && !arrowPathDeactive && !isPaused)
-        {
-            currentArrow = Instantiate(arrowPath, spawnPortals[UnityEngine.Random.Range(0, spawnPortals.Length)].transform.position, spawnPortals[UnityEngine.Random.Range(0, spawnPortals.Length)].transform.rotation);
-            currentArrow.GetComponent<AIDestinationSetter>().target = endPoint;
-        }
+        //if (BuildMode && currentArrow == null && !arrowPathDeactive && !isPaused)
+        //{
+        //    currentArrow = Instantiate(arrowPath, spawnPortals[UnityEngine.Random.Range(0, spawnPortals.Length)].transform.position, spawnPortals[UnityEngine.Random.Range(0, spawnPortals.Length)].transform.rotation);
+        //    currentArrow.GetComponent<AIDestinationSetter>().target = endPoint;
+        //}
 
         if (EnemiesAlive < GameObject.FindGameObjectsWithTag("Enemy").Length)
         {
@@ -271,10 +275,6 @@ public class WaveSpawner : MonoBehaviour
         }
 
         PlayerStats.Money += bonus;
-
-        timeBonusText.text = "TIME BONUS <color=#FFD500>$" + bonus + "</color>";
-
-        timeBonusText.gameObject.GetComponent<Animator>().SetTrigger("PlayBonus");
     }
 
     public void SpeedUp()
@@ -293,6 +293,17 @@ public class WaveSpawner : MonoBehaviour
         {
             Time.timeScale = gameSpeed;
         }
-        speedButtonText.text = "x" + gameSpeed;
+        UpdateSpeedArrows();
+    }
+    private void UpdateSpeedArrows()
+    {
+        for (int i = 0; i < speedArrows.Length; i++)
+        {
+            speedArrows[i].SetActive(false);
+            if (i < gameSpeed)
+            {
+                speedArrows[i].SetActive(true);
+            }
+        }
     }
 }

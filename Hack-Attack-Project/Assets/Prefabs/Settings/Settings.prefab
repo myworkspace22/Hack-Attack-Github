@@ -450,6 +450,7 @@ Transform:
   - {fileID: 7251587041744958466}
   - {fileID: 7251587041357896656}
   - {fileID: 7251587040263307170}
+  - {fileID: 2602041724505063842}
   - {fileID: 6015244018461862568}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -2824,7 +2825,7 @@ Transform:
   m_Children:
   - {fileID: 7251587041137229397}
   m_Father: {fileID: 3790127337129811364}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6015244018461862571
 MonoBehaviour:
@@ -2842,7 +2843,6 @@ MonoBehaviour:
   arrowPathDeactive: 0
   gameSpeed: 0
   isPaused: 0
-  speedButtonText: {fileID: 3889550821775240400}
   gameManager: {fileID: 6015244018461862583}
   spawnPortals:
   - {fileID: 8077055468838727924}
@@ -2853,7 +2853,10 @@ MonoBehaviour:
   waveCountdownButton: {fileID: 6960322158364926095}
   waveIndex: 0
   nameOfLevel: USB PORT
-  timeBonusText: {fileID: 0}
+  speedArrows:
+  - {fileID: 7570133900088544062}
+  - {fileID: 7920833375852429166}
+  - {fileID: 6721053328350098741}
   portalsReady: 0
 --- !u!114 &6015244018461862569
 MonoBehaviour:
@@ -5506,7 +5509,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.356506, y: 618.8613}
+  m_AnchoredPosition: {x: 0, y: 609.5049}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &7251587040367010125
@@ -7810,13 +7813,6 @@ MonoBehaviour:
     - {fileID: 7916541085778940208, guid: 4dc36c88a1310214fb953f2d4815af58, type: 3}
     - {fileID: 7916541085778940208, guid: 093eb98c45785424eb3b622a5544c031, type: 3}
     - {fileID: 7916541085778940208, guid: a479a156e3581be4789abc961d554ff2, type: 3}
-    upgradeEffect:
-    - <size=18><color=#C0C0C0>Shoots at a higher frequency</size></color>
-    - <size=18><color=#C0C0C0>Shoots at a longer range</size></color>
-    - <size=18><color=#C0C0C0>Shoots faster over time</size></color>
-    - <size=18><color=#C0C0C0>Shoots bullets with poison</size></color>
-    - <size=18><color=#C0C0C0>Shoots out multiple bullets</size></color>
-    - <size=18><color=#C0C0C0>Shoots enemies anywhere</size></color>
   missileTurret:
     title: Missile
     description: Launches a missile that explodes in a radius on impact
@@ -7853,16 +7849,6 @@ MonoBehaviour:
     - {fileID: 4133119791020861501, guid: 4b9c0971086cf9e47b7245ebc8a09d74, type: 3}
     - {fileID: 4133119791020861501, guid: 1cebbfd33c00c0d4d841dc095abe806f, type: 3}
     - {fileID: 4133119791020861501, guid: 7f476895eb870ae499c55a93cc088723, type: 3}
-    upgradeEffect:
-    - <size=18><color=#C0C0C0>Shoots out two missiles at a time that no longer explodes</size></color>
-    - <size=18><color=#C0C0C0>Throws out a powerful explosion causing high damage</size></color>
-    - <size=18><color=#C0C0C0>Shoot out a cone of fire damaging all enemies in the
-      area</size></color>
-    - <size=18><color=#C0C0C0>Throws out a high impact explosion causing damage to
-      multiple enemies</size></color>
-    - <size=18><color=#C0C0C0>Scans for nearby enemies and sends out seeking missiles</size></color>
-    - <size=18><color=#C0C0C0>Sends out a spinning projectile that deals damage on
-      collision</size></color>
   laserTurret:
     title: Laser
     description: Shoots lasers at enemies with stun
@@ -7896,13 +7882,6 @@ MonoBehaviour:
     - {fileID: 5556433950650397502, guid: a75464de6e0979e4e8bf041fefb5fa78, type: 3}
     - {fileID: 5556433950650397502, guid: d32e43a5d71a3824ca49113c94cf7b18, type: 3}
     - {fileID: 5556433950650397502, guid: 4ef270e71c19edc46a68d2772230cb94, type: 3}
-    upgradeEffect:
-    - <size=18><color=#C0C0C0>Fires a laser that slows down enemies</size></color>
-    - <size=18><color=#C0C0C0>Shoots laser beams at enemies with stun</size></color>
-    - <size=18><color=#C0C0C0>Slow enemies around the tower while shooting laser</size></color>
-    - <size=18><color=#C0C0C0>Shoots laser beams that stuns enemies for longer</size></color>
-    - <size=18><color=#C0C0C0>Fires out multiple beams that damages enemies</size></color>
-    - <size=18><color=#C0C0C0>Shoots radioactive waves damaging enemies around</size></color>
 --- !u!114 &7251587040906788499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8990,6 +8969,9 @@ MonoBehaviour:
       enemy: {fileID: 5975281576349636344, guid: 146cc806fe0558b48b5e5a601967e8f6, type: 3}
       count: 9
       rate: 0.4
+  arrowPath: {fileID: 8842341416224451530, guid: e0e17a7c16d4c454eba84c2b4e802514, type: 3}
+  timeBetweenArrows: 3
+  endPoint: {fileID: 6015244020020103407}
 --- !u!114 &3041610407390307334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12055,6 +12037,101 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 84.426, y: 46.945}
   m_EdgeRadius: 0
+--- !u!1 &8506964886844860123
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2602041724505063842}
+  - component: {fileID: 552776277514049544}
+  - component: {fileID: 4314366571423195329}
+  m_Layer: 0
+  m_Name: TowerIconDrag
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2602041724505063842
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8506964886844860123}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3790127337129811364}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &552776277514049544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8506964886844860123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21f3aeb61ebca1046bd3d69f97e361c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!212 &4314366571423195329
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8506964886844860123}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 50
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.5019608}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &8774329907846570029
 GameObject:
   m_ObjectHideFlags: 0
