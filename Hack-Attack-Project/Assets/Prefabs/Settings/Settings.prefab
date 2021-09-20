@@ -454,6 +454,71 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1237060861036006125
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2611815648953263084}
+  - component: {fileID: 6334581773272791565}
+  m_Layer: 5
+  m_Name: Arrows
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2611815648953263084
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237060861036006125}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7859964479000948977}
+  - {fileID: 5188911907519078151}
+  - {fileID: 6190665453169271832}
+  m_Father: {fileID: 6950942381054314190}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.0003531, y: 0}
+  m_SizeDelta: {x: 88.257, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6334581773272791565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237060861036006125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 4
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &1439125636708228304
 GameObject:
   m_ObjectHideFlags: 0
@@ -2340,6 +2405,7 @@ RectTransform:
   - {fileID: 1471824871427845509}
   - {fileID: 2532525769566569026}
   - {fileID: 2359989417145108116}
+  - {fileID: 2611815648953263084}
   m_Father: {fileID: 7251587040311425599}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2992,6 +3058,81 @@ Transform:
   m_Father: {fileID: 7251587041808805125}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6721053328350098741
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6190665453169271832}
+  - component: {fileID: 7605361284321956306}
+  - component: {fileID: 1494821199125271134}
+  m_Layer: 5
+  m_Name: Arrow (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6190665453169271832
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6721053328350098741}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2611815648953263084}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 13.7671, y: 22.9452}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &7605361284321956306
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6721053328350098741}
+  m_CullTransparentMesh: 1
+--- !u!114 &1494821199125271134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6721053328350098741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.504, g: 0.504, b: 0.504, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 20fa13b307f1ed44b922eb7fb5bf19f3, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &6862972710368590008
 GameObject:
   m_ObjectHideFlags: 0
@@ -5365,7 +5506,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.6831665, y: 614.85144}
+  m_AnchoredPosition: {x: 9.356506, y: 618.8613}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &7251587040367010125
@@ -7656,12 +7797,12 @@ MonoBehaviour:
     - {fileID: 21300000, guid: bf1d7689313dc7d48a6119cdba63c5d1, type: 3}
     - {fileID: 21300000, guid: 18f40374a2241a24e9b793fa1333979a, type: 3}
     upgradeDescription:
-    - Shoots out bullets at a higher frequency
-    - Shoot enemies at a longer range
-    - Shoots faster over time, resets when changing targets
-    - Shoots bullets that poison enemies
-    - Shoots out multiple bullets at a time
-    - Shoot enemies anywhere on the screen
+    - <size=18><color=#C0C0C0>Shoots at a higher frequency</size></color>
+    - <size=18><color=#C0C0C0>Shoots at a longer range</size></color>
+    - <size=18><color=#C0C0C0>Shoots faster over time</size></color>
+    - <size=18><color=#C0C0C0>Shoots bullets with poison</size></color>
+    - <size=18><color=#C0C0C0>Shoots out multiple bullets</size></color>
+    - <size=18><color=#C0C0C0>Shoots enemies anywhere</size></color>
     upgradedPrefab:
     - {fileID: 7916541085778940208, guid: b8931a0da6aeffa468beceeab355c1e3, type: 3}
     - {fileID: 7916541085778940208, guid: 3c7b63e989636c84fa067ded4913cc92, type: 3}
@@ -7696,12 +7837,15 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 11c68c16f510b574093418da71a5d898, type: 3}
     - {fileID: 21300000, guid: e75a507548af9bd4897e5667e03cc8cc, type: 3}
     upgradeDescription:
-    - Shoots out two missiles at a time that no longer explodes
-    - Throws out a powerful explosion causing high damage
-    - Shoot out a cone of fire damaging all enemies in the area
-    - Throws out a high impact explosion causing damage to multiple enemies
-    - Scans for nearby enemies and sends out seeking missiles
-    - Sends out a spinning projectile that deals damage on collision
+    - <size=18><color=#C0C0C0>Shoots out two missiles at a time that no longer explodes</size></color>
+    - <size=18><color=#C0C0C0>Throws out a powerful explosion causing high damage</size></color>
+    - <size=18><color=#C0C0C0>Shoot out a cone of fire damaging all enemies in the
+      area</size></color>
+    - <size=18><color=#C0C0C0>Throws out a high impact explosion causing damage to
+      multiple enemies</size></color>
+    - <size=18><color=#C0C0C0>Scans for nearby enemies and sends out seeking missiles</size></color>
+    - <size=18><color=#C0C0C0>Sends out a spinning projectile that deals damage on
+      collision</size></color>
     upgradedPrefab:
     - {fileID: 4133119791020861501, guid: ad6e739ccabcb4f488132022e4e5b85c, type: 3}
     - {fileID: 4133119791020861501, guid: 881a4b92a59a5a447a45420e9860cdd2, type: 3}
@@ -7739,12 +7883,12 @@ MonoBehaviour:
     - {fileID: 21300000, guid: e69daa4e8ddfc0a41bf4d7172ebbde6e, type: 3}
     - {fileID: 21300000, guid: dcaececb394caaf48ab1b9872e6ccf18, type: 3}
     upgradeDescription:
-    - Fires a laser that slows down enemies
-    - Shoots laser beams at enemies with stun
-    - Slow enemies around the tower while shooting laser
-    - Shoots laser beams that stuns enemies for longer
-    - Fires out multiple beams that damages enemies
-    - Shoots radioactive waves damaging enemies around
+    - <size=18><color=#C0C0C0>Fires a laser that slows down enemies</size></color>
+    - <size=18><color=#C0C0C0>Shoots laser beams at enemies with stun</size></color>
+    - <size=18><color=#C0C0C0>Slow enemies around the tower while shooting laser</size></color>
+    - <size=18><color=#C0C0C0>Shoots laser beams that stuns enemies for longer</size></color>
+    - <size=18><color=#C0C0C0>Fires out multiple beams that damages enemies</size></color>
+    - <size=18><color=#C0C0C0>Shoots radioactive waves damaging enemies around</size></color>
     upgradedPrefab:
     - {fileID: 5556433950650397502, guid: 2517126d7116b9a4bb30c0a1e97979ac, type: 3}
     - {fileID: 5556433950650397502, guid: e63b2928cb181df45bf9a4569b674829, type: 3}
@@ -11141,6 +11285,81 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &7570133900088544062
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7859964479000948977}
+  - component: {fileID: 2539159894159930714}
+  - component: {fileID: 3686999936471726532}
+  m_Layer: 5
+  m_Name: Arrow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7859964479000948977
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7570133900088544062}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2611815648953263084}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 13.7671, y: 22.9452}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2539159894159930714
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7570133900088544062}
+  m_CullTransparentMesh: 1
+--- !u!114 &3686999936471726532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7570133900088544062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.504, g: 0.504, b: 0.504, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 20fa13b307f1ed44b922eb7fb5bf19f3, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &7697480067383112247
 GameObject:
   m_ObjectHideFlags: 0
@@ -11424,12 +11643,12 @@ GameObject:
   - component: {fileID: 2184342757080235081}
   - component: {fileID: 3889550821775240400}
   m_Layer: 5
-  m_Name: Speed Amount Text
+  m_Name: Amount Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2359989417145108116
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11546,6 +11765,81 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &7920833375852429166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5188911907519078151}
+  - component: {fileID: 4937632040121020255}
+  - component: {fileID: 6548301975588082063}
+  m_Layer: 5
+  m_Name: Arrow (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5188911907519078151
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7920833375852429166}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2611815648953263084}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 13.7671, y: 22.9452}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &4937632040121020255
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7920833375852429166}
+  m_CullTransparentMesh: 1
+--- !u!114 &6548301975588082063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7920833375852429166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.504, g: 0.504, b: 0.504, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 20fa13b307f1ed44b922eb7fb5bf19f3, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &8012526129622744633
 GameObject:
   m_ObjectHideFlags: 0

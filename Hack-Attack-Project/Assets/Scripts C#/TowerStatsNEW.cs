@@ -80,7 +80,7 @@ public class TowerStatsNEW : MonoBehaviour
         string color = (PlayerStats.Money >= nextLevelCost) ? "#FFD500" : "#9A9A9A";
 
         tmp.content = "Cost: <color=" + color + ">$" + nextLevelCost + "</color>\n" +
-            target.turretBlueprint.upgradeEffect[target.upgradeNr + 2 * multiplyer - 1] + "\n" +
+            target.turretBlueprint.upgradeDescription[target.upgradeNr + 1 * multiplyer - 1] + "\n" +
             "Damage: " + turretToUpgrade.bulletDamage + " <color=#00FF00>-> " + target.turretBlueprint.upgradedPrefab[target.upgradeNr + 1 * multiplyer - 1].GetComponent<Turret>().bulletDamage + "</color>\n" +
             "Range: " + turretToUpgrade.range * 100 + " <color=#00FF00>-> " + target.turretBlueprint.upgradedPrefab[target.upgradeNr + 1 * multiplyer - 1].GetComponent<Turret>().range * 100 + "</color>\n" +
             "Frequency: " + turretToUpgrade.fireRate + " <color=#00FF00>-> " + target.turretBlueprint.upgradedPrefab[target.upgradeNr + 1 * multiplyer - 1].GetComponent<Turret>().fireRate + "</color>";
@@ -88,7 +88,7 @@ public class TowerStatsNEW : MonoBehaviour
         color = (PlayerStats.Money >= nextLevelCost) ? "#FFD500" : "#9A9A9A";
 
         tmp2.content = "Cost: <color=" + color + ">$" + nextLevelCost + "</color>\n" +
-            target.turretBlueprint.upgradeEffect[target.upgradeNr + 2 * multiplyer - 1] + "\n" +
+            target.turretBlueprint.upgradeDescription[target.upgradeNr + 2 * multiplyer - 1] + "\n" +
             "Damage: " + turretToUpgrade.bulletDamage + " <color=#00FF00>-> " + target.turretBlueprint.upgradedPrefab[target.upgradeNr + 2 * multiplyer - 1].GetComponent<Turret>().bulletDamage + "</color>\n" +
             "Range: " + turretToUpgrade.range * 100 + " <color=#00FF00>-> " + target.turretBlueprint.upgradedPrefab[target.upgradeNr + 2 * multiplyer - 1].GetComponent<Turret>().range * 100 + "</color>\n" +
             "Frequency: " + turretToUpgrade.fireRate + " <color=#00FF00>-> " + target.turretBlueprint.upgradedPrefab[target.upgradeNr + 2 * multiplyer - 1].GetComponent<Turret>().fireRate + "</color>\n";

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1874531998607346999}
   - component: {fileID: 9118319029743844233}
   - component: {fileID: 3651215910070367833}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,8 +113,6 @@ MonoBehaviour:
   spriteToChange: {fileID: 8620048545108702975}
   rangeSprite: {fileID: 2599942752457133196}
   hoverBackground: {fileID: 21300000, guid: 155de46eb2d422f41a7e2c342ec20ce9, type: 3}
-  meshRendererRange: {fileID: 7088225148930692448}
-  rangeCircle: {fileID: 2100000, guid: aec5c5a7f7a1ef24d8c2cb9902428f97, type: 2}
   turret: {fileID: 0}
   turretBlueprint:
     title: 
@@ -185,7 +183,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6637828571909638315}
   - component: {fileID: 9006045034173087379}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Yellow (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,7 +265,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9138533406666877874}
   - component: {fileID: 717506181410841383}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Yellow (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -348,7 +346,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7831980571034339380}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Star2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -381,7 +379,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4551380000028854992}
   - component: {fileID: 3079941929601845781}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Yellow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -463,7 +461,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5305448145332955365}
   - component: {fileID: 3432823146854493837}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Black
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -545,13 +543,13 @@ GameObject:
   m_Component:
   - component: {fileID: 5745758912270464155}
   - component: {fileID: 2599942752457133196}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Range Borderline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5745758912270464155
 Transform:
   m_ObjectHideFlags: 0
@@ -626,7 +624,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5375324951745556630}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ranks of stars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -662,7 +660,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7682982302476767114}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Star3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -694,7 +692,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6229097178171617892}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Star5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -727,7 +725,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8897032856406092173}
   - component: {fileID: 4936098586179961477}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Black (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -809,7 +807,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3719584675263867760}
   - component: {fileID: 7202533354817243227}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Yellow (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -891,7 +889,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8067894670919858398}
   - component: {fileID: 403704632066526411}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Black (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -973,13 +971,13 @@ GameObject:
   m_Component:
   - component: {fileID: 855144899127475176}
   - component: {fileID: 7088225148930692448}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &855144899127475176
 Transform:
   m_ObjectHideFlags: 0
@@ -1055,7 +1053,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1757654795735358618}
   - component: {fileID: 1194981724360617828}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Yellow (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1137,7 +1135,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5434913166834121886}
   - component: {fileID: 8620048545108702975}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Standard Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1219,7 +1217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 577267797452824330}
   - component: {fileID: 3783331133633235372}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Yellow (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1300,7 +1298,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5463960830337383376}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Star1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1333,7 +1331,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6020824506638812434}
   - component: {fileID: 3735674744123747550}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Black (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1414,7 +1412,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2181480873763956934}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Star6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1446,7 +1444,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4287388779755420658}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Star4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1479,7 +1477,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5741180575124166327}
   - component: {fileID: 1292115985710084503}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Range Indicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1561,7 +1559,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9210873743662621309}
   - component: {fileID: 954487998842435924}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Black (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1643,7 +1641,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6412854868972100975}
   - component: {fileID: 618615637162645365}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Black (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1724,7 +1722,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3104444504961269391}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Range
   m_TagString: Untagged
   m_Icon: {fileID: 0}

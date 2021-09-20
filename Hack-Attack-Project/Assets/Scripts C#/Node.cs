@@ -19,8 +19,8 @@ public class Node : MonoBehaviour
     public Sprite hoverBackground;
     private Sprite baseSprite;
     private Color baseColor;
-    public Renderer meshRendererRange;
-    public Material rangeCircle;
+    //public Renderer meshRendererRange;
+    //public Material rangeCircle;
 
     [HideInInspector]
     public GameObject turret;
@@ -83,8 +83,8 @@ public class Node : MonoBehaviour
         sR = GetComponent<SpriteRenderer>();
         baseColor = sR.color;
         baseSprite = sR.sprite;
-        meshRendererRange = gameObject.GetComponent<Renderer>();
-        rangeCircle = meshRendererRange.material;
+        //meshRendererRange = gameObject.GetComponent<Renderer>();
+        //rangeCircle = meshRendererRange.material;
     }
 
     //private void OnDestroy()
@@ -106,7 +106,7 @@ public class Node : MonoBehaviour
     {
         towerRange.transform.localScale = new Vector2(rangeRadius * 2, rangeRadius * 2);
         towerRange.SetActive(rangeStatus);
-        //rangeCircle.SetFloat("Scale", rangeRadius);
+        //rangeCircle.SetFloat("Scale", 0.5f);
     }
 
     private void OnMouseDown()
@@ -211,8 +211,8 @@ public class Node : MonoBehaviour
         Turret tmpTurret = getTurret != null ? getTurret : blueprint.prefab.GetComponent<Turret>();
         tmp.ShowUi = true;
         tmp.header = (upgradeNr > 0) ? turretBlueprint.upgradeNames[upgradeNr -1]: turretBlueprint.title;
-        string effetTxt = (upgradeNr > 0) ? turretBlueprint.upgradeEffect[upgradeNr - 1] : "";
-        tmp.content = $"Damage: {tmpTurret.bulletDamage} \nRange: {tmpTurret.range * 100} \nFrequency: {tmpTurret.fireRate}\n{effetTxt}";
+        string effetTxt = (upgradeNr > 0) ? turretBlueprint.upgradeDescription[upgradeNr - 1] : turretBlueprint.description;
+        tmp.content = $"{effetTxt}\nDamage: {tmpTurret.bulletDamage} \nRange: {tmpTurret.range * 100} \nFrequency: {tmpTurret.fireRate}";
     }
 
     public void LevelUpTower()

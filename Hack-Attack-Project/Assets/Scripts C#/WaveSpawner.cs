@@ -72,14 +72,7 @@ public class WaveSpawner : MonoBehaviour
         //enCount = EnemiesAlive; //til at kunne se hvor mange enemies der er i banen
         if (Input.GetKeyDown("space")/* && BuildMode*/)
         {
-            if (!BuildMode)
-            {
-                SpeedUp();
-            }
-            else
-            {
                 ReadyUp();
-            }
         }
         if (isPaused && currentArrow != null)
         {
