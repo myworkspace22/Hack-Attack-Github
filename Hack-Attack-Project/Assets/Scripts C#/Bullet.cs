@@ -13,11 +13,14 @@ public class Bullet : MonoBehaviour
     public bool nuke;
     public bool timbersaw;
     public float stunTime;
+    public float slowTime;
+    public float slowPct;
+
     public bool rotateMissile;
 
     private Vector2 returnPos;
     //private bool returned;
-
+    
 
     private Vector2 flameDir;
 
@@ -177,6 +180,10 @@ public class Bullet : MonoBehaviour
             if (stunTime > 0)
             {
                 e.Stun(stunTime);
+            }
+            if (slowTime > 0)
+            {
+                e.Slow(slowPct, slowTime);
             }
         }
     }

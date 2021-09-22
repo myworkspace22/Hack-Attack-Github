@@ -99,7 +99,9 @@ MonoBehaviour:
   flameThrower: 0
   nuke: 0
   timbersaw: 0
-  stunTime: 0.7
+  stunTime: 0
+  slowTime: 6
+  slowPct: 0.8
   rotateMissile: 1
   damage: 0
   explosionRadius: 0
