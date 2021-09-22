@@ -452,7 +452,7 @@ MonoBehaviour:
   splitter: 0
   tesla: 0
   extraLasers: []
-  stunner: 1
+  stunner: 0
   upgradeDamage: 0
   upgradeRange: 0.2
   upgradeFrenquency: 1.2

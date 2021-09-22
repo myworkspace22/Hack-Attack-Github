@@ -58,7 +58,7 @@ public class Enemy : MonoBehaviour
     private float poisonTimer;
 
     private float stunTimer;
-    public bool Stuned { get { return stunTimer > 0; } }
+    public bool Stuned { get { return (stunTimer > 0||slowTimer >0); } }
 
     private float slowTimer;
     private float slowPct;
