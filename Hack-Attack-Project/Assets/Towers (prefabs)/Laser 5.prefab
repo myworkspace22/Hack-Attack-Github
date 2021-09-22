@@ -108,7 +108,7 @@ MonoBehaviour:
   lineRenderer: {fileID: 6920416368136055428}
   impactEffect: {fileID: 2872334427099462869}
   laserWidth: 0.03
-  multiTargets: 2
+  multiTargets: 0
   multiDelay: 0
   increseFrenquencyPct: 0
   sniper: 0

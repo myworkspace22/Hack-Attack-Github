@@ -181,13 +181,13 @@ MonoBehaviour:
   target: {fileID: 0}
   range: 1.5
   nearestTarget: 0
-  bulletDamage: 30
+  bulletDamage: 50
   fireRate: 1
-  useLaser: 1
-  damageOverTime: 0
-  slowAmount: 0.8
+  useLaser: 0
+  damageOverTime: 50
+  slowAmount: 0
   lineRenderer: {fileID: 0}
-  impactEffect: {fileID: 0}
+  impactEffect: {fileID: 4290368347908377900, guid: 85e4a06948741b84babafdd204d71252, type: 3}
   laserWidth: 0.03
   multiTargets: 0
   multiDelay: 0
@@ -197,21 +197,19 @@ MonoBehaviour:
   poisonTime: 0
   clusterBombTarget: {fileID: 0}
   clusterCooldown: 0
-  splitter: 1
+  splitter: 0
   tesla: 0
-  extraLasers:
-  - {fileID: 0}
-  - {fileID: 0}
+  extraLasers: []
   stunner: 0
   upgradeDamage: 0
   upgradeRange: 0
   upgradeFrenquency: 0
-  upgradeLaserDoT: 100
+  upgradeLaserDoT: 200
   enemyTag: Enemy
-  rotationPoint: {fileID: 5918272327451547685}
+  rotationPoint: {fileID: 0}
   bulletPrefab: {fileID: 4238579209898551604, guid: 7f98077fe9376f04baa4166b7ddbe507, type: 3}
-  firePoint: {fileID: 2848132688497259106}
-  towerPlatform: {fileID: 2271421092245175882}
+  firePoint: {fileID: 2848132688497259106, guid: 85e4a06948741b84babafdd204d71252, type: 3}
+  towerPlatform: {fileID: 2271421092245175882, guid: 85e4a06948741b84babafdd204d71252, type: 3}
   randomPitchRangeMax: 0.9
   randomPitchRangeMin: 1.1
 --- !u!212 &8709025309036245343

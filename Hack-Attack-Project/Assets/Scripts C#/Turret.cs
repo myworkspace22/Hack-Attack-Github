@@ -393,7 +393,10 @@ public class Turret : MonoBehaviour
         }
         Vector3 dir = newTraget.position - transform.position;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        rotationPoint.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
+        if (rotationPoint != null)
+        {
+            rotationPoint.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
+        }
     }
     void Laser()
     {
@@ -460,7 +463,10 @@ public class Turret : MonoBehaviour
     }
     private void ResetRotation()
     {
-        rotationPoint.rotation = Quaternion.Euler(0, 0, 0);
+        if (rotationPoint != null)
+        {
+            rotationPoint.rotation = Quaternion.Euler(0, 0, 0);
+        }
     }
 
     public void PlaySound()

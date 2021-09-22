@@ -85,15 +85,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  range: 1.5
+  range: 2.2
   nearestTarget: 0
-  bulletDamage: 50
-  fireRate: 1
-  useLaser: 1
-  damageOverTime: 50
-  slowAmount: 0
-  lineRenderer: {fileID: 0}
-  impactEffect: {fileID: 4290368347908377900}
+  bulletDamage: 0
+  fireRate: 0.2
+  useLaser: 0
+  damageOverTime: 900
+  slowAmount: 0.75
+  lineRenderer: {fileID: 6920416368136055428, guid: 4ef270e71c19edc46a68d2772230cb94, type: 3}
+  impactEffect: {fileID: 0}
   laserWidth: 0.03
   multiTargets: 0
   multiDelay: 0
@@ -104,18 +104,18 @@ MonoBehaviour:
   clusterBombTarget: {fileID: 0}
   clusterCooldown: 0
   splitter: 0
-  tesla: 0
+  tesla: 1
   extraLasers: []
   stunner: 0
-  upgradeDamage: 0
+  upgradeDamage: 900
   upgradeRange: 0
   upgradeFrenquency: 0
-  upgradeLaserDoT: 200
+  upgradeLaserDoT: 0
   enemyTag: Enemy
-  rotationPoint: {fileID: 5918272327451547685}
-  bulletPrefab: {fileID: 4238579209898551604, guid: 7f98077fe9376f04baa4166b7ddbe507, type: 3}
-  firePoint: {fileID: 2848132688497259106}
-  towerPlatform: {fileID: 2271421092245175882}
+  rotationPoint: {fileID: 0}
+  bulletPrefab: {fileID: 2881803708027556478, guid: 27d5bcd3f600cfe44a8784a9a3f7b0d7, type: 3}
+  firePoint: {fileID: 2848132688497259106, guid: 4ef270e71c19edc46a68d2772230cb94, type: 3}
+  towerPlatform: {fileID: 2271421092245175882, guid: 4ef270e71c19edc46a68d2772230cb94, type: 3}
   randomPitchRangeMax: 0.9
   randomPitchRangeMin: 1.1
 --- !u!114 &2211944480445419797
@@ -694,10 +694,5 @@ PrefabInstance:
 --- !u!4 &5856450987359828753 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2126108194832435241, guid: 82f2954dd43510e49af5c6ef1653f4dd, type: 3}
-  m_PrefabInstance: {fileID: 5532459968979645240}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &4290368347908377900 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 8596611103187877396, guid: 82f2954dd43510e49af5c6ef1653f4dd, type: 3}
   m_PrefabInstance: {fileID: 5532459968979645240}
   m_PrefabAsset: {fileID: 0}
