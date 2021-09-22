@@ -13,24 +13,33 @@ public class SpawnPortal : MonoBehaviour
 
     public float timeBetweenArrows;
 
-    private List<GameObject> currentArrows;
-    //private GameObject currentArrows;
+    private GameObject currentArrow;
 
     public Transform endPoint;
 
     private void Start()
     {
-        InvokeRepeating("SpawnArrowPath", 0, timeBetweenArrows);
-        currentArrows = new List<GameObject>();
+        //InvokeRepeating("SpawnArrowPath", 0, timeBetweenArrows);
     }
+    private void Update()
+    {
+        if(currentArrow == null)
+        {
+            SpawnArrowPath();
+        }
+        else if(!waveSpawner.BuildMode)
+        {
+            Destroy(currentArrow);
+        }
+    }
+
     private void SpawnArrowPath()
     {
         //&& currentArrow == null
         if (waveSpawner.BuildMode && !waveSpawner.arrowPathDeactive && !waveSpawner.isPaused)
         {
-            GameObject tmpArrow = Instantiate(arrowPath, transform.position, transform.rotation);
-            tmpArrow.GetComponent<AIDestinationSetter>().target = endPoint;
-            currentArrows.Add(tmpArrow);
+            currentArrow = Instantiate(arrowPath, transform.position, transform.rotation);
+            currentArrow.GetComponent<AIDestinationSetter>().target = endPoint;
         }
     }
 
