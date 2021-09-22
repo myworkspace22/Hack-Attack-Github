@@ -60,13 +60,19 @@ public class Enemy : MonoBehaviour
     private float stunTimer;
     public bool Stuned { get { return stunTimer > 0; } }
 
-    public bool IsSlowed { get; private set; }
+    private float slowTimer;
+    private float slowPct;
+    public bool Slowed { get { return slowTimer > 0; } }
+
+    //public bool IsSlowed { get; private set; }
 
     private void Start()
     {
         StealthMode = false;
 
         stunTimer = 0;
+        slowTimer = 0;
+        slowPct = 0;
 
         aIPath = GetComponent<AILerp>();
         aIDestination = GetComponent<AIDestinationSetter>();
@@ -159,7 +165,15 @@ public class Enemy : MonoBehaviour
         }
         else if (stunResistenceTimer > 0) { stunResistenceTimer -= Time.deltaTime; }
 
+
         slowed = false;
+        
+        if (slowTimer > 0)
+        {
+            slowTimer -= Time.deltaTime;
+            Slow(slowPct);
+        }
+
 
         if (StealthMode)
         {
@@ -203,16 +217,7 @@ public class Enemy : MonoBehaviour
                 health -= 3;
             }
         }
-        
-        
 
-        //float alpha = 90 + (healthUIpct * health);
-        //Debug.Log(alpha + " color on " + gameObject);
-
-        //Color colorTmp = spriteRenderer.color;
-        //colorTmp.a = alpha / 255;
-        //Debug.Log(colorTmp.a + " pct color on " + gameObject);
-        //spriteRenderer.color = colorTmp;
         if (increaseSpeed)
         {
             maxSpeed = StartSpeed * ((1 - health / startHealth) * 2 + 1);
@@ -272,9 +277,29 @@ public class Enemy : MonoBehaviour
         pct -= slowResistence;
         SetSpeed(maxSpeed * (1f - pct));
         slowed = true;
-        defence = 0;
-        IsSlowed = true;
+        // defence = 0;
     }
+    public void ReduseDefence(float pct)
+    {
+        float defencePct = (1f - pct);
+        if (defencePct < 0|| defencePct > 1f)
+        {
+            Debug.LogWarning("defne erreo");
+            defence = 0;
+        }
+        else
+        {
+            defence = (int)(defence * defencePct);
+        }
+    }
+
+    public void Slow(float pct, float time)
+    {
+        if (StealthMode) { return; }
+        slowPct = pct - slowResistence;
+        slowTimer = time;
+    }
+
     void Die()
     {
         if (hasDied)
