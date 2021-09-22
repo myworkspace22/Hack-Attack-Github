@@ -124,7 +124,6 @@ MonoBehaviour:
     upgradeDescription: []
     upgradedPrefab:
     - {fileID: 0}
-    upgradeEffect: []
   isMaxed: 0
   upgradeNr: 0
   towerLevel: 0
