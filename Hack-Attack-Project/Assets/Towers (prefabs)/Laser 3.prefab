@@ -42,7 +42,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5023651156899734471}
   - component: {fileID: 6595567104721690625}
-  - component: {fileID: 2211944480445419797}
   - component: {fileID: 8709025309036245343}
   - component: {fileID: 5359640839676976646}
   - component: {fileID: 7712302776447239023}
@@ -118,20 +117,6 @@ MonoBehaviour:
   towerPlatform: {fileID: 2271421092245175882, guid: 4ef270e71c19edc46a68d2772230cb94, type: 3}
   randomPitchRangeMax: 0.9
   randomPitchRangeMin: 1.1
---- !u!114 &2211944480445419797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5556433950650397502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5762aa5fbb3ea4d44990be350f54801e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slowAmount: 0.6
-  range: 1.5
 --- !u!212 &8709025309036245343
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -142,6 +142,7 @@ GameObject:
   - component: {fileID: -6965488394818203571}
   - component: {fileID: 1065875242750362209}
   - component: {fileID: -8858853124238594249}
+  - component: {fileID: 3209609897476412271}
   m_Layer: 6
   m_Name: Laser 4
   m_TagString: Untagged
@@ -207,8 +208,8 @@ MonoBehaviour:
   upgradeLaserDoT: 200
   enemyTag: Enemy
   rotationPoint: {fileID: 0}
-  bulletPrefab: {fileID: 4238579209898551604, guid: 7f98077fe9376f04baa4166b7ddbe507, type: 3}
-  firePoint: {fileID: 2848132688497259106, guid: 85e4a06948741b84babafdd204d71252, type: 3}
+  bulletPrefab: {fileID: 0}
+  firePoint: {fileID: 2848132688497259106}
   towerPlatform: {fileID: 2271421092245175882, guid: 85e4a06948741b84babafdd204d71252, type: 3}
   randomPitchRangeMax: 0.9
   randomPitchRangeMin: 1.1
@@ -404,6 +405,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3209609897476412271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5556433950650397502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5762aa5fbb3ea4d44990be350f54801e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowAmount: 0.75
+  range: 1.5
 --- !u!1 &7955904125729604621
 GameObject:
   m_ObjectHideFlags: 0

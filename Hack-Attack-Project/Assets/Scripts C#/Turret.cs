@@ -416,7 +416,10 @@ public class Turret : MonoBehaviour
     }
     void Shoot(Transform bulletTarget)
     {
-
+        if (bulletPrefab == null)
+        {
+            return;
+        }
         GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
         PlaySound();
