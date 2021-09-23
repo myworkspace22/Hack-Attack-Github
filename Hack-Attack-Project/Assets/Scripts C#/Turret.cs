@@ -66,7 +66,7 @@ public class Turret : MonoBehaviour
 
     public GameObject bulletPrefab;
     public Transform firePoint;
-    public SpriteRenderer towerPlatform;
+    //public SpriteRenderer towerPlatform;
 
     private AudioSource audioSource;
 
@@ -129,7 +129,16 @@ public class Turret : MonoBehaviour
                 float distanceToEnemy = Vector2.Distance(transform.position, enemy.transform.position);
                 if (splitter)
                 {
-                    if (distanceToEnemy < shortestDistance && enemy.transform != extraLasers[0].target && enemy.transform != extraLasers[1].target)
+                    bool extraTarget = false;
+                    for (int i = 0; i < extraLasers.Length; i++)
+                    {
+                        if (enemy.transform == extraLasers[i].target)
+                        {
+                            extraTarget = true;
+                            break;
+                        }
+                    }
+                    if (distanceToEnemy < shortestDistance && !extraTarget)
                     {
                         shortestDistance = distanceToEnemy;
                         nearestEnemy = enemy;

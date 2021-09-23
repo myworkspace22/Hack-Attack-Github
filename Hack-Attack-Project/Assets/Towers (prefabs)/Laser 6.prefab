@@ -82,6 +82,7 @@ Transform:
   - {fileID: 5918272327451547685}
   - {fileID: 3702757483748989638}
   - {fileID: 5553128085456063208}
+  - {fileID: 6965059136808088223}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -104,7 +105,7 @@ MonoBehaviour:
   fireRate: 6
   useLaser: 1
   damageOverTime: 80
-  slowAmount: 0.8
+  slowAmount: 1.2
   lineRenderer: {fileID: 6920416368136055428}
   impactEffect: {fileID: 2872334427099462869}
   laserWidth: 0.03
@@ -128,7 +129,6 @@ MonoBehaviour:
   rotationPoint: {fileID: 5918272327451547685}
   bulletPrefab: {fileID: 4238579209898551604, guid: 1e935d5707e5c8240ac9c55ed44c57e8, type: 3}
   firePoint: {fileID: 2848132688497259106}
-  towerPlatform: {fileID: 2271421092245175882}
   randomPitchRangeMax: 0.9
   randomPitchRangeMin: 1.1
 --- !u!212 &8709025309036245343
@@ -693,4 +693,66 @@ Transform:
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 8596611103187877396, guid: 82f2954dd43510e49af5c6ef1653f4dd, type: 3}
   m_PrefabInstance: {fileID: 5805659649760969409}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8911426728518250144
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5023651156899734471}
+    m_Modifications:
+    - target: {fileID: 1946508336984267839, guid: d37e32b802297d04398bf9a38898ef45, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946508336984267839, guid: d37e32b802297d04398bf9a38898ef45, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946508336984267839, guid: d37e32b802297d04398bf9a38898ef45, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1875
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946508336984267839, guid: d37e32b802297d04398bf9a38898ef45, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946508336984267839, guid: d37e32b802297d04398bf9a38898ef45, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946508336984267839, guid: d37e32b802297d04398bf9a38898ef45, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946508336984267839, guid: d37e32b802297d04398bf9a38898ef45, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946508336984267839, guid: d37e32b802297d04398bf9a38898ef45, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946508336984267839, guid: d37e32b802297d04398bf9a38898ef45, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946508336984267839, guid: d37e32b802297d04398bf9a38898ef45, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946508336984267839, guid: d37e32b802297d04398bf9a38898ef45, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7741355697009753365, guid: d37e32b802297d04398bf9a38898ef45, type: 3}
+      propertyPath: m_Name
+      value: Laser Charge Effect
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d37e32b802297d04398bf9a38898ef45, type: 3}
+--- !u!4 &6965059136808088223 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1946508336984267839, guid: d37e32b802297d04398bf9a38898ef45, type: 3}
+  m_PrefabInstance: {fileID: 8911426728518250144}
   m_PrefabAsset: {fileID: 0}
