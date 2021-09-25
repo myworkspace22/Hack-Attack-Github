@@ -199,7 +199,7 @@ RectTransform:
   - {fileID: 6585232809303640289}
   - {fileID: 7518798202208940088}
   m_Father: {fileID: 7251587041357896656}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -411,7 +411,7 @@ RectTransform:
   - {fileID: 7532767460737917096}
   - {fileID: 7251587040485958567}
   m_Father: {fileID: 7251587041357896656}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1083,7 +1083,7 @@ RectTransform:
   - {fileID: 6273713471281843554}
   - {fileID: 3414052508066166470}
   m_Father: {fileID: 7251587041357896656}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1821,7 +1821,7 @@ RectTransform:
   - {fileID: 1348191359896244245}
   - {fileID: 7424201899690744497}
   m_Father: {fileID: 7251587040906788501}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1856,8 +1856,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 043c4bf7eda7ae84baca7cf2a5de76f3, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2016,7 +2016,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.29803923}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.4}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2336,7 +2336,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -37.437576}
-  m_SizeDelta: {x: 300, y: 1}
+  m_SizeDelta: {x: 300, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &390896894320684451
 CanvasRenderer:
@@ -2359,7 +2359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.01, g: 0.01, b: 0.01, a: 1}
+  m_Color: {r: 0.02, g: 0.02, b: 0.02, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2561,7 +2561,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 37.562424}
-  m_SizeDelta: {x: 300, y: 1}
+  m_SizeDelta: {x: 300, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8171863992083988593
 CanvasRenderer:
@@ -2584,7 +2584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.01, g: 0.01, b: 0.01, a: 1}
+  m_Color: {r: 0.02, g: 0.02, b: 0.02, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2768,8 +2768,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23
-  m_fontSizeBase: 23
+  m_fontSize: 22
+  m_fontSizeBase: 22
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3024,7 +3024,7 @@ RectTransform:
   - {fileID: 8099964598405227742}
   - {fileID: 5166724181895389423}
   m_Father: {fileID: 7251587040906788501}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3059,8 +3059,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 043c4bf7eda7ae84baca7cf2a5de76f3, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3344,7 +3344,7 @@ RectTransform:
   - {fileID: 1508486457558366332}
   - {fileID: 1473444763319283865}
   m_Father: {fileID: 7251587041357896656}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3387,13 +3387,20 @@ MonoBehaviour:
   enemyImage: {fileID: 1585246194141693113}
   newEnemyTitle:
   - ENEMY APPROACHING!
+  - ENEMY APPROACHING!
+  - ENEMY APPROACHING!
   - BOSS APPROACHING!
   newEnemyDescription:
   - 'HEALER: Regenerates health over time'
-  - THE GAMBLER\n
+  - 'SPLITTER: Turns into multiple on death'
+  - 'NINJA: Turns invisible after taking damage '
+  - 'SKIPPY: SPOOKY!'
   newEnemyImage:
   - {fileID: 21300000, guid: a3ebf052b24bd3a489248cc05e0fcc5d, type: 3}
-  waveIndex: 020000000f000000
+  - {fileID: 21300000, guid: 287b86c33fb70aa44965d8ca53c0a5d0, type: 3}
+  - {fileID: 21300000, guid: 76a0d0de50981914a95f9ac19f653eaa, type: 3}
+  - {fileID: 21300000, guid: da923d05ecb1e67499f1c35750406c06, type: 3}
+  waveIndex: 080000000b0000000f00000014000000
   warning: {fileID: 1543968430156210257}
 --- !u!1 &4378496745591075737
 GameObject:
@@ -3426,7 +3433,7 @@ RectTransform:
   - {fileID: 7896878365650372636}
   - {fileID: 6828071721908635999}
   m_Father: {fileID: 7251587041357896656}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4132,7 +4139,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7251587040906788501}
-  m_RootOrder: 5
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4160,8 +4167,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-  m_RaycastTarget: 1
+  m_Color: {r: 0.02, g: 0.02, b: 0.02, a: 1}
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -4711,7 +4718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e4347b1b39eb3a43b3adc8cb0847706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 5000
+  startMoney: 99999
   startLives: 10
 --- !u!114 &6015244018461862583
 MonoBehaviour:
@@ -4878,7 +4885,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6015244020020103406}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.000005722046, y: 0, z: 0}
   m_LocalScale: {x: 14.285715, y: 14.285715, z: 1}
   m_Children: []
   m_Father: {fileID: 7251587041808805125}
@@ -7108,8 +7115,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22
-  m_fontSizeBase: 22
+  m_fontSize: 21
+  m_fontSizeBase: 21
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7512,7 +7519,7 @@ RectTransform:
   - {fileID: 1937911798056540737}
   - {fileID: 6950942381054314190}
   m_Father: {fileID: 7251587041357896656}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -7693,7 +7700,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 16.039673, y: 624.2079}
+  m_AnchoredPosition: {x: 6.6831665, y: 612.17816}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &7251587040367010125
@@ -8901,7 +8908,7 @@ RectTransform:
   m_Children:
   - {fileID: 7251587041555882322}
   m_Father: {fileID: 7251587041357896656}
-  m_RootOrder: 8
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -9905,10 +9912,10 @@ RectTransform:
   - {fileID: 7251587040416285207}
   - {fileID: 1245133163992298034}
   - {fileID: 1211812915586043812}
-  - {fileID: 6297019665908243573}
   - {fileID: 4095511193648449985}
   - {fileID: 5419875539540165435}
   - {fileID: 6817883653966408794}
+  - {fileID: 6297019665908243573}
   m_Father: {fileID: 7251587041357896656}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10081,12 +10088,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 422ea696cf531b745ac81d7117d25459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shooter: {fileID: 7251587040275090204}
-  cannon: {fileID: 7251587039909311892}
-  laser: {fileID: 7251587040416285204}
-  shooterIcon: {fileID: 7251587039954247627}
-  cannonIcon: {fileID: 7251587040793919443}
-  laserIcon: {fileID: 7251587041497706989}
+  shooter: {fileID: 1899014815267730978}
+  cannon: {fileID: 7502225712519660458}
+  laser: {fileID: 668389439530834729}
+  shooterIcon: {fileID: 3543411278842731136}
+  cannonIcon: {fileID: 794547559221189734}
+  laserIcon: {fileID: 4274059276171516388}
 --- !u!1 &7251587041050146570
 GameObject:
   m_ObjectHideFlags: 0
@@ -10492,8 +10499,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22
-  m_fontSizeBase: 22
+  m_fontSize: 21
+  m_fontSizeBase: 21
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -10831,7 +10838,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7251587041286721332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -4, y: -1.625, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7251587041248286515}
@@ -10965,10 +10972,10 @@ RectTransform:
   m_Father: {fileID: 7251587039857514794}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 23.35665, y: -23.47265}
-  m_SizeDelta: {x: 36.7133, y: 36.9453}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7251587041299183332
 CanvasRenderer:
@@ -11116,7 +11123,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7251587041310783661}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -3}
+  m_LocalPosition: {x: -4.125, y: -1.625, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7251587041180649518}
@@ -11142,20 +11149,142 @@ MonoBehaviour:
     - enemyName: Regular
       enemy: {fileID: 5975281576349636344, guid: 940fad39164ca9141802a89e070abe6b, type: 3}
       count: 2
-      rate: 1
-    - enemyName: 
-      enemy: {fileID: 0}
-      count: 2
-      rate: 1
+      rate: 0.6
+  - enemies:
     - enemyName: Regular
       enemy: {fileID: 5975281576349636344, guid: 940fad39164ca9141802a89e070abe6b, type: 3}
+      count: 3
+      rate: 0.6
+  - enemies:
+    - enemyName: Fast
+      enemy: {fileID: 5975281576349636344, guid: 198d3e72ecd110e40ae4c199279c2a73, type: 3}
       count: 2
+      rate: 0.5
+  - enemies:
+    - enemyName: Strong
+      enemy: {fileID: 5975281576349636344, guid: 6365a09b4fccd8c45b2084a200558eee, type: 3}
+      count: 1
+      rate: 1
+  - enemies:
+    - enemyName: Regular
+      enemy: {fileID: 5975281576349636344, guid: 940fad39164ca9141802a89e070abe6b, type: 3}
+      count: 5
+      rate: 1
+  - enemies:
+    - enemyName: Regular
+      enemy: {fileID: 5975281576349636344, guid: 940fad39164ca9141802a89e070abe6b, type: 3}
+      count: 3
+      rate: 0.5
+    - enemyName: Fast
+      enemy: {fileID: 5975281576349636344, guid: 198d3e72ecd110e40ae4c199279c2a73, type: 3}
+      count: 2
+      rate: 0.4
+  - enemies:
+    - enemyName: Strong
+      enemy: {fileID: 5975281576349636344, guid: 8958b854c78210340a188cbf1486f413, type: 3}
+      count: 1
+      rate: 0.5
+    - enemyName: Regular
+      enemy: {fileID: 5975281576349636344, guid: 940fad39164ca9141802a89e070abe6b, type: 3}
+      count: 3
+      rate: 0.8
+  - enemies:
+    - enemyName: Healer
+      enemy: {fileID: 5975281576349636344, guid: c54c5c8d5069f2748a4a4cdfa2ba956b, type: 3}
+      count: 1
+      rate: 1
+  - enemies:
+    - enemyName: Regular
+      enemy: {fileID: 5975281576349636344, guid: 940fad39164ca9141802a89e070abe6b, type: 3}
+      count: 5
       rate: 1
   - enemies:
     - enemyName: Fast
+      enemy: {fileID: 5975281576349636344, guid: 198d3e72ecd110e40ae4c199279c2a73, type: 3}
+      count: 3
+      rate: 2
+  - enemies:
+    - enemyName: Splitter
+      enemy: {fileID: 5975281576349636344, guid: 798a1752aee2a6b4c84e14d668aaa934, type: 3}
+      count: 1
+      rate: 1
+  - enemies:
+    - enemyName: Healer
+      enemy: {fileID: 5975281576349636344, guid: c54c5c8d5069f2748a4a4cdfa2ba956b, type: 3}
+      count: 3
+      rate: 0.8
+  - enemies:
+    - enemyName: Regular (Hard)
+      enemy: {fileID: 5975281576349636344, guid: 65caac8a94993624791cf2aae4178ac9, type: 3}
+      count: 3
+      rate: 0.8
+  - enemies:
+    - enemyName: Strong
+      enemy: {fileID: 5975281576349636344, guid: 8958b854c78210340a188cbf1486f413, type: 3}
+      count: 2
+      rate: 0.5
+    - enemyName: Splitter
+      enemy: {fileID: 5975281576349636344, guid: a01de46783f967c4a8587f8e500aa8e0, type: 3}
+      count: 1
+      rate: 0.5
+    - enemyName: Fast
+      enemy: {fileID: 5975281576349636344, guid: 198d3e72ecd110e40ae4c199279c2a73, type: 3}
+      count: 2
+      rate: 1
+  - enemies:
+    - enemyName: Ninja
+      enemy: {fileID: 5975281576349636344, guid: e198fbb94fe5559459db6976c8f26283, type: 3}
+      count: 3
+      rate: 1
+  - enemies:
+    - enemyName: Splitter
+      enemy: {fileID: 5975281576349636344, guid: 798a1752aee2a6b4c84e14d668aaa934, type: 3}
+      count: 3
+      rate: 1
+  - enemies:
+    - enemyName: Regular (Hard)
+      enemy: {fileID: 5975281576349636344, guid: 65caac8a94993624791cf2aae4178ac9, type: 3}
+      count: 3
+      rate: 1
+    - enemyName: Strong (Hard)
+      enemy: {fileID: 5975281576349636344, guid: b485687b5c21abc4ca401e6e7924df23, type: 3}
+      count: 1
+      rate: 1
+  - enemies:
+    - enemyName: Fast (Hard)
       enemy: {fileID: 5975281576349636344, guid: 146cc806fe0558b48b5e5a601967e8f6, type: 3}
-      count: 9
-      rate: 0.4
+      count: 3
+      rate: 2
+    - enemyName: Regular (Hard)
+      enemy: {fileID: 5975281576349636344, guid: 65caac8a94993624791cf2aae4178ac9, type: 3}
+      count: 5
+      rate: 1
+    - enemyName: Ninja
+      enemy: {fileID: 5975281576349636344, guid: f2b53bbb51092fb4bb235925281ed868, type: 3}
+      count: 3
+      rate: 0.8
+  - enemies:
+    - enemyName: Strong (Hard)
+      enemy: {fileID: 5975281576349636344, guid: b485687b5c21abc4ca401e6e7924df23, type: 3}
+      count: 3
+      rate: 0.5
+    - enemyName: Healer
+      enemy: {fileID: 5975281576349636344, guid: 2ea33a480a99e0b499fa317112e45ac5, type: 3}
+      count: 3
+      rate: 0.8
+    - enemyName: Regular (Hard)
+      enemy: {fileID: 5975281576349636344, guid: 65caac8a94993624791cf2aae4178ac9, type: 3}
+      count: 5
+      rate: 0.8
+    - enemyName: Fast (Hard)
+      enemy: {fileID: 5975281576349636344, guid: 146cc806fe0558b48b5e5a601967e8f6, type: 3}
+      count: 3
+      rate: 0.8
+  - enemies:
+    - enemyName: Skippy
+      enemy: {fileID: 5975281576349636344, guid: 770ed09784504b24ea9b51843a33f815, type: 3}
+      count: 1
+      rate: 1
   arrowPath: {fileID: 8842341416224451530, guid: e0e17a7c16d4c454eba84c2b4e802514, type: 3}
   timeBetweenArrows: 3
   endPoint: {fileID: 6015244020020103407}
@@ -11239,7 +11368,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7251587041322735280}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.125, y: 0.125, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7251587041145668141}
@@ -11293,14 +11422,14 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 7251587040906788501}
+  - {fileID: 1738180294565918765}
   - {fileID: 65815948268131678}
   - {fileID: 7251587040311425599}
-  - {fileID: 8713279945991250713}
-  - {fileID: 1738180294565918765}
-  - {fileID: 4362822889622038504}
-  - {fileID: 7724197416498318580}
   - {fileID: 7251587041864953946}
   - {fileID: 7251587040692235739}
+  - {fileID: 8713279945991250713}
+  - {fileID: 4362822889622038504}
+  - {fileID: 7724197416498318580}
   - {fileID: 497286120495638838}
   m_Father: {fileID: 3790127337129811364}
   m_RootOrder: 5
@@ -11928,7 +12057,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7251587041637861163}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0.03125, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7251587041322735294}
@@ -12088,10 +12217,10 @@ RectTransform:
   m_Father: {fileID: 7251587039857514794}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 61.069946, y: -23.47265}
-  m_SizeDelta: {x: 36.7133, y: 36.9453}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7251587041659973430
 CanvasRenderer:
@@ -12818,7 +12947,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7251587041808805145}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -3}
+  m_LocalPosition: {x: 3.875, y: -1.625, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1202127985205729679}
@@ -12913,7 +13042,7 @@ RectTransform:
   m_Children:
   - {fileID: 7251587041967900188}
   m_Father: {fileID: 7251587041357896656}
-  m_RootOrder: 7
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -13968,7 +14097,7 @@ RectTransform:
   - {fileID: 6299533852499410041}
   - {fileID: 3835650019377280755}
   m_Father: {fileID: 7251587040906788501}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -14003,8 +14132,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 043c4bf7eda7ae84baca7cf2a5de76f3, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
