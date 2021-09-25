@@ -9,10 +9,8 @@ public class Turret : MonoBehaviour
     private Enemy targetEnemy;
 
     [Header("General")]
-    // string nameTurrent;
     public float range = 15f;
     public bool nearestTarget = false;
-    //public GameObject towerRange;
     public int bulletDamage;
     public float fireRate = 1f;
     private float fireCountdown = 0f;
@@ -30,6 +28,9 @@ public class Turret : MonoBehaviour
 
 
     [Header("Special Abileties")]
+    public float burstCoolDown;
+    public bool ChargeBCD;
+    public bool keepTarget;
     public int multiTargets;
     public float multiDelay;
     public float increseFrenquencyPct;
@@ -44,7 +45,6 @@ public class Turret : MonoBehaviour
     public bool stunner;
 
     private List<Bullet> clusterBullets;
-
     private float baseFrenquency;
     private float multiCountdown;
     private Stack<Transform> mTargets;
@@ -61,15 +61,10 @@ public class Turret : MonoBehaviour
 
     [Header("Unity Setup Fields M.I.S")]
     public string enemyTag = "Enemy";
-
     public Transform rotationPoint;
-
     public GameObject bulletPrefab;
     public Transform firePoint;
-    //public SpriteRenderer towerPlatform;
-
     private AudioSource audioSource;
-
     [SerializeField]
     private float randomPitchRangeMax;
     [SerializeField]
