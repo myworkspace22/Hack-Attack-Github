@@ -40,6 +40,22 @@ public class WaveSpawner : MonoBehaviour
 
     public Button waveCountdownButton;
 
+    public int waveMaxLength 
+    {
+        get 
+        {
+            int waveML = 0;
+            for (int i = 0; i < spawnPortals.Length; i++)
+            {
+                if (spawnPortals[i].waves.Length > waveML)
+                {
+                    waveML = spawnPortals[i].waves.Length;
+                }
+            }
+            return waveML;
+        }
+    }
+
     public int waveIndex = 0;
 
     private bool waveEnded;
@@ -106,15 +122,8 @@ public class WaveSpawner : MonoBehaviour
             waveCountdownButton.interactable = true;
             OnWaveEnded?.Invoke();
         }
-        int waveMaxlength = 0;
-        for (int i = 0; i < spawnPortals.Length; i++)
-        {
-            if (spawnPortals[i].waves.Length > waveMaxlength)
-            {
-                waveMaxlength = spawnPortals[i].waves.Length;
-            }
-        }
-        if (waveIndex == waveMaxlength)
+        
+        if (waveIndex == waveMaxLength)
         {
             if(PlayerStats.Lives > 0)
             {
@@ -256,6 +265,7 @@ public class WaveSpawner : MonoBehaviour
         //AddTimeBonus((int)countdown);
         countdown = 0;
         Time.timeScale = gameSpeed;
+        waveCountdownText.text = "INCOMING";
         //speedButtonText.text = "x" + Time.timeScale;
     }
     //public void SpaceToReadyUp()
