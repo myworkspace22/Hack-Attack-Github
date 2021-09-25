@@ -28,9 +28,13 @@ public class Turret : MonoBehaviour
 
 
     [Header("Special Abileties")]
-    public float burstCoolDown;
-    public bool ChargeBCD;
+    public float burstDuration; 
+    public float burstCooldown;
+    public ParticleSystem cooldownEffect;
+
+    //public bool ChargeBCD;
     public bool keepTarget;
+
     public int multiTargets;
     public float multiDelay;
     public float increseFrenquencyPct;
@@ -44,6 +48,8 @@ public class Turret : MonoBehaviour
     public Turret[] extraLasers;
     public bool stunner;
 
+    private float cooldownTimer;
+    private float burstTimer;
     private List<Bullet> clusterBullets;
     private float baseFrenquency;
     private float multiCountdown;
@@ -88,6 +94,21 @@ public class Turret : MonoBehaviour
         InvokeRepeating("UpdateTarget", 0f, 0.2f); //Update Target Delay
         BuildManager.instance.GetComponent<WaveSpawner>().OnWaveEnded += ResetRotation;
         audioSource = GetComponent<AudioSource>();
+
+        if(burstDuration > 0)
+        {
+            burstTimer = burstDuration;
+        }
+
+        //if (ChargeBCD)
+        //{
+        //    cooldownTimer = burstCooldown;
+        //}
+        //else
+        //{
+        //    cooldownTimer = 0;
+        //}
+       
     }
     private void OnDestroy()
     {
@@ -108,7 +129,7 @@ public class Turret : MonoBehaviour
         {
             if (!stunner || !targetEnemy.Stuned)
             {
-                if (Vector2.Distance(transform.position, target.position) <= range)
+                if (Vector2.Distance(transform.position, target.position) <= range || keepTarget)
                 return;
             }
         }
@@ -156,8 +177,6 @@ public class Turret : MonoBehaviour
             if (clusterBombTarget != null)
             {
                 GameObject cbEffect = Instantiate(clusterBombTarget, target.position, target.rotation, target);
-                //cbTargets.Add(target, cbEffect); 
-                //if (target != null) { cbTargets.Add(target, cbEffect); }
             }
         }
         else
@@ -189,8 +208,6 @@ public class Turret : MonoBehaviour
                     if (clusterBombTarget != null)
                     {
                         GameObject cbEffect = Instantiate(clusterBombTarget, enemy.transform.position, enemy.transform.rotation, enemy.transform);
-                        //cbTargets.Add(enemy.transform, cbEffect);
-                        //if (enemy != null) { cbTargets.Add(enemy.transform, cbEffect); }
                     }
                     index--;
                 }
@@ -219,7 +236,6 @@ public class Turret : MonoBehaviour
                 {
                     mTargets.Push(enemy.transform);
                     GameObject cbEffect = Instantiate(clusterBombTarget, enemy.transform.position, enemy.transform.rotation, enemy.transform);
-                    //cEffects.Add(cbEffect.transform);
 
                     GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
                     Bullet bullet = bulletGO.GetComponent<Bullet>();
@@ -250,6 +266,25 @@ public class Turret : MonoBehaviour
     }
     private void Update()
     {
+        if (burstCooldown > 0 && cooldownTimer > 0) // && !ChargeBCD 
+        {
+            cooldownTimer -= Time.deltaTime;
+            if (useLaser)
+            {
+                if (lineRenderer.enabled)
+                {
+                    lineRenderer.enabled = false;
+                    impactEffect.Stop();
+                }
+            }
+            if (cooldownTimer <= 0)
+            {
+                burstTimer = burstDuration;
+                cooldownEffect.Stop();
+            }
+        }
+
+
         if (sniper && lineRenderer.enabled)
         {
             Color lineColor = lineRenderer.endColor;
@@ -261,7 +296,7 @@ public class Turret : MonoBehaviour
 
         if (target != null)
         {
-            if (target.GetComponent<Enemy>().StealthMode || Vector2.Distance(transform.position, target.position) > range)
+            if (target.GetComponent<Enemy>().StealthMode || (Vector2.Distance(transform.position, target.position) > range && !keepTarget))
             {
                 target = null;
             }
@@ -275,18 +310,15 @@ public class Turret : MonoBehaviour
 
         if (target == null)
         {
-            if (target == null)
+            if (useLaser)
             {
-                if (useLaser)
+                if (lineRenderer.enabled)
                 {
-                    if (lineRenderer.enabled)
-                    {
-                        lineRenderer.enabled = false;
-                        impactEffect.Stop();
-                    }
+                    lineRenderer.enabled = false;
+                    impactEffect.Stop();
                 }
             }
-
+            //måske tilføj cooldown effect?
             return;
         }
 
@@ -314,6 +346,38 @@ public class Turret : MonoBehaviour
         {
             LockOnTarget(target);
         }
+        
+        if (burstCooldown > 0 && cooldownTimer > 0)
+        {
+            //if (ChargeBCD)
+            //{
+            //    cooldownTimer -= Time.deltaTime;
+            //    if(cooldownTimer <= 0)
+            //    {
+            //        burstTimer = burstDuration;
+            //    }
+            //}
+            return;
+        }
+        //else if (cooldownEffect != null)
+        //{
+        //    cooldownEffect.Stop();
+        //}
+
+        if(burstTimer > 0)
+        {
+            burstTimer -= Time.deltaTime;
+            if (burstTimer <= 0)
+            {
+                cooldownTimer = burstCooldown;
+                if (cooldownEffect != null)
+                {
+                    cooldownEffect.Play();
+                }
+            }
+        }
+
+
 
         if (useLaser)
         {
@@ -440,10 +504,6 @@ public class Turret : MonoBehaviour
                 bullet.Seek(bulletTarget);
             }
 
-            if (clusterBombTarget != null)
-            {
-                //bullet.cbTarget = cbTargets[bulletTarget]; cbTargets.Remove(bulletTarget); 
-            }
             if (sniper)
             {
                 bullet.transform.position = bulletTarget.position;

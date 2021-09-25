@@ -384,6 +384,10 @@ MonoBehaviour:
   lineRenderer: {fileID: 217030568604445474}
   impactEffect: {fileID: 0}
   laserWidth: 0
+  burstDuration: 0
+  burstCooldown: 0
+  cooldownEffect: {fileID: 0}
+  keepTarget: 0
   multiTargets: 0
   multiDelay: 0
   increseFrenquencyPct: 0
@@ -404,7 +408,6 @@ MonoBehaviour:
   rotationPoint: {fileID: 8277812115738884651}
   bulletPrefab: {fileID: 4238579209898551604, guid: 9b2c0fa31eff0fe448b14b66ffccf891, type: 3}
   firePoint: {fileID: 524606163506090092}
-  towerPlatform: {fileID: 4559026435059489860}
   randomPitchRangeMax: 0.9
   randomPitchRangeMin: 1.1
 --- !u!212 &2023288362687100980
