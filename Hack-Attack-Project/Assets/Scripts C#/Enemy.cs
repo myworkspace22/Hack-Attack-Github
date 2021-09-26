@@ -37,6 +37,8 @@ public class Enemy : MonoBehaviour
     public Transform healthTransform;
     public bool givesMoneyOnEnd;
     public GameObject spriteToRotate;
+    public EnemyRotation rotater;
+    public SpriteRenderer sr;
 
 
     //Privates
@@ -102,6 +104,8 @@ public class Enemy : MonoBehaviour
         {
             RotateTowardsEnd();
         }
+
+        sr = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void SetSpeed(float newSpeed)
@@ -135,7 +139,6 @@ public class Enemy : MonoBehaviour
             poisonTimer -= Time.deltaTime;
             if (poisonTimer <= 0)
             {
-                SpriteRenderer sr = GetComponentInChildren<SpriteRenderer>();
                 Color c = sr.color;
                 c = enemyBaseColor;
                 sr.color = c;
@@ -156,7 +159,6 @@ public class Enemy : MonoBehaviour
                 {
                     aIPath.canMove = true;
                 }
-                SpriteRenderer sr = GetComponentInChildren<SpriteRenderer>();
                 Color c = sr.color;
                 c = enemyBaseColor;
                 sr.color = c;
@@ -172,6 +174,16 @@ public class Enemy : MonoBehaviour
         {
             slowTimer -= Time.deltaTime;
             Slow(slowPct);
+            if (slowTimer <= 0 && slowPct > 1)
+            {
+                Color c = sr.color;
+                c = enemyBaseColor;
+                sr.color = c;
+                if (rotater != null)
+                {
+                    rotater.rotation = -rotater.rotation;
+                }
+            }
         }
 
 
@@ -241,7 +253,6 @@ public class Enemy : MonoBehaviour
     {
         poisonDamage = poisonDmg;
         poisonTimer = poisonTme;
-        SpriteRenderer sr = GetComponentInChildren<SpriteRenderer>();
         Color color = sr.color;
         color = Color.green;
         sr.color = color;
@@ -253,7 +264,6 @@ public class Enemy : MonoBehaviour
         tag = (change)? "Untagged": "Enemy";
         float tmpSpeed = (change)? maxSpeed * 1.5f : maxSpeed;
         SetSpeed(tmpSpeed);
-        SpriteRenderer sr = GetComponentInChildren<SpriteRenderer>();
         Color tmp = sr.color;
         tmp.a = (change)? 0.6f: 1f;
         sr.color = tmp;
@@ -264,7 +274,6 @@ public class Enemy : MonoBehaviour
         if(stunResistenceTimer > 0) { return; }
         aIPath.canMove = false;
         stunTimer = stunTime;
-        SpriteRenderer sr = GetComponentInChildren<SpriteRenderer>();
         Color color = sr.color;
         color = Color.cyan;
         sr.color = color;
@@ -296,6 +305,18 @@ public class Enemy : MonoBehaviour
     public void Slow(float pct, float time)
     {
         if (StealthMode) { return; }
+        if (slowPct > pct && slowTimer > 0) { return; }
+        if (pct > 1)
+        {
+            Color color = sr.color;
+            color = Color.cyan;
+            sr.color = color;
+
+            if (rotater != null)
+            {
+                rotater.rotation = -rotater.rotation;
+            }
+        }
         slowPct = pct - slowResistence;
         slowTimer = time;
     }
