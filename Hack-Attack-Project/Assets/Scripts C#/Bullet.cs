@@ -44,7 +44,7 @@ public class Bullet : MonoBehaviour
         targetsLastPos = _target.position;
         if (flameThrower) 
         { 
-            flameDir = target.position - transform.position;
+            //flameDir = target.position - transform.position;
             GetComponent<ExplosionRadius>().explosionRange = explosionRadius;
             enemiesDeltDamage = new List<GameObject>();
         }
@@ -111,7 +111,7 @@ public class Bullet : MonoBehaviour
 
         if (flameThrower)
         {
-            transform.Translate(flameDir.normalized * distanceThisFrame, Space.World);
+            transform.Translate(transform.up * distanceThisFrame, Space.World);
             DamageNearbyEnemies();
         }
         else

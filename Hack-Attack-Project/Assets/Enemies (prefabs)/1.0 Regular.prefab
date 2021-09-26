@@ -77,6 +77,8 @@ MonoBehaviour:
   healthTransform: {fileID: 0}
   givesMoneyOnEnd: 1
   spriteToRotate: {fileID: 0}
+  rotater: {fileID: 0}
+  sr: {fileID: 0}
 --- !u!58 &1895774545520125227
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -266,7 +268,7 @@ GameObject:
   - component: {fileID: 3862298695018089167}
   - component: {fileID: 3586261225720915841}
   m_Layer: 0
-  m_Name: s.1 Fast (increased speed)
+  m_Name: s.0 Fast (increased speed)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

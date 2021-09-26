@@ -199,7 +199,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 6b971951cb17a0e45a9919e559f288bf, type: 3}
   m_Color: {r: 0.14117648, g: 0.93333334, b: 0.95686275, a: 1}
   m_FlipX: 0
@@ -387,7 +387,7 @@ MonoBehaviour:
   laserWidth: 0
   burstDuration: 0
   burstCooldown: 0
-  cooldownEffect: {fileID: 0}
+  cooldownEffect: {fileID: 3873674405897887987}
   keepTarget: 0
   multiTargets: 0
   multiDelay: 0
@@ -752,14 +752,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4671400327089842424, guid: d37e32b802297d04398bf9a38898ef45, type: 3}
+      propertyPath: lengthInSec
+      value: 2.8
+      objectReference: {fileID: 0}
     - target: {fileID: 7741355697009753365, guid: d37e32b802297d04398bf9a38898ef45, type: 3}
       propertyPath: m_Name
       value: Laser Charge Effect
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200873948245748226, guid: d37e32b802297d04398bf9a38898ef45, type: 3}
+      propertyPath: lengthInSec
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d37e32b802297d04398bf9a38898ef45, type: 3}
 --- !u!4 &6849471706644944590 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1946508336984267839, guid: d37e32b802297d04398bf9a38898ef45, type: 3}
+  m_PrefabInstance: {fileID: 4903669297808771825}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &3873674405897887987 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8200873948245748226, guid: d37e32b802297d04398bf9a38898ef45, type: 3}
   m_PrefabInstance: {fileID: 4903669297808771825}
   m_PrefabAsset: {fileID: 0}

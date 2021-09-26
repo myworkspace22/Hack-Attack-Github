@@ -28,6 +28,7 @@ public class Turret : MonoBehaviour
 
 
     [Header("Special Abileties")]
+    public bool lock4Rotations;
     public float burstDuration; 
     public float burstCooldown;
     public ParticleSystem cooldownEffect;
@@ -280,7 +281,10 @@ public class Turret : MonoBehaviour
             if (cooldownTimer <= 0)
             {
                 burstTimer = burstDuration;
-                cooldownEffect.Stop();
+                if (cooldownEffect != null)
+                {
+                    cooldownEffect.Stop();
+                }
             }
         }
 
@@ -288,10 +292,17 @@ public class Turret : MonoBehaviour
         if (sniper && lineRenderer.enabled)
         {
             Color lineColor = lineRenderer.endColor;
-            lineColor.a -= (fireRate * 4) * Time.deltaTime;
+            lineColor.a -= 2 * Time.deltaTime;//(fireRate * 4) * Time.deltaTime;
             lineRenderer.startColor = lineColor;
             lineRenderer.endColor = lineColor;
-            if (lineColor.a <= 0) { lineRenderer.enabled = false; }
+            if (lineColor.a <= 0) 
+            {
+                lineRenderer.enabled = false; 
+                if (cooldownEffect != null)
+                {
+                    cooldownEffect.Play();
+                }
+            }
         }
 
         if (target != null)
@@ -461,6 +472,31 @@ public class Turret : MonoBehaviour
         }
         Vector3 dir = newTraget.position - transform.position;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        if (lock4Rotations)
+        {
+            Debug.Log(angle);
+
+            if (angle > -135 && angle < -45)
+            {
+                rotationPoint.rotation = Quaternion.AngleAxis(-180, Vector3.forward);
+            }
+            else if (angle < 135 && angle > 45)
+            {
+                rotationPoint.rotation = Quaternion.AngleAxis(0, Vector3.forward);
+            }
+            else if (angle < 45 && angle > -45)
+            {
+                rotationPoint.rotation = Quaternion.AngleAxis(-90, Vector3.forward);
+            }
+            else
+            {
+                rotationPoint.rotation = Quaternion.AngleAxis(90, Vector3.forward);
+            }
+
+
+
+            return;
+        }
         if (rotationPoint != null)
         {
             rotationPoint.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
@@ -515,6 +551,10 @@ public class Turret : MonoBehaviour
                 lineColor.a = 1;
                 lineRenderer.startColor = lineColor;
                 lineRenderer.endColor = lineColor;
+                if (cooldownEffect != null)
+                {
+                    cooldownEffect.Stop();
+                }
             }
             if (poisonDamage > 0)
             {
@@ -533,6 +573,10 @@ public class Turret : MonoBehaviour
         if (rotationPoint != null)
         {
             rotationPoint.rotation = Quaternion.Euler(0, 0, 0);
+        }
+        if (cooldownEffect != null)
+        {
+            cooldownEffect.Stop();
         }
     }
 
