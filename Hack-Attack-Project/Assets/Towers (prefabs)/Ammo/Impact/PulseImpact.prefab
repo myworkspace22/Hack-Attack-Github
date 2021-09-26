@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6643695351481199766}
   - component: {fileID: -2021675076192597454}
   m_Layer: 0
-  m_Name: TeslaImpact
+  m_Name: PulseImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

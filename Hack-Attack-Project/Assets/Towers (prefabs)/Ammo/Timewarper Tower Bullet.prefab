@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 1373746461384363583}
   - component: {fileID: 8673312452825460262}
   m_Layer: 0
-  m_Name: Sniper Tower Bullet
+  m_Name: Timewarper Tower Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -185,8 +185,8 @@ MonoBehaviour:
   nuke: 0
   timbersaw: 0
   stunTime: 0
-  slowTime: 0
-  slowPct: 0
+  slowTime: 1.5
+  slowPct: 2
   rotateMissile: 1
   damage: 0
   explosionRadius: 0

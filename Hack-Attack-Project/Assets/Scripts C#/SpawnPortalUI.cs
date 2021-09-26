@@ -12,8 +12,6 @@ public class SpawnPortalUI : MonoBehaviour
     {
         if (spawnPortal.waves.Length <= spawnPortal.waveSpawner.waveIndex) { return; }
 
-        Debug.Log("viviviviviviviivivii  " + spawnPortal.waveSpawner.waveIndex);
-
         Wave nextWave = spawnPortal.waves[spawnPortal.waveSpawner.waveIndex];
         string enemieList = "";
         for (int i = 0; i < nextWave.enemies.Length; i++)
