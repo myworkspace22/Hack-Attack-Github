@@ -214,19 +214,19 @@ public class Enemy : MonoBehaviour
     {
         if(StealthMode) { return; }
 
-        if (amount-defence > 3)// måske 5?
+        if (amount-defence > 5)// måske 5?
         {
             health -= amount - defence;
         }
         else
         {
-            if (amount < 3)
+            if (amount < 5)
             {
                 health -= amount;
             }
             else
             {
-                health -= 3;
+                health -= 5;
             }
         }
 

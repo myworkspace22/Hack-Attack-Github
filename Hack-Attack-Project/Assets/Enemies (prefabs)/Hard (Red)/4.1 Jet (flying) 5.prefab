@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7373373764363036414}
   - component: {fileID: 7203673169436658652}
   m_Layer: 0
-  m_Name: 4.1 Jet (flying) 5
+  m_Name: 4
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

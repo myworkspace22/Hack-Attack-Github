@@ -7493,7 +7493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e4347b1b39eb3a43b3adc8cb0847706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 99999
+  startMoney: 100
   startLives: 10
 --- !u!114 &6015244018461862583
 MonoBehaviour:
@@ -11343,7 +11343,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.693085, y: 608.1682}
+  m_AnchoredPosition: {x: -6.6831665, y: 610.84155}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &7251587040367010125
@@ -13692,7 +13692,7 @@ MonoBehaviour:
     prefab: {fileID: 5556433950650397502, guid: f4615c7410a365e428c6f329470011b9, type: 3}
     cost: 20
     upgradeNames:
-    - Themal
+    - Thermal
     - Beamer
     - Typhoon
     - Timewarper
@@ -14026,7 +14026,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 9126dd2b68c11854d8dc17210c448983, type: 3}
-  m_Color: {r: 0.25, g: 0.25, b: 0.25, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -14793,50 +14793,7 @@ MonoBehaviour:
   - enemies:
     - enemyName: Regular
       enemy: {fileID: 5975281576349636344, guid: 940fad39164ca9141802a89e070abe6b, type: 3}
-      count: 2
-      rate: 0.6
-  - enemies:
-    - enemyName: Regular
-      enemy: {fileID: 5975281576349636344, guid: 940fad39164ca9141802a89e070abe6b, type: 3}
       count: 3
-      rate: 0.6
-  - enemies:
-    - enemyName: Fast
-      enemy: {fileID: 5975281576349636344, guid: 198d3e72ecd110e40ae4c199279c2a73, type: 3}
-      count: 2
-      rate: 0.5
-  - enemies:
-    - enemyName: Strong
-      enemy: {fileID: 5975281576349636344, guid: 6365a09b4fccd8c45b2084a200558eee, type: 3}
-      count: 1
-      rate: 1
-  - enemies:
-    - enemyName: Regular
-      enemy: {fileID: 5975281576349636344, guid: 940fad39164ca9141802a89e070abe6b, type: 3}
-      count: 5
-      rate: 1
-  - enemies:
-    - enemyName: Regular
-      enemy: {fileID: 5975281576349636344, guid: 940fad39164ca9141802a89e070abe6b, type: 3}
-      count: 3
-      rate: 0.5
-    - enemyName: Fast
-      enemy: {fileID: 5975281576349636344, guid: 198d3e72ecd110e40ae4c199279c2a73, type: 3}
-      count: 2
-      rate: 0.4
-  - enemies:
-    - enemyName: Strong
-      enemy: {fileID: 5975281576349636344, guid: 8958b854c78210340a188cbf1486f413, type: 3}
-      count: 1
-      rate: 0.5
-    - enemyName: Regular
-      enemy: {fileID: 5975281576349636344, guid: 940fad39164ca9141802a89e070abe6b, type: 3}
-      count: 3
-      rate: 0.8
-  - enemies:
-    - enemyName: Healer
-      enemy: {fileID: 5975281576349636344, guid: c54c5c8d5069f2748a4a4cdfa2ba956b, type: 3}
-      count: 1
       rate: 1
   - enemies:
     - enemyName: Regular
@@ -14849,86 +14806,98 @@ MonoBehaviour:
       count: 3
       rate: 2
   - enemies:
-    - enemyName: Splitter
-      enemy: {fileID: 5975281576349636344, guid: 798a1752aee2a6b4c84e14d668aaa934, type: 3}
-      count: 1
+    - enemyName: Regular
+      enemy: {fileID: 5975281576349636344, guid: 940fad39164ca9141802a89e070abe6b, type: 3}
+      count: 8
       rate: 1
-  - enemies:
-    - enemyName: Healer
-      enemy: {fileID: 5975281576349636344, guid: c54c5c8d5069f2748a4a4cdfa2ba956b, type: 3}
-      count: 3
-      rate: 0.8
-  - enemies:
-    - enemyName: Regular (Hard)
-      enemy: {fileID: 5975281576349636344, guid: 65caac8a94993624791cf2aae4178ac9, type: 3}
-      count: 3
-      rate: 0.8
   - enemies:
     - enemyName: Strong
       enemy: {fileID: 5975281576349636344, guid: 8958b854c78210340a188cbf1486f413, type: 3}
-      count: 2
-      rate: 0.5
-    - enemyName: Splitter
-      enemy: {fileID: 5975281576349636344, guid: a01de46783f967c4a8587f8e500aa8e0, type: 3}
       count: 1
-      rate: 0.5
+      rate: 1
+  - enemies:
+    - enemyName: Regular
+      enemy: {fileID: 5975281576349636344, guid: 940fad39164ca9141802a89e070abe6b, type: 3}
+      count: 6
+      rate: 1
     - enemyName: Fast
       enemy: {fileID: 5975281576349636344, guid: 198d3e72ecd110e40ae4c199279c2a73, type: 3}
-      count: 2
-      rate: 1
-  - enemies:
-    - enemyName: Ninja
-      enemy: {fileID: 5975281576349636344, guid: e198fbb94fe5559459db6976c8f26283, type: 3}
-      count: 3
-      rate: 1
-  - enemies:
-    - enemyName: Splitter
-      enemy: {fileID: 5975281576349636344, guid: 798a1752aee2a6b4c84e14d668aaa934, type: 3}
-      count: 3
-      rate: 1
-  - enemies:
-    - enemyName: Regular (Hard)
-      enemy: {fileID: 5975281576349636344, guid: 65caac8a94993624791cf2aae4178ac9, type: 3}
-      count: 3
-      rate: 1
-    - enemyName: Strong (Hard)
-      enemy: {fileID: 5975281576349636344, guid: b485687b5c21abc4ca401e6e7924df23, type: 3}
-      count: 1
-      rate: 1
-  - enemies:
-    - enemyName: Fast (Hard)
-      enemy: {fileID: 5975281576349636344, guid: 146cc806fe0558b48b5e5a601967e8f6, type: 3}
       count: 3
       rate: 2
-    - enemyName: Regular (Hard)
-      enemy: {fileID: 5975281576349636344, guid: 65caac8a94993624791cf2aae4178ac9, type: 3}
-      count: 5
+  - enemies:
+    - enemyName: Regular
+      enemy: {fileID: 5975281576349636344, guid: 940fad39164ca9141802a89e070abe6b, type: 3}
+      count: 8
       rate: 1
-    - enemyName: Ninja
-      enemy: {fileID: 5975281576349636344, guid: f2b53bbb51092fb4bb235925281ed868, type: 3}
-      count: 3
-      rate: 0.8
   - enemies:
-    - enemyName: Strong (Hard)
-      enemy: {fileID: 5975281576349636344, guid: b485687b5c21abc4ca401e6e7924df23, type: 3}
-      count: 3
-      rate: 0.5
-    - enemyName: Healer
-      enemy: {fileID: 5975281576349636344, guid: 2ea33a480a99e0b499fa317112e45ac5, type: 3}
-      count: 3
-      rate: 0.8
-    - enemyName: Regular (Hard)
-      enemy: {fileID: 5975281576349636344, guid: 65caac8a94993624791cf2aae4178ac9, type: 3}
-      count: 5
-      rate: 0.8
-    - enemyName: Fast (Hard)
-      enemy: {fileID: 5975281576349636344, guid: 146cc806fe0558b48b5e5a601967e8f6, type: 3}
-      count: 3
-      rate: 0.8
+    - enemyName: Regular
+      enemy: {fileID: 5975281576349636344, guid: 940fad39164ca9141802a89e070abe6b, type: 3}
+      count: 8
+      rate: 1
   - enemies:
-    - enemyName: Skippy
-      enemy: {fileID: 5975281576349636344, guid: 770ed09784504b24ea9b51843a33f815, type: 3}
-      count: 1
+    - enemyName: Regular
+      enemy: {fileID: 5975281576349636344, guid: 940fad39164ca9141802a89e070abe6b, type: 3}
+      count: 8
+      rate: 1
+  - enemies:
+    - enemyName: Regular
+      enemy: {fileID: 5975281576349636344, guid: 940fad39164ca9141802a89e070abe6b, type: 3}
+      count: 8
+      rate: 1
+  - enemies:
+    - enemyName: Regular
+      enemy: {fileID: 5975281576349636344, guid: 940fad39164ca9141802a89e070abe6b, type: 3}
+      count: 8
+      rate: 1
+  - enemies:
+    - enemyName: Regular
+      enemy: {fileID: 5975281576349636344, guid: 940fad39164ca9141802a89e070abe6b, type: 3}
+      count: 8
+      rate: 1
+  - enemies:
+    - enemyName: Regular
+      enemy: {fileID: 5975281576349636344, guid: 940fad39164ca9141802a89e070abe6b, type: 3}
+      count: 8
+      rate: 1
+  - enemies:
+    - enemyName: Regular
+      enemy: {fileID: 5975281576349636344, guid: 940fad39164ca9141802a89e070abe6b, type: 3}
+      count: 8
+      rate: 1
+  - enemies:
+    - enemyName: Regular
+      enemy: {fileID: 5975281576349636344, guid: 940fad39164ca9141802a89e070abe6b, type: 3}
+      count: 8
+      rate: 1
+  - enemies:
+    - enemyName: Regular
+      enemy: {fileID: 5975281576349636344, guid: 940fad39164ca9141802a89e070abe6b, type: 3}
+      count: 8
+      rate: 1
+  - enemies:
+    - enemyName: Regular
+      enemy: {fileID: 5975281576349636344, guid: 940fad39164ca9141802a89e070abe6b, type: 3}
+      count: 8
+      rate: 1
+  - enemies:
+    - enemyName: Regular
+      enemy: {fileID: 5975281576349636344, guid: 940fad39164ca9141802a89e070abe6b, type: 3}
+      count: 8
+      rate: 1
+  - enemies:
+    - enemyName: Regular
+      enemy: {fileID: 5975281576349636344, guid: 940fad39164ca9141802a89e070abe6b, type: 3}
+      count: 8
+      rate: 1
+  - enemies:
+    - enemyName: Regular
+      enemy: {fileID: 5975281576349636344, guid: 940fad39164ca9141802a89e070abe6b, type: 3}
+      count: 8
+      rate: 1
+  - enemies:
+    - enemyName: Regular
+      enemy: {fileID: 5975281576349636344, guid: 940fad39164ca9141802a89e070abe6b, type: 3}
+      count: 8
       rate: 1
   arrowPath: {fileID: 8842341416224451530, guid: e0e17a7c16d4c454eba84c2b4e802514, type: 3}
   timeBetweenArrows: 3
@@ -15012,8 +14981,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7251587041322735280}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.125, y: 0.125, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7251587041145668141}
@@ -15708,7 +15677,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7251587041637861163}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.03125, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7251587041322735294}

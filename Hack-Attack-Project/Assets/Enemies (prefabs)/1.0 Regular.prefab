@@ -52,9 +52,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startHealth: 100
   maxSpeed: 1
-  defence: 5
+  defence: 0
   damage: 1
-  worth: 5
+  worth: 7
   speed: 0
   stunResistence: 0.3
   deathEffect: {fileID: 1787491968115139843, guid: 72ae324c15b9e6d43895e32d4fc3c2c3, type: 3}
