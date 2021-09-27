@@ -125,7 +125,10 @@ public class BuildManager : MonoBehaviour
         turretToBuild = turret;
         //shopUI.SelectTower(turret);
         //selectedNode = null;
-
+        if(hoverNode != null)
+        {
+            hoverNode.UpdateHoverSprite();
+        }
         DeselectNode();
     }
     public TurretBluePrint GetTurretToBuild()

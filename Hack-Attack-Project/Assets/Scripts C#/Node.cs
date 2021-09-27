@@ -374,11 +374,11 @@ public class Node : MonoBehaviour
         {
             return;
         }
+        buildManager.hoverNode = this;
         if (!buildManager.CanBuild)
         {
             return;
         }
-        buildManager.hoverNode = this;
         Collider2D[] canPlaceChecks = Physics2D.OverlapCircleAll(transform.position, 0.1f);
         if (canPlaceChecks != null)
         {
@@ -413,6 +413,10 @@ public class Node : MonoBehaviour
 
     private void OnMouseExit()
     {
+        if(buildManager.hoverNode == this)
+        {
+            buildManager.hoverNode = null;
+        }
         if (turret != null && buildManager.selectedNode == null)
         {
             ChangeRange(false);
@@ -531,6 +535,58 @@ public class Node : MonoBehaviour
             spriteToChange.sortingOrder = 2;
             rangeSprite.color = new Color(1, 0, 0, 0.78f);
             sR.sprite = hoverBackground;
+        }
+    }
+    public void UpdateHoverSprite()
+    {
+        Debug.Log("hoverNodeActive");
+        if (spriteToChange.gameObject.activeInHierarchy)
+        {
+            spriteToChange.sprite = buildManager.GetTurretToBuild().prefab.GetComponent<SpriteRenderer>().sprite;
+            ChangeRange(true, buildManager.GetTurretToBuild().prefab.GetComponent<Turret>().range);
+        } else
+        {
+            if (!buildManager.GetComponent<WaveSpawner>().BuildMode)
+                return;
+
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                return;
+            }
+            buildManager.hoverNode = this;
+            if (!buildManager.CanBuild)
+            {
+                return;
+            }
+            Collider2D[] canPlaceChecks = Physics2D.OverlapCircleAll(transform.position, 0.1f);
+            if (canPlaceChecks != null)
+            {
+                for (int i = 0; i < canPlaceChecks.Length; i++)
+                {
+                    if (canPlaceChecks[i].gameObject.tag == "Tower")
+                    {
+                        InDecline();
+                        return;
+                    }
+                }
+            }
+            if (buildManager.HasMoney)
+            {
+                spriteToChange.sprite = buildManager.GetTurretToBuild().prefab.GetComponent<SpriteRenderer>().sprite;
+                ChangeRange(true, buildManager.GetTurretToBuild().prefab.GetComponent<Turret>().range);
+                spriteToChange.gameObject.SetActive(true);
+                //spriteToChange.color = new Color(0, 0.5372466f, 0.5849056f);
+                spriteToChange.color = new Color(1, 1, 1, 0.50f);
+                //sR.color = new Color(0.5849056f, 0.5849056f, 0.5849056f);
+                //sR.color = new Color(1, 1, 1);
+                sR.sortingOrder = 2;
+                rangeSprite.color = new Color(1, 1, 1, 0.78f);
+                sR.sprite = hoverBackground;
+            }
+            else
+            {
+                InDecline();
+            }
         }
     }
 }
