@@ -676,7 +676,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  range: 5
+  range: 1.2
   nearestTarget: 0
   bulletDamage: 15
   fireRate: 1
