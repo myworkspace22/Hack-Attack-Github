@@ -337,7 +337,7 @@ GameObject:
   - component: {fileID: 5009321610863192398}
   - component: {fileID: -3499809669273277765}
   m_Layer: 6
-  m_Name: 1
+  m_Name: 1.1 Machinegun
   m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -375,14 +375,19 @@ MonoBehaviour:
   target: {fileID: 0}
   range: 1.3
   nearestTarget: 0
-  bulletDamage: 30
-  fireRate: 5
+  bulletDamage: 20
+  fireRate: 4
   useLaser: 0
   damageOverTime: 30
   slowAmount: 0.5
   lineRenderer: {fileID: 0}
   impactEffect: {fileID: 0}
   laserWidth: 0
+  lock4Rotations: 0
+  burstDuration: 0
+  burstCooldown: 0
+  cooldownEffect: {fileID: 0}
+  keepTarget: 0
   multiTargets: 0
   multiDelay: 0
   increseFrenquencyPct: 0
@@ -403,7 +408,6 @@ MonoBehaviour:
   rotationPoint: {fileID: 8277812115738884651}
   bulletPrefab: {fileID: 4238579209898551604, guid: 7f98077fe9376f04baa4166b7ddbe507, type: 3}
   firePoint: {fileID: 524606163506090092}
-  towerPlatform: {fileID: 4559026435059489860}
   randomPitchRangeMax: 0.9
   randomPitchRangeMin: 1.1
 --- !u!212 &2023288362687100980
