@@ -5,36 +5,37 @@ using UnityEngine;
 public class Tutorial : MonoBehaviour
 {
     public int[] waveIndex;
-
-    private WaveSpawner waveSpawned;
-
+    private WaveSpawner waveSpawner;
     public GameObject[] panels;
+
+    public GameObject Highligter;
+    public Transform[] objsToBeHighlighted;
 
     private void Start()
     {
-        waveSpawned = BuildManager.instance.GetComponent<WaveSpawner>();
-        waveSpawned.OnWaveEnded += WaveEnd;
-        //panels[0].SetActive(true);
+        waveSpawner = BuildManager.instance.GetComponent<WaveSpawner>();
+        waveSpawner.OnWaveEnded += WaveEnd;
+        panels[0].SetActive(true);
     }
     private void OnDestroy()
     {
-        waveSpawned.OnWaveEnded -= WaveEnd;
+        waveSpawner.OnWaveEnded -= WaveEnd;
     }
 
     private void WaveEnd()
     {
         for (int i = 0; i < waveIndex.Length; i++)
         {
-            if (waveSpawned.waveIndex + 1 == waveIndex[i])
+            if (waveSpawner.waveIndex + 1 == waveIndex[i])
             {
-                panels[i].SetActive(true);
-                waveSpawned.isPaused = true;
+                panels[i + 1].SetActive(true);
+                waveSpawner.isPaused = true;
                 break;
             }
         }
     }
     public void CloseWindow()
     {
-        waveSpawned.isPaused = false;
+        waveSpawner.isPaused = false;
     }
 }
