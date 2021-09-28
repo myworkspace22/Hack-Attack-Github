@@ -25,7 +25,7 @@ public class waveUI : MonoBehaviour
     {
         if(waveSpawner.waveIndex + 1 <= waveSpawner.waveMaxLength)
         {
-            waveText.text = $"wave {waveSpawner.waveIndex + 1} - {waveSpawner.waveMaxLength}";
+            waveText.text = $"wave {waveSpawner.waveIndex + 1} / {waveSpawner.waveMaxLength}";
         }
     }
 }

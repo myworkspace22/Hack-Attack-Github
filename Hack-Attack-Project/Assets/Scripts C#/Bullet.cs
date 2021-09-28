@@ -151,7 +151,7 @@ public class Bullet : MonoBehaviour
 
         if (explosionRadius > 0f)
         {
-            effectIns.GetComponent<ExplosionRadius>().explosionRange = explosionRadius;
+            //effectIns.GetComponent<ExplosionRadius>().explosionRange = explosionRadius;
             Explode();
         }
         else if (target != null)

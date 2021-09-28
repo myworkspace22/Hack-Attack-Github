@@ -13,7 +13,7 @@ public class TowerStatsNEW : MonoBehaviour
 
     public TooltipTrigger upgradeButton, upgradeButton2, levelUpButton, sellButton, sellButton2, sellButton3;
 
-    public Image upgradeImage, upgradeImage2; 
+    public Image upgradeImage, upgradeImage2, levelupImage, levelupBG, upgradeBG, upgradeBG2;
 
     //private BuildManager buildManager;
 
@@ -22,6 +22,13 @@ public class TowerStatsNEW : MonoBehaviour
     //    buildManager = BuildManager.instance;
     //}
 
+    //public void Update()
+    //{
+    //    if (BuildManager.instance.selectedNode != null)
+    //    {
+    //        UpdateTowerToolTip();
+    //    }
+    //}
     public void SetTarget (Node _target)
     {
         target = _target;
@@ -52,10 +59,17 @@ public class TowerStatsNEW : MonoBehaviour
 
         int nextLevelCost = (int)(Mathf.Pow(2, target.towerLevel + 1) * 10);
         string color = (PlayerStats.Money >= nextLevelCost) ? "#FFD500" : "#9A9A9A";
+        levelupImage.color = (PlayerStats.Money >= nextLevelCost) ? new Color(1, 1, 1) : new Color(1, 1, 1, 0.25f);
+        levelupBG.color = (PlayerStats.Money >= nextLevelCost) ? new Color(1, 1, 1) : new Color(0.65f, 0.65f, 0.65f);
         tmp.content = "Cost: <color=" + color + ">$" + nextLevelCost + "</color> \n" +
             "Damage: " + turretToUpgrade.bulletDamage + " <color=#00FF00>-> " + (turretToUpgrade.bulletDamage + turretToUpgrade.upgradeDamage) + "</color> \n" +
             "Range: " + turretToUpgrade.range * 100 + " <color=#00FF00>-> " + (turretToUpgrade.range + turretToUpgrade.upgradeRange) * 100 + "</color> \n" +
             "Frequency: " + turretToUpgrade.fireRate + " <color=#00FF00>-> " + (turretToUpgrade.fireRate + turretToUpgrade.upgradeFrenquency) + "</color>";
+
+        if (TooltipSystem.Instant.curentTT == tmp)
+        {
+            tmp.UpdateTowerTooltipUI();
+        }
     }
 
     private void UpdateUpgradeTooltip()
@@ -78,6 +92,8 @@ public class TowerStatsNEW : MonoBehaviour
         tmp2.header = target.turretBlueprint.upgradeNames[target.upgradeNr + 2 * multiplyer - 1];
 
         string color = (PlayerStats.Money >= nextLevelCost) ? "#FFD500" : "#9A9A9A";
+        upgradeImage.color = (PlayerStats.Money >= nextLevelCost) ? new Color(1, 1, 1) : new Color(1, 1, 1, 0.5f);
+        upgradeBG.color = (PlayerStats.Money >= nextLevelCost) ? new Color(1, 1, 1) : new Color(0.65f, 0.65f, 0.65f);
 
         tmp.content = "Cost: <color=" + color + ">$" + nextLevelCost + "</color>\n" +
             target.turretBlueprint.upgradeDescription[target.upgradeNr + 1 * multiplyer - 1] + "\n" +
@@ -86,6 +102,8 @@ public class TowerStatsNEW : MonoBehaviour
             "Frequency: " + turretToUpgrade.fireRate + " <color=#00FF00>-> " + target.turretBlueprint.upgradedPrefab[target.upgradeNr + 1 * multiplyer - 1].GetComponent<Turret>().fireRate + "</color>";
 
         color = (PlayerStats.Money >= nextLevelCost) ? "#FFD500" : "#9A9A9A";
+        upgradeImage2.color = (PlayerStats.Money >= nextLevelCost) ? new Color(1, 1, 1) : new Color(1, 1, 1, 0.5f);
+        upgradeBG2.color = (PlayerStats.Money >= nextLevelCost) ? new Color(1, 1, 1) : new Color(0.65f, 0.65f, 0.65f);
 
         tmp2.content = "Cost: <color=" + color + ">$" + nextLevelCost + "</color>\n" +
             target.turretBlueprint.upgradeDescription[target.upgradeNr + 2 * multiplyer - 1] + "\n" +
@@ -96,6 +114,15 @@ public class TowerStatsNEW : MonoBehaviour
         upgradeImage.sprite = target.turretBlueprint.upgradeIcon[target.upgradeNr + 1 * multiplyer - 1];
 
         upgradeImage2.sprite = target.turretBlueprint.upgradeIcon[target.upgradeNr + 2 * multiplyer - 1];
+
+        if (TooltipSystem.Instant.curentTT == tmp)
+        {
+            tmp.UpdateTowerTooltipUI();
+        }
+        else if(TooltipSystem.Instant.curentTT == tmp2)
+        {
+            tmp2.UpdateTowerTooltipUI();
+        }
     }
     
     private void UpdateSellToolTip()
@@ -112,5 +139,18 @@ public class TowerStatsNEW : MonoBehaviour
         tmp.content = "Amount: <color=#FFD500>$" + node.SellAmount + "</color>";
         tmp2.content = "Amount: <color=#FFD500>$" + node.SellAmount + "</color>";
         tmp3.content = "Amount: <color=#FFD500>$" + node.SellAmount + "</color>";
+
+        if (TooltipSystem.Instant.curentTT == tmp)
+        {
+            tmp.UpdateTowerTooltipUI();
+        }
+        else if (TooltipSystem.Instant.curentTT == tmp2)
+        {
+            tmp2.UpdateTowerTooltipUI();
+        }
+        else if (TooltipSystem.Instant.curentTT == tmp3)
+        {
+            tmp3.UpdateTowerTooltipUI();
+        }
     }
 }

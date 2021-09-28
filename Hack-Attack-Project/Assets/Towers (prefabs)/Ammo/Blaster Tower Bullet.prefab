@@ -103,7 +103,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b9a29ed26461d3b48afede3625df93a9, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -286,11 +286,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f5245ff6fc94bb4c9f5197d57702516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 8
   flameThrower: 0
   nuke: 0
   timbersaw: 0
   stunTime: 0
+  slowTime: 0
+  slowPct: 0
   rotateMissile: 0
   damage: 0
   explosionRadius: 0

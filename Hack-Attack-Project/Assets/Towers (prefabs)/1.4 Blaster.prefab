@@ -337,7 +337,7 @@ GameObject:
   - component: {fileID: 6910644989880705933}
   - component: {fileID: 6341931627602758755}
   m_Layer: 6
-  m_Name: 1
+  m_Name: 1.4 Blaster
   m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -373,16 +373,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  range: 1.8
+  range: 1.6
   nearestTarget: 0
-  bulletDamage: 170
-  fireRate: 0.7
+  bulletDamage: 140
+  fireRate: 0.6
   useLaser: 0
   damageOverTime: 170
   slowAmount: 0.5
+  reduceDefenceAmount: 0.5
   lineRenderer: {fileID: 0}
   impactEffect: {fileID: 0}
   laserWidth: 0
+  lock4Rotations: 0
+  burstDuration: 0
+  burstCooldown: 0
+  cooldownEffect: {fileID: 0}
+  keepTarget: 0
   multiTargets: 0
   multiDelay: 0
   increseFrenquencyPct: 0
@@ -395,15 +401,14 @@ MonoBehaviour:
   tesla: 0
   extraLasers: []
   stunner: 0
-  upgradeDamage: 110
+  upgradeDamage: 120
   upgradeRange: 0.2
-  upgradeFrenquency: 0.3
+  upgradeFrenquency: 0
   upgradeLaserDoT: 0
   enemyTag: Enemy
   rotationPoint: {fileID: 8277812115738884651}
   bulletPrefab: {fileID: 4238579209898551604, guid: 8499719f2d94f68419464cf79032fd3d, type: 3}
   firePoint: {fileID: 524606163506090092}
-  towerPlatform: {fileID: 4559026435059489860}
   randomPitchRangeMax: 0.9
   randomPitchRangeMin: 1.1
 --- !u!212 &2023288362687100980

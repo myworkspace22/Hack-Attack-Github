@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 
 public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+
     public string header;
     [Multiline()]
     public string content;
@@ -57,7 +58,10 @@ public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     private void ShowIT()
     {
         if (_showUi)
+        {
             TooltipSystem.Instant.Show(content, header);
+            TooltipSystem.Instant.curentTT = this;
+        }
     }
 
     private void HideIT()

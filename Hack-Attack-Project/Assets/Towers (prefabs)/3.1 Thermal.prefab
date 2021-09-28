@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 1018875762760812602}
   - component: {fileID: 5512135561057879423}
   m_Layer: 6
-  m_Name: 3
+  m_Name: 3.1 Thermal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,9 +83,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  range: 1.5
+  range: 1
   nearestTarget: 0
-  bulletDamage: 0
+  bulletDamage: 50
   fireRate: 0.5
   useLaser: 0
   damageOverTime: 900
@@ -93,6 +93,11 @@ MonoBehaviour:
   lineRenderer: {fileID: 6920416368136055428, guid: 4ef270e71c19edc46a68d2772230cb94, type: 3}
   impactEffect: {fileID: 0}
   laserWidth: 0.03
+  lock4Rotations: 0
+  burstDuration: 0
+  burstCooldown: 0
+  cooldownEffect: {fileID: 0}
+  keepTarget: 0
   multiTargets: 0
   multiDelay: 0
   increseFrenquencyPct: 0
@@ -105,15 +110,14 @@ MonoBehaviour:
   tesla: 1
   extraLasers: []
   stunner: 0
-  upgradeDamage: 900
-  upgradeRange: 0
-  upgradeFrenquency: 0
+  upgradeDamage: 25
+  upgradeRange: 0.1
+  upgradeFrenquency: 0.2
   upgradeLaserDoT: 0
   enemyTag: Enemy
   rotationPoint: {fileID: 0}
   bulletPrefab: {fileID: 2881803708027556478, guid: fb7966e605a8b4c448b1127a645ab02b, type: 3}
   firePoint: {fileID: 2848132688497259106}
-  towerPlatform: {fileID: 2271421092245175882, guid: 4ef270e71c19edc46a68d2772230cb94, type: 3}
   randomPitchRangeMax: 0.9
   randomPitchRangeMin: 1.1
 --- !u!212 &8709025309036245343

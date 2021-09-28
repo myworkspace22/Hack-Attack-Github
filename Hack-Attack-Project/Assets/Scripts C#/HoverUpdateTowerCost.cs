@@ -18,9 +18,10 @@ public class HoverUpdateTowerCost : MonoBehaviour
         color = "#FFD500";
         towerTooltip.content = "Cost: <color=" + color + ">$" + cost + "</color>\n" + baseContent;
     }
-
     private void Update()
     {
+        if (TooltipSystem.Instant.curentTT != towerTooltip) { return; }
+
         string tmpColor = color;
         color = (PlayerStats.Money >= cost) ? "#FFD500" : "#9A9A9A";
 

@@ -373,7 +373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  range: 1.3
+  range: 1.4
   nearestTarget: 0
   bulletDamage: 20
   fireRate: 4
@@ -400,9 +400,9 @@ MonoBehaviour:
   tesla: 0
   extraLasers: []
   stunner: 0
-  upgradeDamage: 0
+  upgradeDamage: 30
   upgradeRange: 0.1
-  upgradeFrenquency: 5
+  upgradeFrenquency: 2
   upgradeLaserDoT: 0
   enemyTag: Enemy
   rotationPoint: {fileID: 8277812115738884651}

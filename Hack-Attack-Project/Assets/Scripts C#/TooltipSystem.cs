@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class TooltipSystem : MonoBehaviour
 {
+
+    public TooltipTrigger curentTT;
+
     [SerializeField]
     private float _fadeTime = 0.2f;
 

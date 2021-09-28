@@ -66,10 +66,16 @@ public class Enemy : MonoBehaviour
     private float slowPct;
     public bool Slowed { get { return slowTimer > 0; } }
 
+    private int baseDefence;
+    private bool weakend;
+
     //public bool IsSlowed { get; private set; }
 
     private void Start()
     {
+        baseDefence = defence;
+        weakend = false;
+
         StealthMode = false;
 
         stunTimer = 0;
@@ -132,6 +138,10 @@ public class Enemy : MonoBehaviour
         {
             SetSpeed(maxSpeed);
         }
+        if (!weakend)
+        {
+            defence = baseDefence;
+        }
 
         if (poisonTimer > 0)
         {
@@ -167,7 +177,7 @@ public class Enemy : MonoBehaviour
         }
         else if (stunResistenceTimer > 0) { stunResistenceTimer -= Time.deltaTime; }
 
-
+        weakend = false;
         slowed = false;
         
         if (slowTimer > 0)
@@ -222,7 +232,18 @@ public class Enemy : MonoBehaviour
         {
             if (amount < 5)
             {
-                health -= amount;
+                float timeDefence = defence * Time.deltaTime;
+                if (amount - timeDefence < 0) 
+                {
+                    Debug.Log("Warning: damage is less than 0");
+                    health -= amount * 0.1f;
+                }
+                else
+                {
+                    health -= amount - timeDefence;
+                    Debug.Log("Damage: " + (amount - timeDefence));
+                }
+                    
             }
             else
             {
@@ -290,6 +311,7 @@ public class Enemy : MonoBehaviour
     }
     public void ReduseDefence(float pct)
     {
+        if (StealthMode) { return; }
         float defencePct = (1f - pct);
         if (defencePct < 0|| defencePct > 1f)
         {
@@ -298,8 +320,10 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            defence = (int)(defence * defencePct);
+            defence = (int)(baseDefence * defencePct);
+            Debug.LogWarning("defne erreo");
         }
+        weakend = true;
     }
 
     public void Slow(float pct, float time)

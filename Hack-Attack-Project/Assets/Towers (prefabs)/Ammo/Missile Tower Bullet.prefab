@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 2881803708027556478}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 1}
   m_Children:
   - {fileID: 5295755556078034829}
   - {fileID: 8423523111179344336}
@@ -102,6 +102,8 @@ MonoBehaviour:
   nuke: 0
   timbersaw: 0
   stunTime: 0
+  slowTime: 0
+  slowPct: 0
   rotateMissile: 1
   damage: 0
   explosionRadius: 1.3

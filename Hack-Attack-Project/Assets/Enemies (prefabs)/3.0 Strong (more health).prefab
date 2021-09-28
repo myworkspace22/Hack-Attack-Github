@@ -167,9 +167,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startHealth: 300
   maxSpeed: 0.75
-  defence: 30
+  defence: 80
   damage: 1
-  worth: 40
+  worth: 20
   speed: 0
   stunResistence: 0.4
   deathEffect: {fileID: 1787491968115139843, guid: 72ae324c15b9e6d43895e32d4fc3c2c3, type: 3}

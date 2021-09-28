@@ -53,8 +53,19 @@ public class BuildManager : MonoBehaviour
             DeselectNode();
             DeselectShopItem();
         }
-    }
 
+        if(selectedNode != null)
+        {
+            if(selectedNode.turret != null)
+            {
+                int nextLevelCost = (int)(Mathf.Pow(2, selectedNode.towerLevel + 1) * 10);
+                if (PlayerStats.Money >= nextLevelCost)
+                {
+                    towerStatsUI.UpdateTowerToolTip();
+                }
+            }
+        }
+    }
 
     public void DeselectShopItem()
     {
@@ -98,7 +109,6 @@ public class BuildManager : MonoBehaviour
         selectedNode = node;
         //shopUI.DeselectTower();
         turretToBuild = null;
-
         //nodeUI.SetTarget(node);
         UpdateUI();
         towerStatsUI.SetTarget(node);

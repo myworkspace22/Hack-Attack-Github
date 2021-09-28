@@ -19,13 +19,12 @@ public class Turret : MonoBehaviour
 
     public int damageOverTime = 30;
     public float slowAmount = 0.5f;
+    public float reduceDefenceAmount = 0;
 
     public LineRenderer lineRenderer;
     public ParticleSystem impactEffect;
 
     public float laserWidth;
-
-
 
     [Header("Special Abileties")]
     public bool lock4Rotations;
@@ -63,8 +62,6 @@ public class Turret : MonoBehaviour
     public float upgradeRange;
     public float upgradeFrenquency;
     public int upgradeLaserDoT;
-
-    
 
     [Header("Unity Setup Fields M.I.S")]
     public string enemyTag = "Enemy";
@@ -267,6 +264,15 @@ public class Turret : MonoBehaviour
     }
     private void Update()
     {
+        if(fireCountdown > 0)
+        {
+            fireCountdown -= Time.deltaTime;
+        }
+        else if (tesla)
+        {
+            fireCountdown = 1f / fireRate;
+        }
+
         if (burstCooldown > 0 && cooldownTimer > 0) // && !ChargeBCD 
         {
             cooldownTimer -= Time.deltaTime;
@@ -319,7 +325,9 @@ public class Turret : MonoBehaviour
             return;
         }
 
-        if (target == null)
+        bool teslaReady = (tesla && !BuildManager.instance.GetComponent<WaveSpawner>().BuildMode);
+
+        if (target == null && !teslaReady)
         {
             if (useLaser)
             {
@@ -388,8 +396,6 @@ public class Turret : MonoBehaviour
             }
         }
 
-
-
         if (useLaser)
         {
             Laser();
@@ -414,7 +420,7 @@ public class Turret : MonoBehaviour
                 Shoot(target);
                 fireCountdown = 1f / fireRate;
             }
-            fireCountdown -= Time.deltaTime;
+            //fireCountdown -= Time.deltaTime;
         }
     }
     private void ClusterUpdate()
@@ -506,6 +512,7 @@ public class Turret : MonoBehaviour
     {
         targetEnemy.GetComponent<Enemy>().TakeDamage(damageOverTime * Time.deltaTime);
         targetEnemy.Slow(slowAmount);
+        targetEnemy.ReduseDefence(reduceDefenceAmount);
 
         if (!lineRenderer.enabled)
         {
