@@ -67,5 +67,6 @@ public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     private void HideIT()
     {
         TooltipSystem.Instant.Hide();
+        TooltipSystem.Instant.curentTT = null;
     }
 }

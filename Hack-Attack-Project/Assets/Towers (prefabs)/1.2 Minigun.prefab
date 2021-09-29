@@ -337,7 +337,7 @@ GameObject:
   - component: {fileID: -4886795863130035858}
   - component: {fileID: -3347627123140790806}
   m_Layer: 6
-  m_Name: 1
+  m_Name: 1.2 Minigun
   m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -373,23 +373,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  range: 2
+  range: 1.5
   nearestTarget: 0
-  bulletDamage: 1
-  fireRate: 15
+  bulletDamage: 120
+  fireRate: 6
   useLaser: 0
   damageOverTime: 30
   slowAmount: 0.5
+  reduceDefenceAmount: 0.5
   lineRenderer: {fileID: 0}
   impactEffect: {fileID: 0}
   laserWidth: 0
-  burstDuration: 1
-  burstCooldown: 1
+  lock4Rotations: 0
+  burstDuration: 0
+  burstCooldown: 0
   cooldownEffect: {fileID: 0}
   keepTarget: 0
   multiTargets: 0
   multiDelay: 0
-  increseFrenquencyPct: 0
+  increseFrenquencyPct: 0.2
   sniper: 0
   poisonDamage: 0
   poisonTime: 0
