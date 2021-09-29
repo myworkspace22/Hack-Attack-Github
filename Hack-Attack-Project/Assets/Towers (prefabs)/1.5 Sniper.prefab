@@ -338,7 +338,7 @@ GameObject:
   - component: {fileID: 217030568604445474}
   - component: {fileID: -871327444860877882}
   m_Layer: 6
-  m_Name: 1
+  m_Name: 1.5 Sniper
   m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -374,16 +374,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  range: 90
+  range: 30
   nearestTarget: 0
-  bulletDamage: 1500
-  fireRate: 0.5
+  bulletDamage: 300
+  fireRate: 0.6
   useLaser: 0
   damageOverTime: 30
   slowAmount: 0.5
+  reduceDefenceAmount: 0
   lineRenderer: {fileID: 217030568604445474}
   impactEffect: {fileID: 0}
   laserWidth: 0
+  lock4Rotations: 0
   burstDuration: 0
   burstCooldown: 0
   cooldownEffect: {fileID: 0}
@@ -400,13 +402,13 @@ MonoBehaviour:
   tesla: 0
   extraLasers: []
   stunner: 0
-  upgradeDamage: 1500
+  upgradeDamage: 500
   upgradeRange: 0
-  upgradeFrenquency: 0.1
+  upgradeFrenquency: 0
   upgradeLaserDoT: 0
   enemyTag: Enemy
   rotationPoint: {fileID: 8277812115738884651}
-  bulletPrefab: {fileID: 4238579209898551604, guid: 9b2c0fa31eff0fe448b14b66ffccf891, type: 3}
+  bulletPrefab: {fileID: 4238579209898551604, guid: 34f8b7b2222cb4e42a30a280d74099e9, type: 3}
   firePoint: {fileID: 524606163506090092}
   randomPitchRangeMax: 0.9
   randomPitchRangeMin: 1.1
@@ -545,7 +547,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 1
   m_Positions:
   - {x: 0, y: 0.3, z: 0}
   - {x: 0, y: 1, z: 0}
@@ -586,7 +588,7 @@ LineRenderer:
       ctime6: 0
       ctime7: 0
       atime0: 0
-      atime1: 65535
+      atime1: 65342
       atime2: 0
       atime3: 0
       atime4: 0

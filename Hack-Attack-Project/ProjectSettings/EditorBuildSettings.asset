@@ -6,12 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Backlog/EXPO/Level alpha1.unity
-    guid: 84adf197d5a2184448bf72d00890c2e7
-  - enabled: 1
-    path: Assets/Scenes/Backlog/EXPO/Level alpha2.unity
-    guid: 9d5e930350477ae409b0339dbe633696
-  - enabled: 1
-    path: Assets/Scenes/Backlog/EXPO/Level alpha3.unity
-    guid: a49f23830fada3b4f8998dd2feca0b2a
+    path: Assets/Scenes/EXPO demo.unity
+    guid: d8913b1f7aaeca84eb6ff3a1b5f8795d
   m_configObjects: {}

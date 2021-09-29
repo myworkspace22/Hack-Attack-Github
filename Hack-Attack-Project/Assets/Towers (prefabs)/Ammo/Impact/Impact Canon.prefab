@@ -110,7 +110,7 @@ Transform:
   m_GameObject: {fileID: 6340635527937755175}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 6, y: 6, z: 1}
   m_Children:
   - {fileID: 7853762071515684997}
   m_Father: {fileID: 0}
@@ -275,5 +275,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6011dc77b59bfb44596c66616ee37fc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionRange: 2
-  growSpeed: 3
+  explosionRange: 1.25
+  growSpeed: 2

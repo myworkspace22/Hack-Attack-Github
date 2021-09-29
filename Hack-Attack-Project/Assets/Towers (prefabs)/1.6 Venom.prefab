@@ -337,7 +337,7 @@ GameObject:
   - component: {fileID: 4177661257191024721}
   - component: {fileID: -5212057138071342312}
   m_Layer: 6
-  m_Name: 1
+  m_Name: 1.6 Venom
   m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -375,20 +375,26 @@ MonoBehaviour:
   target: {fileID: 0}
   range: 2
   nearestTarget: 1
-  bulletDamage: 100
-  fireRate: 1
+  bulletDamage: 80
+  fireRate: 1.2
   useLaser: 0
   damageOverTime: 30
   slowAmount: 0.5
+  reduceDefenceAmount: 0.5
   lineRenderer: {fileID: 0}
   impactEffect: {fileID: 0}
   laserWidth: 0
+  lock4Rotations: 0
+  burstDuration: 0
+  burstCooldown: 0
+  cooldownEffect: {fileID: 0}
+  keepTarget: 0
   multiTargets: 0
   multiDelay: 0
   increseFrenquencyPct: 0
   sniper: 0
-  poisonDamage: 400
-  poisonTime: 3
+  poisonDamage: 240
+  poisonTime: 4
   clusterBombTarget: {fileID: 0}
   clusterCooldown: 0
   splitter: 0
@@ -401,9 +407,8 @@ MonoBehaviour:
   upgradeLaserDoT: 0
   enemyTag: Enemy
   rotationPoint: {fileID: 8277812115738884651}
-  bulletPrefab: {fileID: 4238579209898551604, guid: a77f4f42e2d32cc4d96dbc27d1facbc6, type: 3}
+  bulletPrefab: {fileID: 4238579209898551604, guid: ba09cc44ab4421349be66e10c94debf1, type: 3}
   firePoint: {fileID: 524606163506090092}
-  towerPlatform: {fileID: 4559026435059489860}
   randomPitchRangeMax: 0.9
   randomPitchRangeMin: 1.1
 --- !u!212 &2023288362687100980

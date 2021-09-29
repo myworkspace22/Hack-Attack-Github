@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 7712302776447239023}
   - component: {fileID: -8535829375132045144}
   m_Layer: 6
-  m_Name: 3
+  m_Name: 3.2 Typhoon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,16 +83,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  range: 2.2
+  range: 1
   nearestTarget: 0
-  bulletDamage: 0
-  fireRate: 0.2
+  bulletDamage: 125
+  fireRate: 0.5
   useLaser: 0
   damageOverTime: 900
   slowAmount: 0.75
+  reduceDefenceAmount: 0.5
   lineRenderer: {fileID: 6920416368136055428, guid: 4ef270e71c19edc46a68d2772230cb94, type: 3}
   impactEffect: {fileID: 0}
   laserWidth: 0.03
+  lock4Rotations: 0
+  burstDuration: 0
+  burstCooldown: 0
+  cooldownEffect: {fileID: 0}
+  keepTarget: 0
   multiTargets: 0
   multiDelay: 0
   increseFrenquencyPct: 0
@@ -105,15 +111,14 @@ MonoBehaviour:
   tesla: 1
   extraLasers: []
   stunner: 0
-  upgradeDamage: 900
+  upgradeDamage: 250
   upgradeRange: 0
-  upgradeFrenquency: 0
+  upgradeFrenquency: 0.1
   upgradeLaserDoT: 0
   enemyTag: Enemy
   rotationPoint: {fileID: 0}
   bulletPrefab: {fileID: 2881803708027556478, guid: 27d5bcd3f600cfe44a8784a9a3f7b0d7, type: 3}
   firePoint: {fileID: 2848132688497259106}
-  towerPlatform: {fileID: 2271421092245175882, guid: 4ef270e71c19edc46a68d2772230cb94, type: 3}
   randomPitchRangeMax: 0.9
   randomPitchRangeMin: 1.1
 --- !u!212 &8709025309036245343

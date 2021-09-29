@@ -90,6 +90,7 @@ MonoBehaviour:
   useLaser: 0
   damageOverTime: 900
   slowAmount: 0.75
+  reduceDefenceAmount: 0.5
   lineRenderer: {fileID: 6920416368136055428, guid: 4ef270e71c19edc46a68d2772230cb94, type: 3}
   impactEffect: {fileID: 0}
   laserWidth: 0.03
@@ -111,7 +112,7 @@ MonoBehaviour:
   extraLasers: []
   stunner: 0
   upgradeDamage: 25
-  upgradeRange: 0.1
+  upgradeRange: 0
   upgradeFrenquency: 0.2
   upgradeLaserDoT: 0
   enemyTag: Enemy

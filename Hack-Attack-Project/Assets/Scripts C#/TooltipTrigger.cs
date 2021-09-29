@@ -29,6 +29,11 @@ public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         }
         
     }
+    public void HideTooltipUI()
+    {
+        HideIT();
+    }
+
     public void UpdateTooltipUI()
     {
             ShowIT();

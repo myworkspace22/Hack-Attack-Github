@@ -68,7 +68,7 @@ public class TowerStatsNEW : MonoBehaviour
 
         if (TooltipSystem.Instant.curentTT == tmp)
         {
-            tmp.UpdateTowerTooltipUI();
+            tmp.UpdateTooltipUI();
         }
     }
 
@@ -117,11 +117,11 @@ public class TowerStatsNEW : MonoBehaviour
 
         if (TooltipSystem.Instant.curentTT == tmp)
         {
-            tmp.UpdateTowerTooltipUI();
+            tmp.UpdateTooltipUI();
         }
         else if(TooltipSystem.Instant.curentTT == tmp2)
         {
-            tmp2.UpdateTowerTooltipUI();
+            tmp2.UpdateTooltipUI();
         }
     }
     
@@ -142,15 +142,15 @@ public class TowerStatsNEW : MonoBehaviour
 
         if (TooltipSystem.Instant.curentTT == tmp)
         {
-            tmp.UpdateTowerTooltipUI();
+            tmp.UpdateTooltipUI();
         }
         else if (TooltipSystem.Instant.curentTT == tmp2)
         {
-            tmp2.UpdateTowerTooltipUI();
+            tmp2.UpdateTooltipUI();
         }
         else if (TooltipSystem.Instant.curentTT == tmp3)
         {
-            tmp3.UpdateTowerTooltipUI();
+            tmp3.UpdateTooltipUI();
         }
     }
 }

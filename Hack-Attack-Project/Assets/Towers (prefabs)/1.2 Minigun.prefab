@@ -375,7 +375,7 @@ MonoBehaviour:
   target: {fileID: 0}
   range: 1.5
   nearestTarget: 0
-  bulletDamage: 120
+  bulletDamage: 50
   fireRate: 6
   useLaser: 0
   damageOverTime: 30
@@ -391,7 +391,7 @@ MonoBehaviour:
   keepTarget: 0
   multiTargets: 0
   multiDelay: 0
-  increseFrenquencyPct: 0.2
+  increseFrenquencyPct: 0.1
   sniper: 0
   poisonDamage: 0
   poisonTime: 0
@@ -401,13 +401,13 @@ MonoBehaviour:
   tesla: 0
   extraLasers: []
   stunner: 0
-  upgradeDamage: 100
-  upgradeRange: 0
-  upgradeFrenquency: 2
+  upgradeDamage: 40
+  upgradeRange: 0.1
+  upgradeFrenquency: 3
   upgradeLaserDoT: 0
   enemyTag: Enemy
   rotationPoint: {fileID: 8277812115738884651}
-  bulletPrefab: {fileID: 4238579209898551604, guid: 7f98077fe9376f04baa4166b7ddbe507, type: 3}
+  bulletPrefab: {fileID: 4238579209898551604, guid: aaa9a70e12e78b145ab0461d88545ac3, type: 3}
   firePoint: {fileID: 524606163506090092}
   randomPitchRangeMax: 0.9
   randomPitchRangeMin: 1.1

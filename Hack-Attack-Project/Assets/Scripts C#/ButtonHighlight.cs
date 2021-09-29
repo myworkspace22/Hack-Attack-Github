@@ -23,9 +23,9 @@ public class ButtonHighlight : MonoBehaviour
         shooter.color = new Color(0.08f, 0.08f, 0.08f);
         cannon.color = new Color(0.08f, 0.08f, 0.08f);
         laser.color = new Color(0.08f, 0.08f, 0.08f);
-        shooterIcon.color = new Color(1, 1, 1, 0.5f);
-        cannonIcon.color = new Color(1, 1, 1, 0.5f);
-        laserIcon.color = new Color(1, 1, 1, 0.5f);
+        shooterIcon.color = new Color(0.5f, 0.5f, 0.5f);
+        cannonIcon.color = new Color(0.5f, 0.5f, 0.5f);
+        laserIcon.color = new Color(0.5f, 0.5f, 0.5f);
     }
     private void EnableButtons()
     {

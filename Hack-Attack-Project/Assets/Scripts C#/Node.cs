@@ -255,6 +255,22 @@ public class Node : MonoBehaviour
 
         turretToUpgrade.damageOverTime += turretToUpgrade.upgradeLaserDoT;
 
+        SlowArea sa = turret.GetComponent<SlowArea>();
+
+        if(sa != null)
+        {
+            sa.damageOverTime += turretToUpgrade.upgradeLaserDoT;
+            sa.range += turretToUpgrade.upgradeRange;
+        }
+
+        if (turretToUpgrade.splitter)
+        {
+            for (int i = 0; i < turretToUpgrade.extraLasers.Length; i++)
+            {
+                turretToUpgrade.extraLasers[i].damageOverTime += turretToUpgrade.upgradeLaserDoT;
+            }
+        }
+
         towerLevel++;
         StarUI();
 

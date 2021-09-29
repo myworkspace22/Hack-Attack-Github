@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a820fca87f0b64788af86b838f7009, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotation: -60
+  rotation: -90
 --- !u!1 &1666578304798784768
 GameObject:
   m_ObjectHideFlags: 0
@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: -8858853124238594249}
   - component: {fileID: 3209609897476412271}
   m_Layer: 6
-  m_Name: 3
+  m_Name: 3.3 Vortex
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -180,13 +180,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  range: 1.5
+  range: 1.2
   nearestTarget: 0
-  bulletDamage: 50
+  bulletDamage: 35
   fireRate: 1
   useLaser: 0
   damageOverTime: 50
   slowAmount: 0
+  reduceDefenceAmount: 0
   lineRenderer: {fileID: 0}
   impactEffect: {fileID: 4290368347908377900, guid: 85e4a06948741b84babafdd204d71252, type: 3}
   laserWidth: 0.03
@@ -207,10 +208,10 @@ MonoBehaviour:
   tesla: 0
   extraLasers: []
   stunner: 0
-  upgradeDamage: 0
-  upgradeRange: 0
+  upgradeDamage: 35
+  upgradeRange: 0.2
   upgradeFrenquency: 0
-  upgradeLaserDoT: 200
+  upgradeLaserDoT: 35
   enemyTag: Enemy
   rotationPoint: {fileID: 0}
   bulletPrefab: {fileID: 0}
@@ -421,8 +422,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5762aa5fbb3ea4d44990be350f54801e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slowAmount: 0.75
-  range: 1.5
+  slowAmount: 0.5
+  range: 1.2
+  damageOverTime: 35
 --- !u!1 &7955904125729604621
 GameObject:
   m_ObjectHideFlags: 0

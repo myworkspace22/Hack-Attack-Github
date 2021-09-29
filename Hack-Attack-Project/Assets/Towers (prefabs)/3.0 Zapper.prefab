@@ -432,11 +432,12 @@ MonoBehaviour:
   target: {fileID: 0}
   range: 1.3
   nearestTarget: 0
-  bulletDamage: 10
+  bulletDamage: 12
   fireRate: 0.8
   useLaser: 0
   damageOverTime: 30
   slowAmount: 0.5
+  reduceDefenceAmount: 0.5
   lineRenderer: {fileID: 0}
   impactEffect: {fileID: 0}
   laserWidth: 0

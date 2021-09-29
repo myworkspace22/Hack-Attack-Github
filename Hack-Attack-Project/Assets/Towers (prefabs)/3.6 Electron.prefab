@@ -171,16 +171,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  range: 1.5
+  range: 1.8
   nearestTarget: 0
-  bulletDamage: 30
-  fireRate: 1
+  bulletDamage: 50
+  fireRate: 2
   useLaser: 1
-  damageOverTime: 0
-  slowAmount: 0.8
+  damageOverTime: 50
+  slowAmount: 0.5
+  reduceDefenceAmount: 0.5
   lineRenderer: {fileID: 5604909256483303776}
   impactEffect: {fileID: 3522940660889682931}
   laserWidth: 0.03
+  lock4Rotations: 0
+  burstDuration: 0
+  burstCooldown: 0
+  cooldownEffect: {fileID: 0}
+  keepTarget: 0
   multiTargets: 0
   multiDelay: 0
   increseFrenquencyPct: 0
@@ -195,10 +201,10 @@ MonoBehaviour:
   - {fileID: 6595567104721690625}
   - {fileID: 6055422889234401123}
   stunner: 0
-  upgradeDamage: 0
+  upgradeDamage: 50
   upgradeRange: 0
   upgradeFrenquency: 0
-  upgradeLaserDoT: 100
+  upgradeLaserDoT: 50
   enemyTag: Enemy
   rotationPoint: {fileID: 0}
   bulletPrefab: {fileID: 4238579209898551604, guid: 7f98077fe9376f04baa4166b7ddbe507, type: 3}
@@ -431,7 +437,7 @@ GameObject:
   - component: {fileID: 5406172472843194774}
   - component: {fileID: -824184845763585299}
   m_Layer: 6
-  m_Name: 3
+  m_Name: 3.6 Electron
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -470,16 +476,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  range: 1.5
+  range: 1.8
   nearestTarget: 0
-  bulletDamage: 30
-  fireRate: 1
+  bulletDamage: 50
+  fireRate: 2
   useLaser: 1
-  damageOverTime: 0
-  slowAmount: 0.8
+  damageOverTime: 50
+  slowAmount: 0.5
+  reduceDefenceAmount: 0.5
   lineRenderer: {fileID: 6920416368136055428}
   impactEffect: {fileID: 2006098549802789118}
   laserWidth: 0.03
+  lock4Rotations: 0
+  burstDuration: 0
+  burstCooldown: 0
+  cooldownEffect: {fileID: 0}
+  keepTarget: 0
   multiTargets: 0
   multiDelay: 0
   increseFrenquencyPct: 0
@@ -494,10 +506,10 @@ MonoBehaviour:
   - {fileID: 4382104338296011872}
   - {fileID: 6055422889234401123}
   stunner: 0
-  upgradeDamage: 0
+  upgradeDamage: 50
   upgradeRange: 0
   upgradeFrenquency: 0
-  upgradeLaserDoT: 100
+  upgradeLaserDoT: 50
   enemyTag: Enemy
   rotationPoint: {fileID: 0}
   bulletPrefab: {fileID: 4238579209898551604, guid: 7f98077fe9376f04baa4166b7ddbe507, type: 3}
@@ -841,16 +853,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  range: 1.5
+  range: 1.8
   nearestTarget: 0
-  bulletDamage: 30
-  fireRate: 1
+  bulletDamage: 50
+  fireRate: 2
   useLaser: 1
-  damageOverTime: 0
-  slowAmount: 0.8
+  damageOverTime: 50
+  slowAmount: 0.5
+  reduceDefenceAmount: 0.5
   lineRenderer: {fileID: 2513351380321035606}
   impactEffect: {fileID: 7095560146513337215}
   laserWidth: 0.03
+  lock4Rotations: 0
+  burstDuration: 0
+  burstCooldown: 0
+  cooldownEffect: {fileID: 0}
+  keepTarget: 0
   multiTargets: 0
   multiDelay: 0
   increseFrenquencyPct: 0
@@ -865,10 +883,10 @@ MonoBehaviour:
   - {fileID: 6595567104721690625}
   - {fileID: 4382104338296011872}
   stunner: 0
-  upgradeDamage: 0
+  upgradeDamage: 50
   upgradeRange: 0
   upgradeFrenquency: 0
-  upgradeLaserDoT: 100
+  upgradeLaserDoT: 50
   enemyTag: Enemy
   rotationPoint: {fileID: 0}
   bulletPrefab: {fileID: 4238579209898551604, guid: 7f98077fe9376f04baa4166b7ddbe507, type: 3}

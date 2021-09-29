@@ -339,7 +339,7 @@ GameObject:
   - component: {fileID: 217030568604445474}
   - component: {fileID: -871327444860877882}
   m_Layer: 6
-  m_Name: 3
+  m_Name: 3.5 Timewarper
   m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -377,14 +377,16 @@ MonoBehaviour:
   target: {fileID: 0}
   range: 2
   nearestTarget: 0
-  bulletDamage: 10
-  fireRate: 0.3
+  bulletDamage: 280
+  fireRate: 0.5
   useLaser: 0
   damageOverTime: 30
   slowAmount: 0.5
+  reduceDefenceAmount: 0.5
   lineRenderer: {fileID: 217030568604445474}
   impactEffect: {fileID: 0}
   laserWidth: 0
+  lock4Rotations: 0
   burstDuration: 0
   burstCooldown: 0
   cooldownEffect: {fileID: 3873674405897887987}
@@ -401,9 +403,9 @@ MonoBehaviour:
   tesla: 0
   extraLasers: []
   stunner: 0
-  upgradeDamage: 1500
-  upgradeRange: 0
-  upgradeFrenquency: 0.1
+  upgradeDamage: 300
+  upgradeRange: 0.2
+  upgradeFrenquency: 0
   upgradeLaserDoT: 0
   enemyTag: Enemy
   rotationPoint: {fileID: 8277812115738884651}
@@ -546,7 +548,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 1
   m_Positions:
   - {x: 0, y: 0.3, z: 0}
   - {x: 0, y: 1, z: 0}

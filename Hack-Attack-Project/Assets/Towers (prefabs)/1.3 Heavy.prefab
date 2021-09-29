@@ -373,10 +373,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  range: 2
+  range: 1.6
   nearestTarget: 0
-  bulletDamage: 60
-  fireRate: 6
+  bulletDamage: 100
+  fireRate: 12
   useLaser: 0
   damageOverTime: 30
   slowAmount: 0.5
@@ -385,7 +385,7 @@ MonoBehaviour:
   impactEffect: {fileID: 0}
   laserWidth: 0
   lock4Rotations: 0
-  burstDuration: 1
+  burstDuration: 0.2
   burstCooldown: 1
   cooldownEffect: {fileID: 0}
   keepTarget: 0
@@ -401,13 +401,13 @@ MonoBehaviour:
   tesla: 0
   extraLasers: []
   stunner: 0
-  upgradeDamage: 100
-  upgradeRange: 0
-  upgradeFrenquency: 2
+  upgradeDamage: 25
+  upgradeRange: 0.2
+  upgradeFrenquency: 8
   upgradeLaserDoT: 0
   enemyTag: Enemy
   rotationPoint: {fileID: 8277812115738884651}
-  bulletPrefab: {fileID: 4238579209898551604, guid: 7f98077fe9376f04baa4166b7ddbe507, type: 3}
+  bulletPrefab: {fileID: 4238579209898551604, guid: 393c2989dcc6539479726ba60c5bda82, type: 3}
   firePoint: {fileID: 524606163506090092}
   randomPitchRangeMax: 0.9
   randomPitchRangeMin: 1.1
